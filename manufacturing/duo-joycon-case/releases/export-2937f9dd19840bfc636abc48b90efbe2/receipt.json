@@ -1,0 +1,181 @@
+{
+  "designId": "duo-joycon-case",
+  "revision": "da208d8faabf4cfa239ef005f3866ecb42b3c243a629893843a28855a898f29a",
+  "schemaVersion": 2,
+  "exportId": "export-2937f9dd19840bfc636abc48b90efbe2",
+  "generatedAt": "2026-09-27T00:50:13.966Z",
+  "designSha256": "dab5b9386d264aa57f14500c1702302defe1122629c4c094426279d42221f3a2",
+  "role": "enclosure",
+  "stateHash": "a3077d1b8ab14847319e639ae3125c67250a552bba9bce05fff879c88cf316c3",
+  "stateManifest": {
+    "schemaVersion": 3,
+    "designId": "duo-joycon-case",
+    "role": "enclosure",
+    "design": {
+      "revision": "da208d8faabf4cfa239ef005f3866ecb42b3c243a629893843a28855a898f29a",
+      "designSha256": "d1317770cd1ed932750e7df3928d3efbd3d134ea28bb789d1d434946405ece54",
+      "manifestSha256": "be42fb21e257dbe19154a64a033f0a8f66eac52228670e0c4ead6d1431c972c0",
+      "stepSha256": "d619c56bec76256ecd84286d3a9b747fe82feeec09eeb99c9fe368eed0079955",
+      "pcbReleases": []
+    },
+    "brief": {
+      "path": "design/duo-joycon-case/README.md",
+      "sha256": "270d53f89ae3fdf4105100e31da4b5529a0ef7f528a5f3bef82cdabe731600ee"
+    },
+    "requirement": {
+      "artifactContractPath": "product/contract.json",
+      "artifactContractSha256": "ca0289d2fc92757646a024422cdc5636ff6bac11b24c540628812d4e819e8d03",
+      "designRequirementSha256": "0a9897331057299cd73a1b46f51c4fa0910de0ac4b0b7bbfd0a2892bfc586e82",
+      "inputs": [
+        {
+          "role": "external-reference",
+          "id": "orientation_reference",
+          "path": "product/references/uploads/20260927T004006717Z-1-ishot-2026-09-27-12-07-53.png",
+          "sha256": "f02f110425f2169d889c4f4e948864b4d4cbdd939e1046efcc94cc933dc064d0",
+          "sizeBytes": 137274
+        },
+        {
+          "role": "external-reference",
+          "id": "phone_dimensions",
+          "path": "product/references/uploads/20260927T003420271Z-1-ishot-2026-09-24-11-17-13.png",
+          "sha256": "8f23ca89ae44d83f6e5fe8191739144497e094a7f307ebd7a659af18441456e7",
+          "sizeBytes": 77162
+        },
+        {
+          "role": "external-reference",
+          "id": "phone_screen",
+          "path": "product/references/uploads/20260927T003420271Z-2-ishot-2026-09-24-11-17-19.png",
+          "sha256": "3cd0c76b2f4e4e25ca73901e9e3ca58b776705c801057a30c9e69e620c1150f6",
+          "sizeBytes": 94709
+        },
+        {
+          "role": "external-reference",
+          "id": "rail_reference_2",
+          "path": "product/references/uploads/20260927T004006717Z-2-ishot-2026-09-27-8-36-31.png",
+          "sha256": "79b974f22c817d0f5878f4d51b1b67aef557180ccb8825a505c2088df6052859",
+          "sizeBytes": 275962
+        },
+        {
+          "role": "external-reference",
+          "id": "rail_reference_3",
+          "path": "product/references/uploads/20260927T004006717Z-3-2026-09-27-8-36-50.png",
+          "sha256": "3a32b52c26b7b4ddedf75df076a90f31738d83e2f557d3c902314a0d7826bc7e",
+          "sizeBytes": 70323
+        },
+        {
+          "role": "external-reference",
+          "id": "rail_reference_4",
+          "path": "product/references/uploads/20260927T004006717Z-4-2026-09-27-8-37-00.png",
+          "sha256": "bc6070c33cd613a659e01cb440f238edc150db7b448a9e483e3df74fb9b7a8e9",
+          "sizeBytes": 155302
+        }
+      ]
+    },
+    "delivery": {
+      "target": "fit_check",
+      "formats": [
+        "step"
+      ]
+    },
+    "stateHash": "a3077d1b8ab14847319e639ae3125c67250a552bba9bce05fff879c88cf316c3"
+  },
+  "buildArtifacts": {
+    "manifestSha256": "be42fb21e257dbe19154a64a033f0a8f66eac52228670e0c4ead6d1431c972c0",
+    "stepSha256": "d619c56bec76256ecd84286d3a9b747fe82feeec09eeb99c9fe368eed0079955"
+  },
+  "exportAlgorithm": {
+    "version": 1,
+    "bootstrapSha256": "f4939328ef685300fcdaa250c860428f6b9e009d10931b20d36728e55e0029e4"
+  },
+  "sourceHashes": {
+    "left_rail/left_rail": "00777c53d69d72ea88449760d6d79d05e9cbf6f7878367ce5c6eb412047087b6",
+    "rear_shell/rear_shell": "5d2775e08055b914fa940fe94577add758944ad300e5e47228a6f2662f6dc03e",
+    "right_rail/right_rail": "5c6c797aa33c2d2ad0a245340e750c4a87e56340d1c1b768fd1ecb46e95e9c96",
+    "volume_minus/volume_minus": "39cc0b11aaaad53b9377f23750d06a657a371d7687b623db928c8b3453b6d10c",
+    "volume_plus/volume_plus": "21043c6de6fe4226005a41824f2b7cdb1db6d65117a426799a5c33bbfd922c66"
+  },
+  "assetHashes": {},
+  "shapeHashes": {
+    "left_rail": "0f748468fc665d237340c375e941aa1b62088f49c0f0af9b4ae4955e1b61f524",
+    "rear_shell": "5bb3130d4bbafec1b43373aa7f709c5643c6d0041b03f3d7cc31d4a244c90993",
+    "right_rail": "f4ee16e3b62e1b817dd8ea23e53dd1ca6d5faefd936c0ccd1df42ed7250d74e0",
+    "volume_minus": "e030403c0e8a9f5a7e293a9e337a674bbc3eb03c7ce0df143c6721ab337b80aa",
+    "volume_plus": "4cd0b79ab49be9129d5ffa3a981d78e4eed258034642ef4b8d01bf2cb69ce834"
+  },
+  "runtime": {
+    "manifestHash": "56a1de5d760e9f5c1dd991c57c86f24fbfb7da361b3d55b9d4cb65cdabe66a74",
+    "pythonVersion": "3.12.13",
+    "build123dVersion": "0.10.0",
+    "ocpVersion": "7.8.1.1.post1",
+    "cadpyHash": "e8b3788bab31d790595e4c3306dda85dfe057c87a4fc64f7ef3eab254239b7ba"
+  },
+  "artifacts": [
+    {
+      "path": "manufacturing/duo-joycon-case/releases/export-2937f9dd19840bfc636abc48b90efbe2/model.step",
+      "role": "model/step",
+      "sha256": "d619c56bec76256ecd84286d3a9b747fe82feeec09eeb99c9fe368eed0079955",
+      "sizeBytes": 849900
+    }
+  ],
+  "interference": {
+    "summary": "4 interfering pairs",
+    "counts": {
+      "objects": 5,
+      "pairs": 10,
+      "exact": 0,
+      "cached": 4,
+      "interference": 4,
+      "undeclared": 0,
+      "over_budget": 0,
+      "undetermined": 0
+    },
+    "overlaps": [
+      {
+        "a": "left_rail",
+        "b": "rear_shell",
+        "verdict": "declared",
+        "kind": "fused",
+        "reason": "Custom rail root is fused into the wing edge for a single printed shell.",
+        "maxDepthMm": 0.2,
+        "volumeMm3": 43.894032
+      },
+      {
+        "a": "rear_shell",
+        "b": "right_rail",
+        "verdict": "declared",
+        "kind": "fused",
+        "reason": "Custom rail root is fused into the wing edge for a single printed shell.",
+        "maxDepthMm": 0.2,
+        "volumeMm3": 43.894032
+      },
+      {
+        "a": "rear_shell",
+        "b": "volume_minus",
+        "verdict": "declared",
+        "kind": "fused",
+        "reason": "The fixed foot joins both the base (0.2 mm) and the tray sidewall (0.8 mm); only this anchor is fused, leaving both flexure leaves and the output arm free.",
+        "maxDepthMm": 0.8246,
+        "volumeMm3": 14.56
+      },
+      {
+        "a": "rear_shell",
+        "b": "volume_plus",
+        "verdict": "declared",
+        "kind": "fused",
+        "reason": "The fixed foot joins both the base (0.2 mm) and the tray sidewall (0.8 mm); only this anchor is fused, leaving both flexure leaves and the output arm free.",
+        "maxDepthMm": 0.8246,
+        "volumeMm3": 14.56
+      }
+    ]
+  },
+  "authority": {
+    "version": 1,
+    "algorithm": "hmac-sha256",
+    "keyId": "761657b6d664e71812fd01e01c1125b1",
+    "projectId": "3d45b24e-981b-4bd8-9704-a2998fdf1cb7",
+    "receiptPath": "manufacturing/duo-joycon-case/releases/export-2937f9dd19840bfc636abc48b90efbe2/receipt.json",
+    "payloadSha256": "b20524e0736e1597a3932435337720ae6943e4bc057107a1aefd93424df02095",
+    "mac": "b0cd44405f8da217b5cd5f3710eb4a6ca6f6e863f83b154b0ab5d915a39abf8c"
+  },
+  "status": "handoff"
+}

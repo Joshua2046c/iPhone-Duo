@@ -43,11 +43,11 @@
       "source": "user"
     },
     "phone_pose": {
-      "value": "展开，内屏朝上，摄像头方向朝人",
+      "value": "按 20260927T004006717Z-1 图理解朝向与结构；不照抄图中造型",
       "source": "user"
     },
     "shell_structure": {
-      "value": "手机后壳半包结构",
+      "value": "只覆盖 iPhone Duo 后盖所在半片，不得影响手机开合",
       "source": "user"
     },
     "volume_control": {
@@ -59,11 +59,11 @@
       "source": "default"
     },
     "mechanism_concept": {
-      "value": "两个独立正面柱塞，经两组转向摇臂和受导向推杆，驱动原机音量加减键；带独立回位、空行程与限位",
+      "value": "两路独立音量键，每路以两条并联柔性梁回位、L 形臂转向并向内接触手机音量键；固定脚与壳一体融合，壳体设置下压限位。横向姿态右边缘的原音量键坐标待核实。",
       "source": "default"
     },
     "manufacturing_method": {
-      "value": "FDM 原型，PETG 主壳，独立可更换按键传导模块；滑轨优先金属成品",
+      "value": "PETG FDM 主壳和自定义槽形滑轨原型；滑轨截面尺寸待实配",
       "source": "default"
     },
     "deliverable": {
@@ -73,11 +73,24 @@
     "electrical_scope": {
       "value": "壳体不增加 Joy-Con 充电或有线连接，游戏通信沿用手柄与手机已有无线功能",
       "source": "default"
+    },
+    "insertion_direction": {
+      "value": "两侧 Joy-Con 沿原生轨道从上往下滑入",
+      "source": "user"
+    },
+    "rail_structure": {
+      "value": "参照后三张红框的长直导向槽与端部结构设计左右滑轨",
+      "source": "user"
+    },
+    "layout_frame": {
+      "value": {
+        "x": "左右，后盖宽 117.8 mm",
+        "y": "远离玩家为正，后盖深约 84.1 mm，铰链在 +Y",
+        "z": "内屏朝 +Z，背板位于 -Z",
+        "interpretation": "参考图推导的装配坐标；闭合宽度仅用作半片包络近似，非精确半片尺寸"
+      },
+      "source": "default"
     }
   },
-  "open_questions": [
-    "插入方向：左右侧安装、按初代原生滑轨从上向下滑入，还是沿水平方向从左/右向中心推入？",
-    "后壳范围：仅包摄像头所在半片背面并允许另一半折叠，还是覆盖展开后的整个背面且游戏时固定展开？",
-    "摄像头方向朝人：是摄像头所在机身边靠近玩家，还是要求摄像头镜头本身朝向玩家？"
-  ]
+  "open_questions": []
 }

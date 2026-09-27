@@ -1,0 +1,6 @@
+id,name,quantity,source
+phone,Apple iPhone Duo,1,user
+joycon_l,Nintendo Switch Joy-Con (L)，初代,1,user
+joycon_r,Nintendo Switch Joy-Con (R)，初代,1,user
+rear_shell,PETG 一体后盖壳原型，含左右槽形轨道与两路柔性音量键,1,default
+adhesive,可移除双面胶垫，厚 0.3 mm，10 × 30 mm，原型固定用,2,default

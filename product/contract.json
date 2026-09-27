@@ -2,7 +2,7 @@
   "version": 2,
   "artifact_level": "assembly",
   "deliverable_intent": "fit_check",
-  "summary": "iPhone Duo 初代 Joy-Con 半包背壳及右侧双音量机械传导组件。当前为需求草案，安装方向与半包范围待用户明确。",
+  "summary": "仅固定后盖半片、允许开合的 Joy-Con 手机后壳；先交付可调整结构模型，接口仍需实配核实。",
   "required_interfaces": [
     {
       "id": "phone_shell",
@@ -38,10 +38,34 @@
       "source": "user_requested",
       "description": "用户上传的内外屏示意",
       "path": "product/references/uploads/20260927T003420271Z-2-ishot-2026-09-24-11-17-19.png"
+    },
+    {
+      "id": "orientation_reference",
+      "source": "user_requested",
+      "description": "仅朝向结构参考，禁止照抄造型",
+      "path": "product/references/uploads/20260927T004006717Z-1-ishot-2026-09-27-12-07-53.png"
+    },
+    {
+      "id": "rail_reference_2",
+      "source": "user_requested",
+      "description": "红框滑轨形式参考，无标注尺寸",
+      "path": "product/references/uploads/20260927T004006717Z-2-ishot-2026-09-27-8-36-31.png"
+    },
+    {
+      "id": "rail_reference_3",
+      "source": "user_requested",
+      "description": "红框滑轨形式参考，无标注尺寸",
+      "path": "product/references/uploads/20260927T004006717Z-3-2026-09-27-8-36-50.png"
+    },
+    {
+      "id": "rail_reference_4",
+      "source": "user_requested",
+      "description": "红框滑轨形式参考，无标注尺寸",
+      "path": "product/references/uploads/20260927T004006717Z-4-2026-09-27-8-37-00.png"
     }
   ],
   "assembly_story": {
-    "installation": "明确后壳范围与插入方向后，安装后壳、传导组件并插入左右初代 Joy-Con。",
+    "installation": "后盖半片置入三边敞口浅托壳，以可移除薄胶垫固定；另一半沿 +Y 自由开合；Joy-Con 从上端沿两侧槽形滑轨向下插入。",
     "maintenance": "传导组件独立可拆换；保留 Joy-Con 释放按钮操作空间。",
     "user_access": [
       "内屏",
@@ -70,14 +94,14 @@
         ],
         "reference_ids": [
           "phone_dimensions",
-          "phone_screen"
+          "phone_screen",
+          "orientation_reference",
+          "rail_reference_2",
+          "rail_reference_3",
+          "rail_reference_4"
         ]
       }
     ]
   },
-  "open_questions": [
-    "插入方向：左右侧安装、按初代原生滑轨从上向下滑入，还是沿水平方向从左/右向中心推入？",
-    "后壳范围：仅包摄像头所在半片背面并允许另一半折叠，还是覆盖展开后的整个背面且游戏时固定展开？",
-    "摄像头方向朝人：是摄像头所在机身边靠近玩家，还是要求摄像头镜头本身朝向玩家？"
-  ]
+  "open_questions": []
 }

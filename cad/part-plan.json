@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "joycon_rail_interface",
+      "requested": "初代 Joy-Con 配对轨道",
+      "catalog_query": "Joy-Con",
+      "catalog_results": [],
+      "selection": null,
+      "status": "unresolved",
+      "reason": "无可验证标准目录条目；红框仅提供形式，无尺寸",
+      "implementation": "free",
+      "custom_objects": [
+        "left_rail",
+        "right_rail"
+      ],
+      "note": "自定义原型几何不是原厂资产，仍须实配"
+    },
+    {
+      "id": "volume_linkage",
+      "implementation": "free",
+      "custom_objects": [
+        "volume_plus",
+        "volume_minus"
+      ],
+      "connections": "固定脚融合、两条弹性梁、L 形转向臂与接触头；无螺钉关节"
+    }
+  ]
+}

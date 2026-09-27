@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "units": "mm",
+  "coordinateFrame": "replicator-world-z-up",
+  "targets": [
+    {
+      "id": "rear_shell",
+      "label": "rear_shell",
+      "cells": [
+        {
+          "id": "rear_shell",
+          "target": "rear_shell",
+          "order": 0,
+          "path": "design/duo-joycon-case/source/parts/rear_shell/000-rear_shell.py",
+          "sha256": "5d2775e08055b914fa940fe94577add758944ad300e5e47228a6f2662f6dc03e"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "left_rail",
+      "label": "left_rail",
+      "cells": [
+        {
+          "id": "left_rail",
+          "target": "left_rail",
+          "order": 0,
+          "path": "design/duo-joycon-case/source/parts/left_rail/000-left_rail.py",
+          "sha256": "00777c53d69d72ea88449760d6d79d05e9cbf6f7878367ce5c6eb412047087b6"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "right_rail",
+      "label": "right_rail",
+      "cells": [
+        {
+          "id": "right_rail",
+          "target": "right_rail",
+          "order": 0,
+          "path": "design/duo-joycon-case/source/parts/right_rail/000-right_rail.py",
+          "sha256": "5c6c797aa33c2d2ad0a245340e750c4a87e56340d1c1b768fd1ecb46e95e9c96"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "volume_plus",
+      "label": "volume_plus",
+      "cells": [
+        {
+          "id": "volume_plus",
+          "target": "volume_plus",
+          "order": 0,
+          "path": "design/duo-joycon-case/source/parts/volume_plus/000-volume_plus.py",
+          "sha256": "21043c6de6fe4226005a41824f2b7cdb1db6d65117a426799a5c33bbfd922c66"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "volume_minus",
+      "label": "volume_minus",
+      "cells": [
+        {
+          "id": "volume_minus",
+          "target": "volume_minus",
+          "order": 0,
+          "path": "design/duo-joycon-case/source/parts/volume_minus/000-volume_minus.py",
+          "sha256": "39cc0b11aaaad53b9377f23750d06a657a371d7687b623db928c8b3453b6d10c"
+        }
+      ],
+      "dependencies": []
+    }
+  ],
+  "objects": [
+    {
+      "id": "rear_shell",
+      "target": "rear_shell",
+      "label": "半包后盖承力壳",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "5bb3130d4bbafec1b43373aa7f709c5643c6d0041b03f3d7cc31d4a244c90993",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "left_rail",
+      "target": "left_rail",
+      "label": "左侧槽形滑轨",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "0f748468fc665d237340c375e941aa1b62088f49c0f0af9b4ae4955e1b61f524",
+      "transform": {
+        "positionMm": [
+          -84.1,
+          0,
+          -2.4
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "right_rail",
+      "target": "right_rail",
+      "label": "右侧槽形滑轨",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "f4ee16e3b62e1b817dd8ea23e53dd1ca6d5faefd936c0ccd1df42ed7250d74e0",
+      "transform": {
+        "positionMm": [
+          84.1,
+          0,
+          -2.4
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "volume_plus",
+      "target": "volume_plus",
+      "label": "音量加柔性转向键",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "4cd0b79ab49be9129d5ffa3a981d78e4eed258034642ef4b8d01bf2cb69ce834",
+      "transform": {
+        "positionMm": [
+          63,
+          12,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "volume_minus",
+      "target": "volume_minus",
+      "label": "音量减柔性转向键",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "e030403c0e8a9f5a7e293a9e337a674bbc3eb03c7ce0df143c6721ab337b80aa",
+      "transform": {
+        "positionMm": [
+          63,
+          -12,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    }
+  ],
+  "assets": [],
+  "fits": [
+    {
+      "kind": "fused",
+      "reason": "Custom rail root is fused into the wing edge for a single printed shell.",
+      "a": "left_rail",
+      "b": "rear_shell"
+    },
+    {
+      "kind": "fused",
+      "reason": "Custom rail root is fused into the wing edge for a single printed shell.",
+      "a": "right_rail",
+      "b": "rear_shell"
+    },
+    {
+      "kind": "fused",
+      "reason": "The fixed foot joins both the base (0.2 mm) and the tray sidewall (0.8 mm); only this anchor is fused, leaving both flexure leaves and the output arm free.",
+      "a": "volume_minus",
+      "b": "rear_shell"
+    },
+    {
+      "kind": "fused",
+      "reason": "The fixed foot joins both the base (0.2 mm) and the tray sidewall (0.8 mm); only this anchor is fused, leaving both flexure leaves and the output arm free.",
+      "a": "volume_plus",
+      "b": "rear_shell"
+    }
+  ],
+  "updatedAt": "2026-09-27T00:50:13.966Z",
+  "parameters": {
+    "rear_shell": {
+      "rear_shell_side_clearance": 0.5,
+      "rear_shell_base_thickness": 2.4,
+      "rear_shell_wall_thickness": 2.4,
+      "rear_shell_wall_height": 3.4,
+      "rear_shell_left_blank": 20,
+      "rear_shell_right_control": 20,
+      "rear_shell_hinge_setback": 4,
+      "rear_shell_corner_radius": 6,
+      "rear_shell_camera_width": 24,
+      "rear_shell_camera_length": 62,
+      "rear_shell_camera_x": 38,
+      "rear_shell_camera_y": 0,
+      "rear_shell_port_relief_length": 24,
+      "rear_shell_port_relief_y": 0,
+      "rear_shell_button_pitch": 24,
+      "rear_shell_button_stop_x": 76,
+      "rear_shell_button_stop_height": 7.6,
+      "rear_shell_button_stop_width": 2,
+      "rear_shell_output_slot_width": 7,
+      "rear_shell_wing_length": 96,
+      "rear_shell_button_stop_spacing": 9,
+      "rear_shell_button_stop_depth": 1
+    },
+    "left_rail": {
+      "left_rail_width": 5,
+      "left_rail_length": 96,
+      "left_rail_height": 10,
+      "left_rail_corner_radius": 1,
+      "left_rail_channel_depth": 2.8,
+      "left_rail_channel_height": 4.6,
+      "left_rail_mouth_height": 2.4,
+      "left_rail_lip_thickness": 0.7,
+      "left_rail_channel_center_z": 6,
+      "left_rail_bottom_stop": 3,
+      "left_rail_latch_y": -39,
+      "left_rail_latch_length": 3,
+      "left_rail_latch_depth": 0.6,
+      "left_rail_entry_length": 5
+    },
+    "right_rail": {
+      "right_rail_width": 5,
+      "right_rail_length": 96,
+      "right_rail_height": 10,
+      "right_rail_corner_radius": 1,
+      "right_rail_channel_depth": 2.8,
+      "right_rail_channel_height": 4.6,
+      "right_rail_mouth_height": 2.4,
+      "right_rail_lip_thickness": 0.7,
+      "right_rail_channel_center_z": 6,
+      "right_rail_bottom_stop": 3,
+      "right_rail_latch_y": -39,
+      "right_rail_latch_length": 3,
+      "right_rail_latch_depth": 0.6,
+      "right_rail_entry_length": 5
+    },
+    "volume_plus": {
+      "volume_plus_anchor_width": 4,
+      "volume_plus_anchor_span": 14,
+      "volume_plus_anchor_thickness": 1.2,
+      "volume_plus_flexure_length": 8,
+      "volume_plus_flexure_width": 2,
+      "volume_plus_flexure_thickness": 0.8,
+      "volume_plus_flexure_height": 6.4,
+      "volume_plus_flexure_spacing": 10,
+      "volume_plus_input_arm_length": 8,
+      "volume_plus_arm_thickness": 2,
+      "volume_plus_contact_x": -4,
+      "volume_plus_contact_height": 3.1,
+      "volume_plus_contact_width": 3,
+      "volume_plus_contact_thickness": 1.6,
+      "volume_plus_cap_width": 8,
+      "volume_plus_cap_length": 10,
+      "volume_plus_cap_thickness": 2,
+      "volume_plus_anchor_embed": 0.2
+    },
+    "volume_minus": {
+      "volume_minus_anchor_width": 4,
+      "volume_minus_anchor_span": 14,
+      "volume_minus_anchor_thickness": 1.2,
+      "volume_minus_flexure_length": 8,
+      "volume_minus_flexure_width": 2,
+      "volume_minus_flexure_thickness": 0.8,
+      "volume_minus_flexure_height": 6.4,
+      "volume_minus_flexure_spacing": 10,
+      "volume_minus_input_arm_length": 8,
+      "volume_minus_arm_thickness": 2,
+      "volume_minus_contact_x": -4,
+      "volume_minus_contact_height": 3.1,
+      "volume_minus_contact_width": 3,
+      "volume_minus_contact_thickness": 1.6,
+      "volume_minus_cap_width": 8,
+      "volume_minus_cap_length": 10,
+      "volume_minus_cap_thickness": 2,
+      "volume_minus_anchor_embed": 0.2
+    }
+  }
+}

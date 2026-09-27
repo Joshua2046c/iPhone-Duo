@@ -1,0 +1,66 @@
+{
+  "units": "mm",
+  "phone": {
+    "unfolded": [
+      164.6,
+      117.8,
+      5.2
+    ],
+    "folded": [
+      84.1,
+      117.8,
+      11.3
+    ],
+    "source": "user",
+    "rear_half_layout_nominal": [
+      117.8,
+      84.1
+    ],
+    "rear_half_layout_source": "default",
+    "hinge_edge": "+Y",
+    "screen_normal": "+Z"
+  },
+  "defaults": {
+    "side_clearance": 0.5,
+    "base_thickness": 2.4,
+    "wall_thickness": 2.4,
+    "wall_height": 3.4,
+    "left_blank_width": 20,
+    "right_control_width": 20,
+    "hinge_setback": 4,
+    "rail_length": 96,
+    "rail_channel_height": 4.6,
+    "rail_channel_depth": 2.8,
+    "camera_opening": [
+      24,
+      62
+    ],
+    "camera_center": [
+      38,
+      0
+    ],
+    "button_center_y": [
+      12,
+      -12
+    ],
+    "volume_contact_x": 59.0,
+    "overall_case_bbox": [
+      173.2,
+      96,
+      13.2
+    ],
+    "nominal_key_downstroke": 0.8,
+    "flexure_beam_size": [
+      8,
+      2,
+      0.8
+    ]
+  },
+  "verification": {
+    "phone_fit": false,
+    "joycon_fit": false,
+    "hinge_sweep": false,
+    "volume_actuation": false
+  },
+  "note": "默认接口值为结构模型参数，不是从参考图片量取的制造尺寸。无原机/手柄占位实体。"
+}

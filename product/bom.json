@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "draft",
+  "bom_ready": false,
+  "requirements_digest": "25fff52176650b04bd52a127489162ef8388fdec8f504345302a87ddbff49645",
+  "items": [
+    {
+      "id": "phone",
+      "name": "Apple iPhone Duo",
+      "quantity": 1,
+      "source": "user",
+      "procurement_status": "user_supplied"
+    },
+    {
+      "id": "joycon_l",
+      "name": "Nintendo Switch Joy-Con (L)，初代",
+      "quantity": 1,
+      "source": "user",
+      "procurement_status": "user_supplied"
+    },
+    {
+      "id": "joycon_r",
+      "name": "Nintendo Switch Joy-Con (R)，初代",
+      "quantity": 1,
+      "source": "user",
+      "procurement_status": "user_supplied"
+    },
+    {
+      "id": "rear_shell",
+      "name": "PETG 一体后盖壳原型，含左右槽形轨道与两路柔性音量键",
+      "quantity": 1,
+      "source": "default"
+    },
+    {
+      "id": "adhesive",
+      "name": "可移除双面胶垫，厚 0.3 mm，10 × 30 mm，原型固定用",
+      "quantity": 2,
+      "source": "default"
+    }
+  ],
+  "unresolved_items": [
+    "初代滑轨截面、锁扣尺寸需实配",
+    "手机音量键坐标、行程、相机与铰链尺寸待核实；现有模型采用明确标注的默认空间参数"
+  ]
+}
