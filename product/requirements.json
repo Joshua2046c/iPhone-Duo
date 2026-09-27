@@ -1,0 +1,83 @@
+{
+  "requirements": {
+    "product_class": {
+      "value": "mechanical",
+      "source": "default"
+    },
+    "product_name": {
+      "value": "iPhone Duo 初代 Joy-Con 半包后壳",
+      "source": "user"
+    },
+    "phone": {
+      "value": "iPhone Duo",
+      "source": "user"
+    },
+    "phone_open_mm": {
+      "value": {
+        "width": 164.6,
+        "height": 117.8,
+        "thickness": 5.2
+      },
+      "source": "user"
+    },
+    "phone_closed_mm": {
+      "value": {
+        "width": 84.1,
+        "height": 117.8,
+        "thickness": 11.3
+      },
+      "source": "user"
+    },
+    "controller": {
+      "value": "Nintendo Switch 初代 Joy-Con (L)/(R)，各一只",
+      "source": "user"
+    },
+    "layout_left_to_right": {
+      "value": [
+        "Joy-Con 滑轨",
+        "空白区域",
+        "横向 iPhone Duo",
+        "两个音量按钮",
+        "Joy-Con 滑轨"
+      ],
+      "source": "user"
+    },
+    "phone_pose": {
+      "value": "展开，内屏朝上，摄像头方向朝人",
+      "source": "user"
+    },
+    "shell_structure": {
+      "value": "手机后壳半包结构",
+      "source": "user"
+    },
+    "volume_control": {
+      "value": "手机原音量键在顶部；通过正面右侧两个独立按钮机械传导调音量",
+      "source": "user"
+    },
+    "base_board": {
+      "value": "无需电路板；纯机械附件",
+      "source": "default"
+    },
+    "mechanism_concept": {
+      "value": "两个独立正面柱塞，经两组转向摇臂和受导向推杆，驱动原机音量加减键；带独立回位、空行程与限位",
+      "source": "default"
+    },
+    "manufacturing_method": {
+      "value": "FDM 原型，PETG 主壳，独立可更换按键传导模块；滑轨优先金属成品",
+      "source": "default"
+    },
+    "deliverable": {
+      "value": "参数化装配 CAD 和 STEP；关键接口尺寸核实后进行实配验证",
+      "source": "default"
+    },
+    "electrical_scope": {
+      "value": "壳体不增加 Joy-Con 充电或有线连接，游戏通信沿用手柄与手机已有无线功能",
+      "source": "default"
+    }
+  },
+  "open_questions": [
+    "插入方向：左右侧安装、按初代原生滑轨从上向下滑入，还是沿水平方向从左/右向中心推入？",
+    "后壳范围：仅包摄像头所在半片背面并允许另一半折叠，还是覆盖展开后的整个背面且游戏时固定展开？",
+    "摄像头方向朝人：是摄像头所在机身边靠近玩家，还是要求摄像头镜头本身朝向玩家？"
+  ]
+}

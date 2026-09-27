@@ -1,0 +1,83 @@
+{
+  "version": 2,
+  "artifact_level": "assembly",
+  "deliverable_intent": "fit_check",
+  "summary": "iPhone Duo 初代 Joy-Con 半包背壳及右侧双音量机械传导组件。当前为需求草案，安装方向与半包范围待用户明确。",
+  "required_interfaces": [
+    {
+      "id": "phone_shell",
+      "kind": "mechanical",
+      "description": "iPhone Duo 后壳半包固定，不压内屏与铰链",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "joycon_rails",
+      "kind": "mechanical",
+      "description": "初代 Joy-Con 左右滑轨配合、止退和释放",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "volume_linkage",
+      "kind": "mechanical",
+      "description": "正面右侧双按钮到原机顶部音量键的独立传动",
+      "source": "user_requested",
+      "required": true
+    }
+  ],
+  "external_references": [
+    {
+      "id": "phone_dimensions",
+      "source": "user_requested",
+      "description": "用户上传的展开/闭合尺寸图",
+      "path": "product/references/uploads/20260927T003420271Z-1-ishot-2026-09-24-11-17-13.png"
+    },
+    {
+      "id": "phone_screen",
+      "source": "user_requested",
+      "description": "用户上传的内外屏示意",
+      "path": "product/references/uploads/20260927T003420271Z-2-ishot-2026-09-24-11-17-19.png"
+    }
+  ],
+  "assembly_story": {
+    "installation": "明确后壳范围与插入方向后，安装后壳、传导组件并插入左右初代 Joy-Con。",
+    "maintenance": "传导组件独立可拆换；保留 Joy-Con 释放按钮操作空间。",
+    "user_access": [
+      "内屏",
+      "顶部原机音量键",
+      "右侧双音量按钮",
+      "摄像头",
+      "Joy-Con 释放按钮",
+      "USB-C"
+    ]
+  },
+  "cad": {
+    "requirement": "required",
+    "designs": [
+      {
+        "role": "enclosure",
+        "design_id": "duo-joycon-case",
+        "description": "半包后壳、双音量传导机构与左右轨道安装组件",
+        "delivery_target": "fit_check",
+        "required_formats": [
+          "step"
+        ],
+        "interface_ids": [
+          "phone_shell",
+          "joycon_rails",
+          "volume_linkage"
+        ],
+        "reference_ids": [
+          "phone_dimensions",
+          "phone_screen"
+        ]
+      }
+    ]
+  },
+  "open_questions": [
+    "插入方向：左右侧安装、按初代原生滑轨从上向下滑入，还是沿水平方向从左/右向中心推入？",
+    "后壳范围：仅包摄像头所在半片背面并允许另一半折叠，还是覆盖展开后的整个背面且游戏时固定展开？",
+    "摄像头方向朝人：是摄像头所在机身边靠近玩家，还是要求摄像头镜头本身朝向玩家？"
+  ]
+}
