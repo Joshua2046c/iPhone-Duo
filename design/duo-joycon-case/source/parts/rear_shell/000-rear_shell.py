@@ -1,3 +1,4 @@
+# cell: rear_shell
 
 # Phone envelope from the user's size sheet, rotated into the reference pose.
 PHONE_X = 117.8
@@ -64,7 +65,12 @@ with BuildSketch() as floor_profile:
         Line((xl+outer_r,yt),(tl,yt))
         Bezier((tl,yt),((tl-join)/2,yt),((tl-join)/2,hinge_y),(-join,hinge_y))
     make_face()
+back_bevel=param("rear_shell_back_chamfer",0.6)
+edge_bevel=param("rear_shell_outer_chamfer",0.3)
+front_bevel=param("rear_shell_front_chamfer",0.4)
 s = Pos(0,0,-base)*extrude(floor_profile.sketch,amount=base)
+# Only the outside wire of the rear face is beveled, before any interior or rail exists.
+s=chamfer(s.faces().sort_by(Axis.Z)[0].outer_wire().edges(),length=back_bevel)
 # Three-sided low phone wall rises from the common floor; no wall spans the hinge.
 rim=extrude(RectangleRounded(ox,oy,corner),amount=rise)
 rim=rim-extrude(RectangleRounded(ix,iy,max(corner-wall,0.5)),amount=rise+1)
@@ -76,9 +82,10 @@ housing_h=param("rear_shell_wing_wall_height",8.6)
 rail_allowance=param("rear_shell_wing_rail_allowance",0.2)
 support_inset=param("rear_shell_cover_support_inset",12.0)
 support_depth=param("rear_shell_cover_support_depth",6.0)
-tape_w=param("rear_shell_cover_tape_width",12.0)
-tape_l=param("rear_shell_cover_tape_length",4.0)
-tape_d=param("rear_shell_cover_tape_depth",0.3)
+socket_w=param("rear_shell_cover_socket_width",4.4)
+socket_d=param("rear_shell_cover_socket_depth",8.4)
+socket_relief=param("rear_shell_socket_retention_relief",0.4)
+capture_h=param("rear_shell_socket_capture_height",2.2)
 port_h=param("rear_shell_port_tunnel_height",4.2)
 port_z=param("rear_shell_port_tunnel_z",2.3)
 key_h=param("rear_shell_output_tunnel_height",3.6)
@@ -111,15 +118,26 @@ for sign, extension in [(-1,left),(1,right)]:
     if sign<0:
         outline=Rot(0,0,180)*outline
     outer=Pos(wc,center_y,0)*extrude(outline,amount=housing_h)
-    inner=wing_profile(wing_w-2*wall,wing_depth-2*wall,hinge_y-front_y-2*wall,transition,outer_r)
-    if sign<0:
-        inner=Rot(0,0,180)*inner
+    # Chamfer the outside end shoulders only, never the phone-facing or rail-side long edge.
+    shoulders=[e for e in outer.edges() if all(abs(v.Z-housing_h)<1e-5 for v in e.vertices()) and abs(e.center().Y-center_y)>(hinge_y-front_y)/2-1e-5]
+    assert len(shoulders)>0
+    outer=chamfer(shoulders,length=edge_bevel)
+    # End voids and tape recesses are replaced by solid square-socket lands.
+    pocket_l=wing_depth-2*support_inset-support_depth
+    inner=RectangleRounded(wing_w-2*wall,pocket_l,outer_r)
     chamber=outer-Pos(wc,center_y,0)*extrude(inner,amount=housing_h+1)
     for end in [-1,1]:
         sy=center_y+end*(wing_depth/2-support_inset)
-        chamber+=outer & (Pos(wc,sy,housing_h/2)*Box(wing_w,support_depth,housing_h))
-        chamber-=Pos(wc,sy,housing_h-tape_d/2)*Box(tape_w,tape_l,tape_d)
+        chamber-=Pos(wc,sy,housing_h-socket_d/2)*Box(socket_w,socket_w,socket_d)
+        chamber-=Pos(wc,sy,housing_h-socket_d+capture_h/2)*Box(socket_w+2*socket_relief,socket_w,capture_h)
     s+=chamber
+
+# Fill the exterior triangular junctions without entering the phone keep-out.
+phone_keepout=extrude(RectangleRounded(ix,iy,max(corner-wall,0.5)),amount=rise+1)
+for sign in [-1,1]:
+    corner_zone=Pos(sign*(ox/2-corner/2),front_y+corner/2,rise/2)*Box(corner,corner,rise)
+    bridge=(extrude(floor_profile.sketch,amount=rise) & corner_zone)-phone_keepout
+    s+=bridge
 
 # Photo 2 supplies corner location/orientation only; cutout dimensions are tunable defaults.
 camera = Pos(camx,camy,-base-1)*extrude(RectangleRounded(camw,camh,camw/2-0.1),amount=base+rise+2)
@@ -197,6 +215,10 @@ def make_right_rail():
 s=s+make_right_rail()
 
 s=s.clean()
+# The front exterior rim edge is outside the phone contact faces; rails are excluded by Z/Y.
+front_edges=[e for e in s.edges() if all(abs(v.Z-rise)<1e-5 and abs(v.Y-front_y)<1e-5 for v in e.vertices()) and e.length>wall]
+assert len(front_edges)>0
+s=chamfer(front_edges,length=front_bevel)
 assert len(s.solids()) == 1, "Rails and lower housing must be one connected solid"
 s.color=Color(0.16,0.19,0.23)
 publish("rear_shell",s,"滑轨一体下壳",material="petg")

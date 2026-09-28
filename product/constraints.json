@@ -62,7 +62,7 @@
     "cover_size": [
       21.8,
       95.6,
-      1.6
+      9.6
     ],
     "cover_roof_thickness": 1.6,
     "cover_center_x": [
@@ -70,11 +70,6 @@
       70.5
     ],
     "cover_center_y": -3.45,
-    "cover_tape_pocket": [
-      12,
-      4,
-      0.3
-    ],
     "left_sound_slot_size": [
       14,
       2.8
@@ -88,7 +83,7 @@
     "key_cap_protrusion_without_mark": 1.2,
     "static_linkage_cover_minimum_gap": 0.2,
     "cover_z_range": [
-      8.6,
+      0.6,
       10.2
     ],
     "wing_housing_height": 8.6,
@@ -99,7 +94,6 @@
       32.55,
       -39.45
     ],
-    "cover_tape_pocket_top_z": 8.6,
     "phone_side_sound_tunnel_size": [
       24,
       4.2
@@ -114,7 +108,39 @@
       173.2,
       96,
       11
-    ]
+    ],
+    "cover_plate_size": [
+      21.8,
+      95.6,
+      1.6
+    ],
+    "cover_plate_z_range": [
+      8.6,
+      10.2
+    ],
+    "cover_support_depth": 8.4,
+    "wing_cavity_length": 63.6,
+    "cover_peg_width": 4,
+    "cover_peg_length": 8,
+    "cover_peg_spacing": 72,
+    "cover_peg_split": 1.6,
+    "cover_peg_root": 0.8,
+    "cover_peg_leadin": 0.4,
+    "cover_peg_retention": 0.4,
+    "cover_peg_retention_height": 1.2,
+    "cover_peg_release_height": 0.4,
+    "cover_socket_width": 4.4,
+    "cover_socket_depth": 8.4,
+    "cover_socket_lower_relief": [
+      5.2,
+      4.4,
+      2.3
+    ],
+    "cover_peg_bottom_clearance": 0.4,
+    "cover_peg_side_clearance": 0.2,
+    "back_chamfer": 0.6,
+    "outer_shoulder_chamfer": 0.3,
+    "front_outer_chamfer": 0.4
   },
   "verification": {
     "phone_fit": false,
@@ -124,7 +150,7 @@
     "cover_retention": false,
     "acoustic_performance": false
   },
-  "note": "底板为连续单件，双翼侧壁和端部承台并入底壳，下部不再随盖板拆下。顶部随形薄盖沿四处对称曲线收边，手机侧仅留低位声道及两处传动口。胶槽位于壳内承台顶部，盖板落座Z=8.6。真实手机/手柄接口、完整开合、声学性能与胶粘保持力均未实配。相机尺寸和位置仍是用户照片布局对应的可调初值。",
+  "note": "连续底板、双轨及双翼侧壁为单实体。标注端部空洞、旧胶槽及前缘外侧缺口已补齐；每盖两根开槽方桩与下壳方孔卡接，带可退出斜面。背面外轮廓与外露边缘局部倒角，排除轨道和手机内侧。盖板落座Z=8.6，桩底Z=0.6；盖板无需胶带，手机固定胶垫保留。真实手机/手柄接口、完整开合、声学性能和方桩插拔保持力均未实配。相机尺寸与位置仍为照片对应的可调初值。",
   "construction": {
     "rail_lower_shell_single_solid": true,
     "source": "user",

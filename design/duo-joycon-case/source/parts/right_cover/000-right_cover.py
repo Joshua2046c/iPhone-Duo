@@ -1,3 +1,5 @@
+# cell: right_cover
+# cell: right_cover
 
 w=param("right_cover_width",22.2)
 length=param("right_cover_length",96.0)
@@ -43,6 +45,29 @@ key_pitch=param("right_cover_key_pitch",24.0)
 for sign in [-1,1]:
     lid-=Pos(key_x,key_y+sign*key_pitch/2,height-roof)*extrude(RectangleRounded(hole_w,hole_l,hole_r),amount=roof+1)
 
+peg_w=param("right_cover_peg_width",4.0)
+peg_l=param("right_cover_peg_length",8.0)
+peg_pitch=param("right_cover_peg_spacing",72.0)
+peg_x=param("right_cover_peg_x",0.0)
+lead=param("right_cover_peg_leadin",0.4)
+split=param("right_cover_peg_split",1.6)
+root=param("right_cover_peg_root",0.8)
+barb=param("right_cover_peg_retention",0.4)
+barb_h=param("right_cover_peg_retention_height",1.2)
+release_h=param("right_cover_peg_release_height",0.4)
+for end in [-1,1]:
+    yy=end*peg_pitch/2
+    bottom=height-roof-peg_l
+    peg=Pos(peg_x,yy,bottom+peg_l/2)*Box(peg_w,peg_w,peg_l)
+    peg=chamfer(peg.faces().sort_by(Axis.Z)[0].edges(),length=lead)
+    ramp=loft([Pos(peg_x,yy,bottom+lead)*Rectangle(peg_w,peg_w),
+               Pos(peg_x,yy,bottom+lead+barb_h)*Rectangle(peg_w+2*barb,peg_w),
+               Pos(peg_x,yy,bottom+lead+barb_h+release_h)*Rectangle(peg_w,peg_w)],ruled=True)
+    peg+=ramp
+    peg-=Pos(peg_x,yy,bottom+(peg_l-root)/2-0.05)*Box(split,peg_w+2*barb+1,peg_l-root+0.1)
+    lid+=peg
+# Pegs and relieved square sockets are separated in their seated position.
+# Their spring arms deflect during insertion; the retained shoulders need no static overlap declaration.
 lid.color=Color(0.18,0.21,0.25)
 publish("right_cover",lid,"右侧曲线音量上盖",material="petg")
 assert len(lid.solids())==1

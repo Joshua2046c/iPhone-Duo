@@ -92,11 +92,17 @@
       "source": "user_requested",
       "description": "滑轨与下半部壳体为一体结构的红线参考",
       "path": "product/references/uploads/20260928T141931364Z-1-mark.png"
+    },
+    {
+      "id": "filled_ends_square_posts_chamfers",
+      "source": "user_requested",
+      "description": "补齐红框缺口与端部空洞，上盖方桩连接，底壳背面及外缘倒角但排除轨道和手机内侧",
+      "path": "product/references/uploads/20260928T142555511Z-1-mark.png"
     }
   ],
   "assembly_story": {
     "installation": "后盖半片置入三边敞口浅托壳，以可移除薄胶垫固定；另一半沿 +Y 自由开合；Joy-Con 从上端沿两侧槽形滑轨向下插入。",
-    "maintenance": "左右随形薄上盖从顶部移除，检修封闭底壳腔体内的机构；上盖薄胶槽位于壳内承台，柔性传导组件与底壳一体打印；保留 Joy-Con 释放按钮操作空间。",
+    "maintenance": "左右随形上盖各以两根开槽方桩连接下壳方孔，止退肩卡入孔底扩腔；从端部逐步解开卡接取下上盖，检修声腔和音量机构。柔性传导组件与底壳一体打印；保留Joy-Con释放按钮操作空间。",
     "user_access": [
       "内屏",
       "顶部原机音量键",
@@ -134,7 +140,8 @@
           "rear_camera_photo",
           "centered_rails_and_covers",
           "closed_lower_housing_top_lids",
-          "integrated_rails_lower_shell"
+          "integrated_rails_lower_shell",
+          "filled_ends_square_posts_chamfers"
         ]
       }
     ]

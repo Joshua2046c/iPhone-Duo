@@ -12,7 +12,7 @@
           "target": "rear_shell",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/rear_shell/000-rear_shell.py",
-          "sha256": "36933717ba0a46187681fcf420dbe4558e036b3c14e0a411d84bf0cece0a0bfa"
+          "sha256": "1d9848db572fc423902163ca7189bd72b2fbade188c27185d6cfe665713d9641"
         }
       ],
       "dependencies": []
@@ -54,7 +54,7 @@
           "target": "left_cover",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/left_cover/000-left_cover.py",
-          "sha256": "4bc08885cbf8e07b756872dd2413e20292ec17e2865dd3c57d33e443b11c1d33"
+          "sha256": "11baca8931abd1b112017fe9b763f4370e4614d00cbca1ce9aac3594b2a6e9d6"
         }
       ],
       "dependencies": []
@@ -68,7 +68,7 @@
           "target": "right_cover",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/right_cover/000-right_cover.py",
-          "sha256": "5b0b0b7045b69e80eb203b15cda3691a92ae6bef4046eb190d10b2d914be2385"
+          "sha256": "d5e5dee734c8bb398cc814ad0b82804ab9e8d0b4ab29a05d4f4f79907dacd064"
         }
       ],
       "dependencies": []
@@ -81,7 +81,7 @@
       "label": "滑轨一体下壳",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "11584d0e07b1032205da7bfdc57d271a2b5af7056c7a6d3d180bf3031500de2e",
+      "shapeHash": "9632e7c49794f5fa48aba7ed11ad184f7f5afe01721ecf466dbaec5c0d8740da",
       "transform": {
         "positionMm": [
           0,
@@ -162,7 +162,7 @@
       "label": "左侧曲线出声上盖",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "daa1fe05477dbb432b21f16c8b7d21627b300c5752204badd4777e7e4f2f506c",
+      "shapeHash": "457bc32f9400f66934683796618f385e5fae015e3b968c7f1782bb0fa95769f6",
       "transform": {
         "positionMm": [
           -70.5,
@@ -189,7 +189,7 @@
       "label": "右侧曲线音量上盖",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "6edba15392e4015fffce88b5554a3d6caaaa8a877e16b30eee66df6c7a849d37",
+      "shapeHash": "d1b4cc890b8981138ff880b12f5f21320c5ba49688dc8b5530938bee182b6745",
       "transform": {
         "positionMm": [
           70.5,
@@ -226,7 +226,7 @@
       "b": "rear_shell"
     }
   ],
-  "updatedAt": "2026-09-28T14:22:09.217Z",
+  "updatedAt": "2026-09-28T14:34:32.340Z",
   "parameters": {
     "rear_shell": {
       "rear_shell_side_clearance": 0.5,
@@ -257,10 +257,7 @@
       "rear_shell_wing_wall_height": 8.6,
       "rear_shell_wing_rail_allowance": 0.2,
       "rear_shell_cover_support_inset": 12,
-      "rear_shell_cover_support_depth": 6,
-      "rear_shell_cover_tape_width": 12,
-      "rear_shell_cover_tape_length": 4,
-      "rear_shell_cover_tape_depth": 0.3,
+      "rear_shell_cover_support_depth": 8.4,
       "rear_shell_port_tunnel_height": 4.2,
       "rear_shell_port_tunnel_z": 2.3,
       "rear_shell_output_tunnel_height": 3.6,
@@ -294,7 +291,14 @@
       "right_rail_latch_length": 3,
       "right_rail_latch_depth": 0.6,
       "right_rail_entry_length": 5,
-      "right_rail_foundation_height": 2.4
+      "right_rail_foundation_height": 2.4,
+      "rear_shell_back_chamfer": 0.6,
+      "rear_shell_outer_chamfer": 0.3,
+      "rear_shell_front_chamfer": 0.4,
+      "rear_shell_cover_socket_width": 4.4,
+      "rear_shell_cover_socket_depth": 8.4,
+      "rear_shell_socket_retention_relief": 0.4,
+      "rear_shell_socket_capture_height": 2.3
     },
     "volume_plus": {
       "volume_plus_anchor_width": 4,
@@ -348,7 +352,17 @@
       "left_cover_slot_y": 0,
       "left_cover_inner_length": 83,
       "left_cover_transition_span": 16,
-      "left_cover_seam_inset": 0.2
+      "left_cover_seam_inset": 0.2,
+      "left_cover_peg_width": 4,
+      "left_cover_peg_length": 8,
+      "left_cover_peg_spacing": 72,
+      "left_cover_peg_x": 0,
+      "left_cover_peg_leadin": 0.4,
+      "left_cover_peg_split": 1.6,
+      "left_cover_peg_root": 0.8,
+      "left_cover_peg_retention": 0.4,
+      "left_cover_peg_retention_height": 1.2,
+      "left_cover_peg_release_height": 0.4
     },
     "right_cover": {
       "right_cover_width": 22.2,
@@ -364,7 +378,17 @@
       "right_cover_key_pitch": 24,
       "right_cover_inner_length": 83,
       "right_cover_transition_span": 16,
-      "right_cover_seam_inset": 0.2
+      "right_cover_seam_inset": 0.2,
+      "right_cover_peg_width": 4,
+      "right_cover_peg_length": 8,
+      "right_cover_peg_spacing": 72,
+      "right_cover_peg_x": 0,
+      "right_cover_peg_leadin": 0.4,
+      "right_cover_peg_split": 1.6,
+      "right_cover_peg_root": 0.8,
+      "right_cover_peg_retention": 0.4,
+      "right_cover_peg_retention_height": 1.2,
+      "right_cover_peg_release_height": 0.4
     }
   }
 }
