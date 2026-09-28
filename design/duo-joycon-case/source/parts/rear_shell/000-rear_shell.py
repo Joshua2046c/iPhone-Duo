@@ -1,3 +1,4 @@
+# cell: rear_shell
 
 # Phone envelope from the user's size sheet, rotated into the reference pose.
 PHONE_X = 117.8
@@ -10,10 +11,10 @@ left = param("rear_shell_left_blank", 20.0)
 right = param("rear_shell_right_control", 20.0)
 setback = param("rear_shell_hinge_setback", 4.0)
 corner = param("rear_shell_corner_radius", 6.0)
-camw = param("rear_shell_camera_width", 24.0)
-camh = param("rear_shell_camera_length", 62.0)
-camx = param("rear_shell_camera_x", 38.0)
-camy = param("rear_shell_camera_y", 0.0)
+camw = param("rear_shell_camera_width", 22.0)
+camh = param("rear_shell_camera_length", 56.0)
+camx = param("rear_shell_camera_x", 41.5)
+camy = param("rear_shell_camera_y", -8.5)
 portw = param("rear_shell_port_relief_length", 24.0)
 porty = param("rear_shell_port_relief_y", 0.0)
 key_pitch = param("rear_shell_button_pitch", 24.0)
@@ -28,17 +29,48 @@ ix = PHONE_X + 2*gap
 iy = PHONE_HALF_Y + 2*gap
 ox = ix+2*wall
 oy = iy+2*wall
-# Rounded rear tray, open at the hinge and never wrapped over the inner display.
-s = extrude(RectangleRounded(ox,oy,corner), amount=base+rise)
-s = Pos(0,0,-base)*s
-cavity = Pos(0,0,0)*extrude(RectangleRounded(ix,iy,max(corner-wall,0.5)),amount=rise+1)
-s = s-cavity
+
+transition = param("rear_shell_transition_span",16.0)
+foundation = param("rear_shell_rail_foundation_width",4.8)
+outer_r = param("rear_shell_outline_radius",1.0)
 hinge_y = PHONE_HALF_Y/2-setback
-s = s-Pos(0,hinge_y+oy/2,0)*Box(ox+2,oy,30)
-# Solid blank/control wings carry the rails without bridging the folding half.
-lwing=Pos(-ox/2-left/2+0.2,0,-base)*extrude(RectangleRounded(left+0.4,wing_depth,3),amount=base)
-rwing=Pos(ox/2+right/2-0.2,0,-base)*extrude(RectangleRounded(right+0.4,wing_depth,3),amount=base)
-s=s+lwing+rwing
+front_y = -oy/2
+xl = -ox/2-left-foundation
+xr = ox/2+right+foundation
+yt = wing_depth/2
+yb = -wing_depth/2
+join = ix/2
+tl = max(xl+outer_r, -join-transition)
+tr = min(xr-outer_r, join+transition)
+front_join = ox/2-corner
+k = 0.5522847498  # cubic circle approximation coefficient, not a dimension
+# A single closed outline and a single extrusion form the entire load-bearing floor.
+with BuildSketch() as floor_profile:
+    with BuildLine():
+        Line((-join,hinge_y),(join,hinge_y))
+        Bezier((join,hinge_y),(join+(tr-join)*0.5,hinge_y),(tr-(tr-join)*0.5,yt),(tr,yt))
+        Line((tr,yt),(xr-outer_r,yt))
+        Bezier((xr-outer_r,yt),(xr-outer_r+k*outer_r,yt),(xr,yt-outer_r+k*outer_r),(xr,yt-outer_r))
+        Line((xr,yt-outer_r),(xr,yb+outer_r))
+        Bezier((xr,yb+outer_r),(xr,yb+outer_r-k*outer_r),(xr-outer_r+k*outer_r,yb),(xr-outer_r,yb))
+        Line((xr-outer_r,yb),(tr,yb))
+        Bezier((tr,yb),((tr+front_join)/2,yb),((tr+front_join)/2,front_y),(front_join,front_y))
+        Line((front_join,front_y),(-front_join,front_y))
+        Bezier((-front_join,front_y),((tl-front_join)/2,front_y),((tl-front_join)/2,yb),(tl,yb))
+        Line((tl,yb),(xl+outer_r,yb))
+        Bezier((xl+outer_r,yb),(xl+outer_r-k*outer_r,yb),(xl,yb+outer_r-k*outer_r),(xl,yb+outer_r))
+        Line((xl,yb+outer_r),(xl,yt-outer_r))
+        Bezier((xl,yt-outer_r),(xl,yt-outer_r+k*outer_r),(xl+outer_r-k*outer_r,yt),(xl+outer_r,yt))
+        Line((xl+outer_r,yt),(tl,yt))
+        Bezier((tl,yt),((tl-join)/2,yt),((tl-join)/2,hinge_y),(-join,hinge_y))
+    make_face()
+s = Pos(0,0,-base)*extrude(floor_profile.sketch,amount=base)
+# Three-sided low phone wall rises from the common floor; no wall spans the hinge.
+rim=extrude(RectangleRounded(ox,oy,corner),amount=rise)
+rim=rim-extrude(RectangleRounded(ix,iy,max(corner-wall,0.5)),amount=rise+1)
+rim=rim-Pos(0,hinge_y+oy/2,rise/2)*Box(ox+2,oy,rise+2)
+s=s+rim
+# Photo 2 supplies corner location/orientation only; cutout dimensions are tunable defaults.
 camera = Pos(camx,camy,-base-1)*extrude(RectangleRounded(camw,camh,camw/2-0.1),amount=base+rise+2)
 s=s-camera
 s=s-Pos(-ox/2,porty,rise/2)*Box(wall*3,portw,rise+0.2)

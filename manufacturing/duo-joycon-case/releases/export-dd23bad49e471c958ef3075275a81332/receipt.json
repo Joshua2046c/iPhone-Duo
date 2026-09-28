@@ -1,0 +1,177 @@
+{
+  "designId": "duo-joycon-case",
+  "revision": "f9b08fb1aa018d55f09363b75dbcaff4d6765ef6e27812bd1d0bd184716d21f0",
+  "schemaVersion": 2,
+  "exportId": "export-dd23bad49e471c958ef3075275a81332",
+  "generatedAt": "2026-09-28T03:48:32.898Z",
+  "designSha256": "d1191af28e4b503311e62572784a19e55f15b1eed08aa3d7805c67979017e5e8",
+  "role": "enclosure",
+  "stateHash": "7201018e678b687a615f6fd17c4c849f4562301c50edda04e3735faadeb569b5",
+  "stateManifest": {
+    "schemaVersion": 3,
+    "designId": "duo-joycon-case",
+    "role": "enclosure",
+    "design": {
+      "revision": "f9b08fb1aa018d55f09363b75dbcaff4d6765ef6e27812bd1d0bd184716d21f0",
+      "designSha256": "bbb76f8ba9e3b915c49048fdb32ab73fd9f4a8add26a2cd50ebd97bbb93a934e",
+      "manifestSha256": "3c32f6b4ed70f6ddba122354dbc6441efac6cdb887ee98ed072e020aa0f88c56",
+      "stepSha256": "930caa5dc2e2012ddd1c4742b345cc36537e6e7ae27a39abbcba9816c7e0fcdc",
+      "pcbReleases": []
+    },
+    "brief": {
+      "path": "design/duo-joycon-case/README.md",
+      "sha256": "5f78a12ffaaa625788d9cb24ea499ccfedd37b5fd6baef74e8b5dea13ebf336c"
+    },
+    "requirement": {
+      "artifactContractPath": "product/contract.json",
+      "artifactContractSha256": "70b07f437220a6471042d64e022a105fb492939fda186eb8c7cfa8d0f5ca6076",
+      "designRequirementSha256": "04ade953cf73ed846d3332c2f9315d99d5cf8a7f971c9704588bf6666383a150",
+      "inputs": [
+        {
+          "role": "external-reference",
+          "id": "continuous_base_outline",
+          "path": "product/references/uploads/20260928T034345208Z-1-mark.png",
+          "sha256": "85fafd9cd169749af231cbbc18e8316a9b6ace692dbbe0f51ed2a29abc6e0911",
+          "sizeBytes": 1037461
+        },
+        {
+          "role": "external-reference",
+          "id": "orientation_reference",
+          "path": "product/references/uploads/20260927T004006717Z-1-ishot-2026-09-27-12-07-53.png",
+          "sha256": "f02f110425f2169d889c4f4e948864b4d4cbdd939e1046efcc94cc933dc064d0",
+          "sizeBytes": 137274
+        },
+        {
+          "role": "external-reference",
+          "id": "phone_dimensions",
+          "path": "product/references/uploads/20260927T003420271Z-1-ishot-2026-09-24-11-17-13.png",
+          "sha256": "8f23ca89ae44d83f6e5fe8191739144497e094a7f307ebd7a659af18441456e7",
+          "sizeBytes": 77162
+        },
+        {
+          "role": "external-reference",
+          "id": "phone_screen",
+          "path": "product/references/uploads/20260927T003420271Z-2-ishot-2026-09-24-11-17-19.png",
+          "sha256": "3cd0c76b2f4e4e25ca73901e9e3ca58b776705c801057a30c9e69e620c1150f6",
+          "sizeBytes": 94709
+        },
+        {
+          "role": "external-reference",
+          "id": "rail_reference_2",
+          "path": "product/references/uploads/20260927T004006717Z-2-ishot-2026-09-27-8-36-31.png",
+          "sha256": "79b974f22c817d0f5878f4d51b1b67aef557180ccb8825a505c2088df6052859",
+          "sizeBytes": 275962
+        },
+        {
+          "role": "external-reference",
+          "id": "rail_reference_3",
+          "path": "product/references/uploads/20260927T004006717Z-3-2026-09-27-8-36-50.png",
+          "sha256": "3a32b52c26b7b4ddedf75df076a90f31738d83e2f557d3c902314a0d7826bc7e",
+          "sizeBytes": 70323
+        },
+        {
+          "role": "external-reference",
+          "id": "rail_reference_4",
+          "path": "product/references/uploads/20260927T004006717Z-4-2026-09-27-8-37-00.png",
+          "sha256": "bc6070c33cd613a659e01cb440f238edc150db7b448a9e483e3df74fb9b7a8e9",
+          "sizeBytes": 155302
+        },
+        {
+          "role": "external-reference",
+          "id": "rear_camera_photo",
+          "path": "product/references/uploads/20260928T034345208Z-2-image.png",
+          "sha256": "85fcac2cf565964fed3f113ae81833f0899fbcb98642c6317040e269d764f0ed",
+          "sizeBytes": 37079
+        }
+      ]
+    },
+    "delivery": {
+      "target": "fit_check",
+      "formats": [
+        "step"
+      ]
+    },
+    "stateHash": "7201018e678b687a615f6fd17c4c849f4562301c50edda04e3735faadeb569b5"
+  },
+  "buildArtifacts": {
+    "manifestSha256": "3c32f6b4ed70f6ddba122354dbc6441efac6cdb887ee98ed072e020aa0f88c56",
+    "stepSha256": "930caa5dc2e2012ddd1c4742b345cc36537e6e7ae27a39abbcba9816c7e0fcdc"
+  },
+  "exportAlgorithm": {
+    "version": 1,
+    "bootstrapSha256": "f4939328ef685300fcdaa250c860428f6b9e009d10931b20d36728e55e0029e4"
+  },
+  "sourceHashes": {
+    "left_rail/left_rail": "201c923cc3ab1a01e0bc09e8fc2f16766e00d4688df281a3749ae87342911e43",
+    "rear_shell/rear_shell": "a7d7dc790080e3967f4a518483de5ac9a5a4f4ae8eba08b3bb554f8bfe1a0ca2",
+    "right_rail/right_rail": "92ff58fa579918602ed8175d046f84a2e819fb35b5e685984e5ac796942febd8",
+    "volume_minus/volume_minus": "39cc0b11aaaad53b9377f23750d06a657a371d7687b623db928c8b3453b6d10c",
+    "volume_plus/volume_plus": "21043c6de6fe4226005a41824f2b7cdb1db6d65117a426799a5c33bbfd922c66"
+  },
+  "assetHashes": {},
+  "shapeHashes": {
+    "left_rail": "20e3901c0b10f3bfaa6dc8fcca57bdafabc50bd3e997ab6f8e6789594285a061",
+    "rear_shell": "298da313aa7251b88804f7f117ab07b388bc08d22860be2bf628ffb73ff61690",
+    "right_rail": "ca2a83d5f847332a77be892b79b3a4f7528b4d5b304d49c54dfc5a723096b81b",
+    "volume_minus": "e030403c0e8a9f5a7e293a9e337a674bbc3eb03c7ce0df143c6721ab337b80aa",
+    "volume_plus": "4cd0b79ab49be9129d5ffa3a981d78e4eed258034642ef4b8d01bf2cb69ce834"
+  },
+  "runtime": {
+    "manifestHash": "56a1de5d760e9f5c1dd991c57c86f24fbfb7da361b3d55b9d4cb65cdabe66a74",
+    "pythonVersion": "3.12.13",
+    "build123dVersion": "0.10.0",
+    "ocpVersion": "7.8.1.1.post1",
+    "cadpyHash": "e8b3788bab31d790595e4c3306dda85dfe057c87a4fc64f7ef3eab254239b7ba"
+  },
+  "artifacts": [
+    {
+      "path": "manufacturing/duo-joycon-case/releases/export-dd23bad49e471c958ef3075275a81332/model.step",
+      "role": "model/step",
+      "sha256": "930caa5dc2e2012ddd1c4742b345cc36537e6e7ae27a39abbcba9816c7e0fcdc",
+      "sizeBytes": 841410
+    }
+  ],
+  "interference": {
+    "summary": "2 interfering pairs",
+    "counts": {
+      "objects": 5,
+      "pairs": 10,
+      "exact": 0,
+      "cached": 4,
+      "interference": 2,
+      "undeclared": 0,
+      "over_budget": 0,
+      "undetermined": 0
+    },
+    "overlaps": [
+      {
+        "a": "rear_shell",
+        "b": "volume_minus",
+        "verdict": "declared",
+        "kind": "fused",
+        "reason": "The fixed foot joins both the base (0.2 mm) and the tray sidewall (0.8 mm); only this anchor is fused, leaving both flexure leaves and the output arm free.",
+        "maxDepthMm": 0.8246,
+        "volumeMm3": 14.56
+      },
+      {
+        "a": "rear_shell",
+        "b": "volume_plus",
+        "verdict": "declared",
+        "kind": "fused",
+        "reason": "The fixed foot joins both the base (0.2 mm) and the tray sidewall (0.8 mm); only this anchor is fused, leaving both flexure leaves and the output arm free.",
+        "maxDepthMm": 0.8246,
+        "volumeMm3": 14.56
+      }
+    ]
+  },
+  "authority": {
+    "version": 1,
+    "algorithm": "hmac-sha256",
+    "keyId": "761657b6d664e71812fd01e01c1125b1",
+    "projectId": "3d45b24e-981b-4bd8-9704-a2998fdf1cb7",
+    "receiptPath": "manufacturing/duo-joycon-case/releases/export-dd23bad49e471c958ef3075275a81332/receipt.json",
+    "payloadSha256": "279f9723da98d1bd0dfbdff92e438a1ec99cdc9d146a6496dcb358aa1b25c8b4",
+    "mac": "57d7ee419e3cedab1029500b73b9cabaa183e34c69af849391f914c0d4503a1c"
+  },
+  "status": "handoff"
+}

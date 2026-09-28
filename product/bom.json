@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "draft",
   "bom_ready": false,
-  "requirements_digest": "25fff52176650b04bd52a127489162ef8388fdec8f504345302a87ddbff49645",
+  "requirements_digest": "ec0b23f8110c069476569fef4449e35851ec937b695102733150d30b3cf9aac7",
   "items": [
     {
       "id": "phone",
@@ -27,7 +27,7 @@
     },
     {
       "id": "rear_shell",
-      "name": "PETG 一体后盖壳原型，含左右槽形轨道与两路柔性音量键",
+      "name": "PETG 连续整板后盖壳原型，左右平滑过渡，含槽形滑轨与柔性音量键",
       "quantity": 1,
       "source": "default"
     },

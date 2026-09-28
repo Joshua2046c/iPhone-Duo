@@ -1,3 +1,4 @@
+# cell: left_rail
 
 w=param("left_rail_width",5.0)
 length=param("left_rail_length",96.0)
@@ -14,7 +15,9 @@ latch_len=param("left_rail_latch_length",3.0)
 latch_depth=param("left_rail_latch_depth",0.6)
 entry=param("left_rail_entry_length",5.0)
 # Custom groove inspired by user's red-box views. These are NOT Nintendo-certified dimensions.
-rail=extrude(RectangleRounded(w,length,rounding),amount=height)
+foundation=param("left_rail_foundation_height",2.4)
+# The common floor belongs exclusively to rear_shell. The rail starts flush on it.
+rail=Pos(0,0,foundation)*extrude(RectangleRounded(w,length,rounding),amount=height-foundation)
 side=-1
 run=length-stop+1
 cy=stop/2+0.5
@@ -25,5 +28,4 @@ rail=rail-Pos(side*(w/2-channel_d/2),length/2-entry/2+0.1,channel_z)*Box(channel
 rail=rail-Pos(side*(w/2-lip-channel_d-latch_depth/2+0.1),latch_y,channel_z)*Box(latch_depth+0.2,latch_len,channel_h/2)
 rail.color=Color(0.20,0.30,0.38)
 publish("left_rail",rail,"左侧槽形滑轨",material="petg")
-fit("left_rail","rear_shell",kind="fused",reason="Custom rail root is fused into the wing edge for a single printed shell.")
 assert len(rail.solids())==1

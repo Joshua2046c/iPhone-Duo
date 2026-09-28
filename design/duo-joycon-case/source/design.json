@@ -12,7 +12,7 @@
           "target": "rear_shell",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/rear_shell/000-rear_shell.py",
-          "sha256": "5d2775e08055b914fa940fe94577add758944ad300e5e47228a6f2662f6dc03e"
+          "sha256": "a7d7dc790080e3967f4a518483de5ac9a5a4f4ae8eba08b3bb554f8bfe1a0ca2"
         }
       ],
       "dependencies": []
@@ -26,7 +26,7 @@
           "target": "left_rail",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/left_rail/000-left_rail.py",
-          "sha256": "00777c53d69d72ea88449760d6d79d05e9cbf6f7878367ce5c6eb412047087b6"
+          "sha256": "201c923cc3ab1a01e0bc09e8fc2f16766e00d4688df281a3749ae87342911e43"
         }
       ],
       "dependencies": []
@@ -40,7 +40,7 @@
           "target": "right_rail",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/right_rail/000-right_rail.py",
-          "sha256": "5c6c797aa33c2d2ad0a245340e750c4a87e56340d1c1b768fd1ecb46e95e9c96"
+          "sha256": "92ff58fa579918602ed8175d046f84a2e819fb35b5e685984e5ac796942febd8"
         }
       ],
       "dependencies": []
@@ -81,7 +81,7 @@
       "label": "半包后盖承力壳",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "5bb3130d4bbafec1b43373aa7f709c5643c6d0041b03f3d7cc31d4a244c90993",
+      "shapeHash": "298da313aa7251b88804f7f117ab07b388bc08d22860be2bf628ffb73ff61690",
       "transform": {
         "positionMm": [
           0,
@@ -108,7 +108,7 @@
       "label": "左侧槽形滑轨",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "0f748468fc665d237340c375e941aa1b62088f49c0f0af9b4ae4955e1b61f524",
+      "shapeHash": "20e3901c0b10f3bfaa6dc8fcca57bdafabc50bd3e997ab6f8e6789594285a061",
       "transform": {
         "positionMm": [
           -84.1,
@@ -135,7 +135,7 @@
       "label": "右侧槽形滑轨",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "f4ee16e3b62e1b817dd8ea23e53dd1ca6d5faefd936c0ccd1df42ed7250d74e0",
+      "shapeHash": "ca2a83d5f847332a77be892b79b3a4f7528b4d5b304d49c54dfc5a723096b81b",
       "transform": {
         "positionMm": [
           84.1,
@@ -215,18 +215,6 @@
   "fits": [
     {
       "kind": "fused",
-      "reason": "Custom rail root is fused into the wing edge for a single printed shell.",
-      "a": "left_rail",
-      "b": "rear_shell"
-    },
-    {
-      "kind": "fused",
-      "reason": "Custom rail root is fused into the wing edge for a single printed shell.",
-      "a": "right_rail",
-      "b": "rear_shell"
-    },
-    {
-      "kind": "fused",
       "reason": "The fixed foot joins both the base (0.2 mm) and the tray sidewall (0.8 mm); only this anchor is fused, leaving both flexure leaves and the output arm free.",
       "a": "volume_minus",
       "b": "rear_shell"
@@ -238,7 +226,7 @@
       "b": "rear_shell"
     }
   ],
-  "updatedAt": "2026-09-27T00:50:13.966Z",
+  "updatedAt": "2026-09-28T03:48:32.898Z",
   "parameters": {
     "rear_shell": {
       "rear_shell_side_clearance": 0.5,
@@ -249,10 +237,10 @@
       "rear_shell_right_control": 20,
       "rear_shell_hinge_setback": 4,
       "rear_shell_corner_radius": 6,
-      "rear_shell_camera_width": 24,
-      "rear_shell_camera_length": 62,
-      "rear_shell_camera_x": 38,
-      "rear_shell_camera_y": 0,
+      "rear_shell_camera_width": 22,
+      "rear_shell_camera_length": 56,
+      "rear_shell_camera_x": 41.5,
+      "rear_shell_camera_y": -8.5,
       "rear_shell_port_relief_length": 24,
       "rear_shell_port_relief_y": 0,
       "rear_shell_button_pitch": 24,
@@ -262,7 +250,10 @@
       "rear_shell_output_slot_width": 7,
       "rear_shell_wing_length": 96,
       "rear_shell_button_stop_spacing": 9,
-      "rear_shell_button_stop_depth": 1
+      "rear_shell_button_stop_depth": 1,
+      "rear_shell_transition_span": 16,
+      "rear_shell_rail_foundation_width": 4.8,
+      "rear_shell_outline_radius": 1
     },
     "left_rail": {
       "left_rail_width": 5,
@@ -278,7 +269,8 @@
       "left_rail_latch_y": -39,
       "left_rail_latch_length": 3,
       "left_rail_latch_depth": 0.6,
-      "left_rail_entry_length": 5
+      "left_rail_entry_length": 5,
+      "left_rail_foundation_height": 2.4
     },
     "right_rail": {
       "right_rail_width": 5,
@@ -294,7 +286,8 @@
       "right_rail_latch_y": -39,
       "right_rail_latch_length": 3,
       "right_rail_latch_depth": 0.6,
-      "right_rail_entry_length": 5
+      "right_rail_entry_length": 5,
+      "right_rail_foundation_height": 2.4
     },
     "volume_plus": {
       "volume_plus_anchor_width": 4,

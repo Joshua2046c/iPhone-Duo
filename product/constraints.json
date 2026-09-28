@@ -32,12 +32,12 @@
     "rail_channel_height": 4.6,
     "rail_channel_depth": 2.8,
     "camera_opening": [
-      24,
-      62
+      22,
+      56
     ],
     "camera_center": [
-      38,
-      0
+      41.5,
+      -8.5
     ],
     "button_center_y": [
       12,
@@ -54,7 +54,9 @@
       8,
       2,
       0.8
-    ]
+    ],
+    "base_transition_span": 16,
+    "rail_foundation_width": 4.8
   },
   "verification": {
     "phone_fit": false,
@@ -62,5 +64,5 @@
     "hinge_sweep": false,
     "volume_actuation": false
   },
-  "note": "默认接口值为结构模型参数，不是从参考图片量取的制造尺寸。无原机/手柄占位实体。"
+  "note": "底板单一轮廓连续拉伸，滑轨下方无重复底板体积。摄像头位置按用户后盖图在当前横向坐标下作近似修正；22×56 mm、中心(41.5,-8.5)均为可调默认值，非精确测量。真实实配仍未验证。"
 }

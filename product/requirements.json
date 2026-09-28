@@ -90,6 +90,14 @@
         "interpretation": "参考图推导的装配坐标；闭合宽度仅用作半片包络近似，非精确半片尺寸"
       },
       "source": "default"
+    },
+    "continuous_base": {
+      "value": "底板为一整块连续件，左右手柄支架与手机后盖区域平滑过渡，轮廓按 20260928 红线参考",
+      "source": "user"
+    },
+    "rear_camera_reference": {
+      "value": "手机后盖摄像头布局参考 20260928 图 2；在既定横向装机姿态下对应外侧角部",
+      "source": "user"
     }
   },
   "open_questions": []
