@@ -123,6 +123,10 @@
     "lower_wing_enclosure": {
       "value": "两侧底壳下部结构封闭，侧壁并入底壳；盖板仅位于顶部区域，轮廓应美观并符合整体手柄外形",
       "source": "user"
+    },
+    "integrated_rails": {
+      "value": "左右滑轨与下半部壳体为一体结构，CAD及导出模型中合并为同一个连续实体；顶部盖板保持独立",
+      "source": "user"
     }
   },
   "open_questions": []

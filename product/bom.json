@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "draft",
   "bom_ready": false,
-  "requirements_digest": "bb703e7874541dfddd72516934240b51b11fd62f3e030e224b9d6c1450e8add4",
+  "requirements_digest": "be2458d0aff1b89dc2677f8e0ff3aae5d3f13e5b27288bbfd8a0cbfb7ab4a423",
   "items": [
     {
       "id": "phone",
@@ -27,7 +27,7 @@
     },
     {
       "id": "rear_shell",
-      "name": "PETG 一体底壳原型，封闭双翼腔体、居中双轨、对称过渡和柔性音量双键",
+      "name": "PETG 双轨一体下壳原型，双轨与封闭双翼及底板为单一实体，含柔性音量双键",
       "quantity": 1,
       "source": "default"
     },

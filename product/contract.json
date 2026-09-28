@@ -86,6 +86,12 @@
       "source": "user_requested",
       "description": "两侧下部封闭、盖板仅限顶部且贴合手柄整体外形的红线参考",
       "path": "product/references/uploads/20260928T124340899Z-1-mark.png"
+    },
+    {
+      "id": "integrated_rails_lower_shell",
+      "source": "user_requested",
+      "description": "滑轨与下半部壳体为一体结构的红线参考",
+      "path": "product/references/uploads/20260928T141931364Z-1-mark.png"
     }
   ],
   "assembly_story": {
@@ -127,7 +133,8 @@
           "continuous_base_outline",
           "rear_camera_photo",
           "centered_rails_and_covers",
-          "closed_lower_housing_top_lids"
+          "closed_lower_housing_top_lids",
+          "integrated_rails_lower_shell"
         ]
       }
     ]

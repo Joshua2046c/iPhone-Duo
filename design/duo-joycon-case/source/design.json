@@ -12,35 +12,7 @@
           "target": "rear_shell",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/rear_shell/000-rear_shell.py",
-          "sha256": "d322ba846eb3445c12734b584606effe8bc99389e9f79595f2fc8b7dcf8b0d2f"
-        }
-      ],
-      "dependencies": []
-    },
-    {
-      "id": "left_rail",
-      "label": "left_rail",
-      "cells": [
-        {
-          "id": "left_rail",
-          "target": "left_rail",
-          "order": 0,
-          "path": "design/duo-joycon-case/source/parts/left_rail/000-left_rail.py",
-          "sha256": "201c923cc3ab1a01e0bc09e8fc2f16766e00d4688df281a3749ae87342911e43"
-        }
-      ],
-      "dependencies": []
-    },
-    {
-      "id": "right_rail",
-      "label": "right_rail",
-      "cells": [
-        {
-          "id": "right_rail",
-          "target": "right_rail",
-          "order": 0,
-          "path": "design/duo-joycon-case/source/parts/right_rail/000-right_rail.py",
-          "sha256": "92ff58fa579918602ed8175d046f84a2e819fb35b5e685984e5ac796942febd8"
+          "sha256": "36933717ba0a46187681fcf420dbe4558e036b3c14e0a411d84bf0cece0a0bfa"
         }
       ],
       "dependencies": []
@@ -106,69 +78,15 @@
     {
       "id": "rear_shell",
       "target": "rear_shell",
-      "label": "半包后盖承力壳",
+      "label": "滑轨一体下壳",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "376a24e3602bb8707d41240ffdd0a984aa6df070846583b3803986d3cb72a7fe",
+      "shapeHash": "11584d0e07b1032205da7bfdc57d271a2b5af7056c7a6d3d180bf3031500de2e",
       "transform": {
         "positionMm": [
           0,
           0,
           0
-        ],
-        "rotationDeg": [
-          0,
-          0,
-          0
-        ],
-        "rotationOrder": "XYZ",
-        "scale": [
-          1,
-          1,
-          1
-        ]
-      },
-      "datums": []
-    },
-    {
-      "id": "left_rail",
-      "target": "left_rail",
-      "label": "左侧槽形滑轨",
-      "material": "petg",
-      "kind": "generated",
-      "shapeHash": "6ae782a4ee36af7ccf90f998deb61349841242fc60ff29a959e75909c252bcc6",
-      "transform": {
-        "positionMm": [
-          -84.1,
-          -3.45,
-          -2.4
-        ],
-        "rotationDeg": [
-          0,
-          0,
-          0
-        ],
-        "rotationOrder": "XYZ",
-        "scale": [
-          1,
-          1,
-          1
-        ]
-      },
-      "datums": []
-    },
-    {
-      "id": "right_rail",
-      "target": "right_rail",
-      "label": "右侧槽形滑轨",
-      "material": "petg",
-      "kind": "generated",
-      "shapeHash": "c7cae3987d43989c28acc6179b8c4bae25daa6a2ddd701ea79895317284be31a",
-      "transform": {
-        "positionMm": [
-          84.1,
-          -3.45,
-          -2.4
         ],
         "rotationDeg": [
           0,
@@ -308,7 +226,7 @@
       "b": "rear_shell"
     }
   ],
-  "updatedAt": "2026-09-28T12:52:46.603Z",
+  "updatedAt": "2026-09-28T14:22:09.217Z",
   "parameters": {
     "rear_shell": {
       "rear_shell_side_clearance": 0.5,
@@ -346,9 +264,7 @@
       "rear_shell_port_tunnel_height": 4.2,
       "rear_shell_port_tunnel_z": 2.3,
       "rear_shell_output_tunnel_height": 3.6,
-      "rear_shell_output_tunnel_z": 3.1
-    },
-    "left_rail": {
+      "rear_shell_output_tunnel_z": 3.1,
       "left_rail_width": 5,
       "left_rail_length": 96,
       "left_rail_height": 10,
@@ -363,9 +279,7 @@
       "left_rail_latch_length": 3,
       "left_rail_latch_depth": 0.6,
       "left_rail_entry_length": 5,
-      "left_rail_foundation_height": 2.4
-    },
-    "right_rail": {
+      "left_rail_foundation_height": 2.4,
       "right_rail_width": 5,
       "right_rail_length": 96,
       "right_rail_height": 10,

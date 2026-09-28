@@ -1,5 +1,3 @@
-# cell: rear_shell
-# cell: rear_shell
 
 # Phone envelope from the user's size sheet, rotated into the reference pose.
 PHONE_X = 117.8
@@ -131,6 +129,74 @@ for yy in [-key_pitch/2,key_pitch/2]:
     s=s-Pos(join+wall/2,yy,key_z)*Box(wall*3,keyslot,key_h)
     for sign in [-1,1]:
         s=s+Pos(key_x,yy+sign*stop_span/2,stop_z/2)*Box(stop_w,stop_depth,stop_z)
+
+# Integrated left_rail: original channel, entry and latch relief dimensions are preserved.
+def make_left_rail():
+    w=param("left_rail_width",5.0)
+    length=param("left_rail_length",96.0)
+    height=param("left_rail_height",10.0)
+    rounding=param("left_rail_corner_radius",1.0)
+    channel_d=param("left_rail_channel_depth",2.8)
+    channel_h=param("left_rail_channel_height",4.6)
+    mouth_h=param("left_rail_mouth_height",2.4)
+    lip=param("left_rail_lip_thickness",0.7)
+    channel_z=param("left_rail_channel_center_z",6.0)
+    stop=param("left_rail_bottom_stop",3.0)
+    latch_y=param("left_rail_latch_y",-39.0)
+    latch_len=param("left_rail_latch_length",3.0)
+    latch_depth=param("left_rail_latch_depth",0.6)
+    entry=param("left_rail_entry_length",5.0)
+    # Custom groove inspired by user's red-box views. These are NOT Nintendo-certified dimensions.
+    foundation=param("left_rail_foundation_height",2.4)
+    # Rail dimensions retain their original parameter names as features of the unified shell.
+    rail=Pos(0,0,foundation)*extrude(RectangleRounded(w,length,rounding),amount=height-foundation)
+    side=-1
+    # Solid web joins the inner rail corners to the wing wall before cutting the track.
+    rail=rail+Pos(-side*w/2,0,(foundation+height)/2)*Box(2*rounding,length,height-foundation)
+    run=length-stop+1
+    cy=stop/2+0.5
+    cx=side*(w/2-lip-channel_d/2)
+    rail=rail-Pos(cx,cy,channel_z)*Box(channel_d,run,channel_h)
+    rail=rail-Pos(side*(w/2-lip/2+0.1),cy,channel_z)*Box(lip+0.3,run,mouth_h)
+    rail=rail-Pos(side*(w/2-channel_d/2),length/2-entry/2+0.1,channel_z)*Box(channel_d+0.2,entry+0.2,channel_h)
+    rail=rail-Pos(side*(w/2-lip-channel_d-latch_depth/2+0.1),latch_y,channel_z)*Box(latch_depth+0.2,latch_len,channel_h/2)
+    return Pos(xl+w/2,center_y,-foundation)*rail
+s=s+make_left_rail()
+
+# Integrated right_rail: original channel, entry and latch relief dimensions are preserved.
+def make_right_rail():
+    w=param("right_rail_width",5.0)
+    length=param("right_rail_length",96.0)
+    height=param("right_rail_height",10.0)
+    rounding=param("right_rail_corner_radius",1.0)
+    channel_d=param("right_rail_channel_depth",2.8)
+    channel_h=param("right_rail_channel_height",4.6)
+    mouth_h=param("right_rail_mouth_height",2.4)
+    lip=param("right_rail_lip_thickness",0.7)
+    channel_z=param("right_rail_channel_center_z",6.0)
+    stop=param("right_rail_bottom_stop",3.0)
+    latch_y=param("right_rail_latch_y",-39.0)
+    latch_len=param("right_rail_latch_length",3.0)
+    latch_depth=param("right_rail_latch_depth",0.6)
+    entry=param("right_rail_entry_length",5.0)
+    # Custom groove inspired by user's red-box views. These are NOT Nintendo-certified dimensions.
+    foundation=param("right_rail_foundation_height",2.4)
+    # Rail dimensions retain their original parameter names as features of the unified shell.
+    rail=Pos(0,0,foundation)*extrude(RectangleRounded(w,length,rounding),amount=height-foundation)
+    side=1
+    # Solid web joins the inner rail corners to the wing wall before cutting the track.
+    rail=rail+Pos(-side*w/2,0,(foundation+height)/2)*Box(2*rounding,length,height-foundation)
+    run=length-stop+1
+    cy=stop/2+0.5
+    cx=side*(w/2-lip-channel_d/2)
+    rail=rail-Pos(cx,cy,channel_z)*Box(channel_d,run,channel_h)
+    rail=rail-Pos(side*(w/2-lip/2+0.1),cy,channel_z)*Box(lip+0.3,run,mouth_h)
+    rail=rail-Pos(side*(w/2-channel_d/2),length/2-entry/2+0.1,channel_z)*Box(channel_d+0.2,entry+0.2,channel_h)
+    rail=rail-Pos(side*(w/2-lip-channel_d-latch_depth/2+0.1),latch_y,channel_z)*Box(latch_depth+0.2,latch_len,channel_h/2)
+    return Pos(xr-w/2,center_y,-foundation)*rail
+s=s+make_right_rail()
+
+s=s.clean()
+assert len(s.solids()) == 1, "Rails and lower housing must be one connected solid"
 s.color=Color(0.16,0.19,0.23)
-publish("rear_shell",s,"半包后盖承力壳",material="petg")
-assert len(s.solids()) == 1
+publish("rear_shell",s,"滑轨一体下壳",material="petg")
