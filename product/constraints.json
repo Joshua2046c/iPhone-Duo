@@ -60,15 +60,14 @@
     "rail_center_y": -3.45,
     "rail_fore_aft_projection": 6.5,
     "cover_size": [
-      19.2,
-      84,
-      10.2
+      21.8,
+      95.6,
+      1.6
     ],
     "cover_roof_thickness": 1.6,
-    "cover_wall_thickness": 2,
     "cover_center_x": [
-      -71.7,
-      71.7
+      -70.5,
+      70.5
     ],
     "cover_center_y": -3.45,
     "cover_tape_pocket": [
@@ -87,7 +86,30 @@
     ],
     "key_cap_thickness": 3,
     "key_cap_protrusion_without_mark": 1.2,
-    "static_linkage_cover_minimum_gap": 0.2
+    "static_linkage_cover_minimum_gap": 0.2,
+    "cover_z_range": [
+      8.6,
+      10.2
+    ],
+    "wing_housing_height": 8.6,
+    "wing_housing_wall_nominal": 2.4,
+    "wing_housing_width": 22.2,
+    "cover_perimeter_inset": 0.2,
+    "cover_support_center_y": [
+      32.55,
+      -39.45
+    ],
+    "cover_tape_pocket_top_z": 8.6,
+    "phone_side_sound_tunnel_size": [
+      24,
+      4.2
+    ],
+    "phone_side_sound_tunnel_z": 2.3,
+    "volume_output_tunnel_size": [
+      7,
+      3.6
+    ],
+    "volume_output_tunnel_z": 3.1
   },
   "verification": {
     "phone_fit": false,
@@ -97,5 +119,5 @@
     "cover_retention": false,
     "acoustic_performance": false
   },
-  "note": "底板单一轮廓连续拉伸，滑轨下方无重复底板体积。摄像头位置按用户后盖图在当前横向坐标下作近似修正；22×56 mm、中心(41.5,-8.5)均为可调默认值，非精确测量。真实实配仍未验证。 左右轨道和盖板围绕托壳中心Y=-3.45居中；四处外轮廓曲线镜像对称。盖板由端部支撑承压，手机侧开口连通声腔/传动空间，胶槽定位；声学性能和胶粘保持力未实测。"
+  "note": "底板为连续单件，双翼侧壁和端部承台并入底壳，下部不再随盖板拆下。顶部随形薄盖沿四处对称曲线收边，手机侧仅留低位声道及两处传动口。胶槽位于壳内承台顶部，盖板落座Z=8.6。真实手机/手柄接口、完整开合、声学性能与胶粘保持力均未实配。相机尺寸和位置仍是用户照片布局对应的可调初值。"
 }

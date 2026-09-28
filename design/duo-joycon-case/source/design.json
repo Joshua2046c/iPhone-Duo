@@ -12,7 +12,7 @@
           "target": "rear_shell",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/rear_shell/000-rear_shell.py",
-          "sha256": "29269a6fecd6f600c8fdf60cc1a15e7c2552d8396dca6bdba2b8a1c2c976bb90"
+          "sha256": "d322ba846eb3445c12734b584606effe8bc99389e9f79595f2fc8b7dcf8b0d2f"
         }
       ],
       "dependencies": []
@@ -82,7 +82,7 @@
           "target": "left_cover",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/left_cover/000-left_cover.py",
-          "sha256": "211e2687ec5286afee6ff517ea8b1f40b2688e124232bcc8375b858361450b8d"
+          "sha256": "4bc08885cbf8e07b756872dd2413e20292ec17e2865dd3c57d33e443b11c1d33"
         }
       ],
       "dependencies": []
@@ -96,7 +96,7 @@
           "target": "right_cover",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/right_cover/000-right_cover.py",
-          "sha256": "98b141d37b0c506c83f3edccb77fde23aaee68d9a1a26a439ee22a76919c09ed"
+          "sha256": "5b0b0b7045b69e80eb203b15cda3691a92ae6bef4046eb190d10b2d914be2385"
         }
       ],
       "dependencies": []
@@ -109,7 +109,7 @@
       "label": "半包后盖承力壳",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "c7dcfbbad75ffd311f317d0cec787b09a173bcb6eef7c4b92f7d31a549299de9",
+      "shapeHash": "376a24e3602bb8707d41240ffdd0a984aa6df070846583b3803986d3cb72a7fe",
       "transform": {
         "positionMm": [
           0,
@@ -241,13 +241,13 @@
     {
       "id": "left_cover",
       "target": "left_cover",
-      "label": "左侧双槽出声盖板",
+      "label": "左侧曲线出声上盖",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "c40628a89714dd911ee3339f6ef8aeb0a25c32995e9288ef26ce60e8901ed2fc",
+      "shapeHash": "daa1fe05477dbb432b21f16c8b7d21627b300c5752204badd4777e7e4f2f506c",
       "transform": {
         "positionMm": [
-          -71.7,
+          -70.5,
           -3.45,
           0
         ],
@@ -268,13 +268,13 @@
     {
       "id": "right_cover",
       "target": "right_cover",
-      "label": "右侧音量机构盖板",
+      "label": "右侧曲线音量上盖",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "cea833a3275a90599637c98b7a5804c36b4243dca5fde400249ab7b55e867422",
+      "shapeHash": "6edba15392e4015fffce88b5554a3d6caaaa8a877e16b30eee66df6c7a849d37",
       "transform": {
         "positionMm": [
-          71.7,
+          70.5,
           -3.45,
           0
         ],
@@ -308,7 +308,7 @@
       "b": "rear_shell"
     }
   ],
-  "updatedAt": "2026-09-28T03:57:06.081Z",
+  "updatedAt": "2026-09-28T12:52:46.603Z",
   "parameters": {
     "rear_shell": {
       "rear_shell_side_clearance": 0.5,
@@ -335,7 +335,18 @@
       "rear_shell_button_stop_depth": 1,
       "rear_shell_transition_span": 16,
       "rear_shell_rail_foundation_width": 4.8,
-      "rear_shell_outline_radius": 1
+      "rear_shell_outline_radius": 1,
+      "rear_shell_wing_wall_height": 8.6,
+      "rear_shell_wing_rail_allowance": 0.2,
+      "rear_shell_cover_support_inset": 12,
+      "rear_shell_cover_support_depth": 6,
+      "rear_shell_cover_tape_width": 12,
+      "rear_shell_cover_tape_length": 4,
+      "rear_shell_cover_tape_depth": 0.3,
+      "rear_shell_port_tunnel_height": 4.2,
+      "rear_shell_port_tunnel_z": 2.3,
+      "rear_shell_output_tunnel_height": 3.6,
+      "rear_shell_output_tunnel_z": 3.1
     },
     "left_rail": {
       "left_rail_width": 5,
@@ -412,40 +423,34 @@
       "volume_minus_anchor_embed": 0.2
     },
     "left_cover": {
-      "left_cover_width": 19.2,
-      "left_cover_length": 84,
+      "left_cover_width": 22.2,
+      "left_cover_length": 96,
       "left_cover_height": 10.2,
       "left_cover_roof_thickness": 1.6,
-      "left_cover_wall_thickness": 2,
-      "left_cover_corner_radius": 4,
-      "left_cover_foot_depth": 6,
-      "left_cover_foot_inset": 9,
-      "left_cover_tape_depth": 0.3,
-      "left_cover_tape_width": 12,
-      "left_cover_tape_length": 4,
+      "left_cover_corner_radius": 1,
       "left_cover_slot_length": 14,
       "left_cover_slot_width": 2.8,
       "left_cover_slot_pitch": 7,
-      "left_cover_slot_y": 0
+      "left_cover_slot_y": 0,
+      "left_cover_inner_length": 83,
+      "left_cover_transition_span": 16,
+      "left_cover_seam_inset": 0.2
     },
     "right_cover": {
-      "right_cover_width": 19.2,
-      "right_cover_length": 84,
+      "right_cover_width": 22.2,
+      "right_cover_length": 96,
       "right_cover_height": 10.2,
       "right_cover_roof_thickness": 1.6,
-      "right_cover_wall_thickness": 2,
-      "right_cover_corner_radius": 4,
-      "right_cover_foot_depth": 6,
-      "right_cover_foot_inset": 9,
-      "right_cover_tape_depth": 0.3,
-      "right_cover_tape_width": 12,
-      "right_cover_tape_length": 4,
+      "right_cover_corner_radius": 1,
       "right_cover_key_hole_width": 8.8,
       "right_cover_key_hole_length": 10.8,
       "right_cover_key_hole_radius": 2.4,
-      "right_cover_key_x": 3.3,
+      "right_cover_key_x": 4.5,
       "right_cover_key_y": 3.45,
-      "right_cover_key_pitch": 24
+      "right_cover_key_pitch": 24,
+      "right_cover_inner_length": 83,
+      "right_cover_transition_span": 16,
+      "right_cover_seam_inset": 0.2
     }
   }
 }

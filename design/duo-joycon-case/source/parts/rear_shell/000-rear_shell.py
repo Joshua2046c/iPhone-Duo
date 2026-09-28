@@ -1,4 +1,5 @@
 # cell: rear_shell
+# cell: rear_shell
 
 # Phone envelope from the user's size sheet, rotated into the reference pose.
 PHONE_X = 117.8
@@ -71,12 +72,63 @@ rim=extrude(RectangleRounded(ox,oy,corner),amount=rise)
 rim=rim-extrude(RectangleRounded(ix,iy,max(corner-wall,0.5)),amount=rise+1)
 rim=rim-Pos(0,hinge_y+oy/2,rise/2)*Box(ox+2,oy,rise+2)
 s=s+rim
+
+# Closed side cavities are part of the base, not skirts on the detachable lids.
+housing_h=param("rear_shell_wing_wall_height",8.6)
+rail_allowance=param("rear_shell_wing_rail_allowance",0.2)
+support_inset=param("rear_shell_cover_support_inset",12.0)
+support_depth=param("rear_shell_cover_support_depth",6.0)
+tape_w=param("rear_shell_cover_tape_width",12.0)
+tape_l=param("rear_shell_cover_tape_length",4.0)
+tape_d=param("rear_shell_cover_tape_depth",0.3)
+port_h=param("rear_shell_port_tunnel_height",4.2)
+port_z=param("rear_shell_port_tunnel_z",2.3)
+key_h=param("rear_shell_output_tunnel_height",3.6)
+key_z=param("rear_shell_output_tunnel_z",3.1)
+
+def wing_profile(w, length, inner_length, transition, r):
+    a=-w/2
+    b=w/2
+    t=min(a+transition,b-r)
+    yt=length/2
+    yi=inner_length/2
+    k=0.5522847498
+    with BuildSketch() as sketch:
+        with BuildLine():
+            Line((a,-yi),(a,yi))
+            Bezier((a,yi),((a+t)/2,yi),((a+t)/2,yt),(t,yt))
+            Line((t,yt),(b-r,yt))
+            Bezier((b-r,yt),(b-r+k*r,yt),(b,yt-r+k*r),(b,yt-r))
+            Line((b,yt-r),(b,-yt+r))
+            Bezier((b,-yt+r),(b,-yt+r-k*r),(b-r+k*r,-yt),(b-r,-yt))
+            Line((b-r,-yt),(t,-yt))
+            Bezier((t,-yt),((a+t)/2,-yt),((a+t)/2,-yi),(a,-yi))
+        make_face()
+    return sketch.sketch
+
+for sign, extension in [(-1,left),(1,right)]:
+    wing_w=extension+wall-rail_allowance
+    wc=sign*(join+wing_w/2)
+    outline=wing_profile(wing_w,wing_depth,hinge_y-front_y,transition,outer_r)
+    if sign<0:
+        outline=Rot(0,0,180)*outline
+    outer=Pos(wc,center_y,0)*extrude(outline,amount=housing_h)
+    inner=wing_profile(wing_w-2*wall,wing_depth-2*wall,hinge_y-front_y-2*wall,transition,outer_r)
+    if sign<0:
+        inner=Rot(0,0,180)*inner
+    chamber=outer-Pos(wc,center_y,0)*extrude(inner,amount=housing_h+1)
+    for end in [-1,1]:
+        sy=center_y+end*(wing_depth/2-support_inset)
+        chamber+=outer & (Pos(wc,sy,housing_h/2)*Box(wing_w,support_depth,housing_h))
+        chamber-=Pos(wc,sy,housing_h-tape_d/2)*Box(tape_w,tape_l,tape_d)
+    s+=chamber
+
 # Photo 2 supplies corner location/orientation only; cutout dimensions are tunable defaults.
 camera = Pos(camx,camy,-base-1)*extrude(RectangleRounded(camw,camh,camw/2-0.1),amount=base+rise+2)
 s=s-camera
-s=s-Pos(-ox/2,porty,rise/2)*Box(wall*3,portw,rise+0.2)
+s=s-Pos(-join,porty,port_z)*Box(wall*3,portw,port_h)
 for yy in [-key_pitch/2,key_pitch/2]:
-    s=s-Pos(ox/2-wall/2,yy,rise/2)*Box(wall*3,keyslot,rise+0.2)
+    s=s-Pos(join+wall/2,yy,key_z)*Box(wall*3,keyslot,key_h)
     for sign in [-1,1]:
         s=s+Pos(key_x,yy+sign*stop_span/2,stop_z/2)*Box(stop_w,stop_depth,stop_z)
 s.color=Color(0.16,0.19,0.23)
