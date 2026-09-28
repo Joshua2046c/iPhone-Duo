@@ -37,12 +37,13 @@ hinge_y = PHONE_HALF_Y/2-setback
 front_y = -oy/2
 xl = -ox/2-left-foundation
 xr = ox/2+right+foundation
-yt = wing_depth/2
-yb = -wing_depth/2
+center_y = (hinge_y+front_y)/2
+yt = center_y+wing_depth/2
+yb = center_y-wing_depth/2
 join = ix/2
 tl = max(xl+outer_r, -join-transition)
 tr = min(xr-outer_r, join+transition)
-front_join = ox/2-corner
+front_join = join  # mirrored upper/lower transitions about center_y
 k = 0.5522847498  # cubic circle approximation coefficient, not a dimension
 # A single closed outline and a single extrusion form the entire load-bearing floor.
 with BuildSketch() as floor_profile:

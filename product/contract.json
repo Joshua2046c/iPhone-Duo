@@ -74,18 +74,25 @@
       "source": "user_requested",
       "description": "后盖相机位置与姿态参考，无标注尺寸",
       "path": "product/references/uploads/20260928T034345208Z-2-image.png"
+    },
+    {
+      "id": "centered_rails_and_covers",
+      "source": "user_requested",
+      "description": "滑轨居中、四处曲线对称、左右盖板与左侧两条竖向出声槽",
+      "path": "product/references/uploads/20260928T035108743Z-1-mark.png"
     }
   ],
   "assembly_story": {
     "installation": "后盖半片置入三边敞口浅托壳，以可移除薄胶垫固定；另一半沿 +Y 自由开合；Joy-Con 从上端沿两侧槽形滑轨向下插入。",
-    "maintenance": "传导组件独立可拆换；保留 Joy-Con 释放按钮操作空间。",
+    "maintenance": "左右盖板通过薄双面胶固定，可移除检修；柔性传导组件与底壳一体打印；保留 Joy-Con 释放按钮操作空间。",
     "user_access": [
       "内屏",
       "顶部原机音量键",
       "右侧双音量按钮",
       "摄像头",
       "Joy-Con 释放按钮",
-      "USB-C"
+      "USB-C",
+      "左盖板双出声槽"
     ]
   },
   "cad": {
@@ -112,7 +119,8 @@
           "rail_reference_3",
           "rail_reference_4",
           "continuous_base_outline",
-          "rear_camera_photo"
+          "rear_camera_photo",
+          "centered_rails_and_covers"
         ]
       }
     ]

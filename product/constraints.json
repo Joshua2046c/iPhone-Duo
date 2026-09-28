@@ -47,7 +47,7 @@
     "overall_case_bbox": [
       173.2,
       96,
-      13.2
+      14.2
     ],
     "nominal_key_downstroke": 0.8,
     "flexure_beam_size": [
@@ -56,13 +56,46 @@
       0.8
     ],
     "base_transition_span": 16,
-    "rail_foundation_width": 4.8
+    "rail_foundation_width": 4.8,
+    "rail_center_y": -3.45,
+    "rail_fore_aft_projection": 6.5,
+    "cover_size": [
+      19.2,
+      84,
+      10.2
+    ],
+    "cover_roof_thickness": 1.6,
+    "cover_wall_thickness": 2,
+    "cover_center_x": [
+      -71.7,
+      71.7
+    ],
+    "cover_center_y": -3.45,
+    "cover_tape_pocket": [
+      12,
+      4,
+      0.3
+    ],
+    "left_sound_slot_size": [
+      14,
+      2.8
+    ],
+    "left_sound_slot_pitch": 7,
+    "right_cover_key_hole": [
+      8.8,
+      10.8
+    ],
+    "key_cap_thickness": 3,
+    "key_cap_protrusion_without_mark": 1.2,
+    "static_linkage_cover_minimum_gap": 0.2
   },
   "verification": {
     "phone_fit": false,
     "joycon_fit": false,
     "hinge_sweep": false,
-    "volume_actuation": false
+    "volume_actuation": false,
+    "cover_retention": false,
+    "acoustic_performance": false
   },
-  "note": "底板单一轮廓连续拉伸，滑轨下方无重复底板体积。摄像头位置按用户后盖图在当前横向坐标下作近似修正；22×56 mm、中心(41.5,-8.5)均为可调默认值，非精确测量。真实实配仍未验证。"
+  "note": "底板单一轮廓连续拉伸，滑轨下方无重复底板体积。摄像头位置按用户后盖图在当前横向坐标下作近似修正；22×56 mm、中心(41.5,-8.5)均为可调默认值，非精确测量。真实实配仍未验证。 左右轨道和盖板围绕托壳中心Y=-3.45居中；四处外轮廓曲线镜像对称。盖板由端部支撑承压，手机侧开口连通声腔/传动空间，胶槽定位；声学性能和胶粘保持力未实测。"
 }

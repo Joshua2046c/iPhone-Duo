@@ -98,6 +98,27 @@
     "rear_camera_reference": {
       "value": "手机后盖摄像头布局参考 20260928 图 2；在既定横向装机姿态下对应外侧角部",
       "source": "user"
+    },
+    "rail_centering": {
+      "value": "两侧滑轨沿手机托壳前后方向居中放置，四处过渡弧线左右、前后对称",
+      "source": "user"
+    },
+    "wing_covers": {
+      "value": "右侧音量机构区和左侧空白区各增加一块盖板，保留右侧双键可操作",
+      "source": "user"
+    },
+    "left_sound_slots": {
+      "value": {
+        "count": 2,
+        "orientation": "俯视竖向，沿滑轨长度方向",
+        "shape": "圆角短线形贯通开孔",
+        "purpose": "出声孔"
+      },
+      "source": "user"
+    },
+    "cover_construction": {
+      "value": "两块 PETG 独立盖板，19.2×84 mm，顶板厚1.6 mm，顶面Z=10.2 mm；端部承压支撑及0.3 mm薄双面胶凹槽，每盖两处；左槽14×2.8 mm、中心距7 mm；声腔朝手机侧开放，声学效果待实测",
+      "source": "default"
     }
   },
   "open_questions": []

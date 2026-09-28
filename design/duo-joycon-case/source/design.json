@@ -12,7 +12,7 @@
           "target": "rear_shell",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/rear_shell/000-rear_shell.py",
-          "sha256": "a7d7dc790080e3967f4a518483de5ac9a5a4f4ae8eba08b3bb554f8bfe1a0ca2"
+          "sha256": "29269a6fecd6f600c8fdf60cc1a15e7c2552d8396dca6bdba2b8a1c2c976bb90"
         }
       ],
       "dependencies": []
@@ -72,6 +72,34 @@
         }
       ],
       "dependencies": []
+    },
+    {
+      "id": "left_cover",
+      "label": "left_cover",
+      "cells": [
+        {
+          "id": "left_cover",
+          "target": "left_cover",
+          "order": 0,
+          "path": "design/duo-joycon-case/source/parts/left_cover/000-left_cover.py",
+          "sha256": "211e2687ec5286afee6ff517ea8b1f40b2688e124232bcc8375b858361450b8d"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "right_cover",
+      "label": "right_cover",
+      "cells": [
+        {
+          "id": "right_cover",
+          "target": "right_cover",
+          "order": 0,
+          "path": "design/duo-joycon-case/source/parts/right_cover/000-right_cover.py",
+          "sha256": "98b141d37b0c506c83f3edccb77fde23aaee68d9a1a26a439ee22a76919c09ed"
+        }
+      ],
+      "dependencies": []
     }
   ],
   "objects": [
@@ -81,7 +109,7 @@
       "label": "半包后盖承力壳",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "298da313aa7251b88804f7f117ab07b388bc08d22860be2bf628ffb73ff61690",
+      "shapeHash": "c7dcfbbad75ffd311f317d0cec787b09a173bcb6eef7c4b92f7d31a549299de9",
       "transform": {
         "positionMm": [
           0,
@@ -108,11 +136,11 @@
       "label": "左侧槽形滑轨",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "20e3901c0b10f3bfaa6dc8fcca57bdafabc50bd3e997ab6f8e6789594285a061",
+      "shapeHash": "6ae782a4ee36af7ccf90f998deb61349841242fc60ff29a959e75909c252bcc6",
       "transform": {
         "positionMm": [
           -84.1,
-          0,
+          -3.45,
           -2.4
         ],
         "rotationDeg": [
@@ -135,11 +163,11 @@
       "label": "右侧槽形滑轨",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "ca2a83d5f847332a77be892b79b3a4f7528b4d5b304d49c54dfc5a723096b81b",
+      "shapeHash": "c7cae3987d43989c28acc6179b8c4bae25daa6a2ddd701ea79895317284be31a",
       "transform": {
         "positionMm": [
           84.1,
-          0,
+          -3.45,
           -2.4
         ],
         "rotationDeg": [
@@ -162,7 +190,7 @@
       "label": "音量加柔性转向键",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "4cd0b79ab49be9129d5ffa3a981d78e4eed258034642ef4b8d01bf2cb69ce834",
+      "shapeHash": "b3227d2c8c9af5ef91e75324b10fdbbb2f5e8bef8ad8a4384a7dde3370fefe13",
       "transform": {
         "positionMm": [
           63,
@@ -189,11 +217,65 @@
       "label": "音量减柔性转向键",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "e030403c0e8a9f5a7e293a9e337a674bbc3eb03c7ce0df143c6721ab337b80aa",
+      "shapeHash": "f2b3115c87dfc578f42b6d852a83345f04a2a1c8056e3791512ff7b934b8f44f",
       "transform": {
         "positionMm": [
           63,
           -12,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "left_cover",
+      "target": "left_cover",
+      "label": "左侧双槽出声盖板",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "c40628a89714dd911ee3339f6ef8aeb0a25c32995e9288ef26ce60e8901ed2fc",
+      "transform": {
+        "positionMm": [
+          -71.7,
+          -3.45,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "right_cover",
+      "target": "right_cover",
+      "label": "右侧音量机构盖板",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "cea833a3275a90599637c98b7a5804c36b4243dca5fde400249ab7b55e867422",
+      "transform": {
+        "positionMm": [
+          71.7,
+          -3.45,
           0
         ],
         "rotationDeg": [
@@ -226,7 +308,7 @@
       "b": "rear_shell"
     }
   ],
-  "updatedAt": "2026-09-28T03:48:32.898Z",
+  "updatedAt": "2026-09-28T03:57:06.081Z",
   "parameters": {
     "rear_shell": {
       "rear_shell_side_clearance": 0.5,
@@ -306,7 +388,7 @@
       "volume_plus_contact_thickness": 1.6,
       "volume_plus_cap_width": 8,
       "volume_plus_cap_length": 10,
-      "volume_plus_cap_thickness": 2,
+      "volume_plus_cap_thickness": 3,
       "volume_plus_anchor_embed": 0.2
     },
     "volume_minus": {
@@ -326,8 +408,44 @@
       "volume_minus_contact_thickness": 1.6,
       "volume_minus_cap_width": 8,
       "volume_minus_cap_length": 10,
-      "volume_minus_cap_thickness": 2,
+      "volume_minus_cap_thickness": 3,
       "volume_minus_anchor_embed": 0.2
+    },
+    "left_cover": {
+      "left_cover_width": 19.2,
+      "left_cover_length": 84,
+      "left_cover_height": 10.2,
+      "left_cover_roof_thickness": 1.6,
+      "left_cover_wall_thickness": 2,
+      "left_cover_corner_radius": 4,
+      "left_cover_foot_depth": 6,
+      "left_cover_foot_inset": 9,
+      "left_cover_tape_depth": 0.3,
+      "left_cover_tape_width": 12,
+      "left_cover_tape_length": 4,
+      "left_cover_slot_length": 14,
+      "left_cover_slot_width": 2.8,
+      "left_cover_slot_pitch": 7,
+      "left_cover_slot_y": 0
+    },
+    "right_cover": {
+      "right_cover_width": 19.2,
+      "right_cover_length": 84,
+      "right_cover_height": 10.2,
+      "right_cover_roof_thickness": 1.6,
+      "right_cover_wall_thickness": 2,
+      "right_cover_corner_radius": 4,
+      "right_cover_foot_depth": 6,
+      "right_cover_foot_inset": 9,
+      "right_cover_tape_depth": 0.3,
+      "right_cover_tape_width": 12,
+      "right_cover_tape_length": 4,
+      "right_cover_key_hole_width": 8.8,
+      "right_cover_key_hole_length": 10.8,
+      "right_cover_key_hole_radius": 2.4,
+      "right_cover_key_x": 3.3,
+      "right_cover_key_y": 3.45,
+      "right_cover_key_pitch": 24
     }
   }
 }
