@@ -81,7 +81,7 @@
       "label": "滑轨一体下壳",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "782beeb96fabd18770143ba620a345fae94e1c9d9d4f482aae0d7473865e2a93",
+      "shapeHash": "c4066874c788e8935869b92502ce0a7a7620654e4bf9325428b641f7851515b6",
       "transform": {
         "positionMm": [
           0,
@@ -162,7 +162,7 @@
       "label": "左侧曲线出声上盖",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "457bc32f9400f66934683796618f385e5fae015e3b968c7f1782bb0fa95769f6",
+      "shapeHash": "afe0780cc0d721dbe374f1a8804b805cf1cdcbc2823f1b1b0896a02ec30a64bd",
       "transform": {
         "positionMm": [
           -70.5,
@@ -189,7 +189,7 @@
       "label": "右侧曲线音量上盖",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "d1b4cc890b8981138ff880b12f5f21320c5ba49688dc8b5530938bee182b6745",
+      "shapeHash": "944014780eaeaf105f404e802c5e3f5047bcab87dee2bd66a1bc43010851f1ad",
       "transform": {
         "positionMm": [
           70.5,
@@ -226,7 +226,7 @@
       "b": "rear_shell"
     }
   ],
-  "updatedAt": "2026-09-29T04:37:16.769Z",
+  "updatedAt": "2026-09-29T05:05:13.388Z",
   "parameters": {
     "rear_shell": {
       "rear_shell_side_clearance": 0.5,
@@ -248,15 +248,15 @@
       "rear_shell_button_stop_height": 7.6,
       "rear_shell_button_stop_width": 2,
       "rear_shell_output_slot_width": 7,
-      "rear_shell_wing_length": 96,
+      "rear_shell_wing_length": 100.8,
       "rear_shell_button_stop_spacing": 9,
       "rear_shell_button_stop_depth": 1,
-      "rear_shell_transition_span": 16,
+      "rear_shell_transition_span": 20,
       "rear_shell_rail_foundation_width": 4.8,
       "rear_shell_outline_radius": 1,
       "rear_shell_wing_wall_height": 8.6,
       "rear_shell_wing_rail_allowance": 0.2,
-      "rear_shell_cover_support_inset": 12,
+      "rear_shell_cover_support_inset": 14.4,
       "rear_shell_cover_support_depth": 8.4,
       "rear_shell_port_tunnel_height": 4.2,
       "rear_shell_port_tunnel_z": 2.3,
@@ -342,7 +342,7 @@
     },
     "left_cover": {
       "left_cover_width": 22.2,
-      "left_cover_length": 96,
+      "left_cover_length": 100.8,
       "left_cover_height": 10.2,
       "left_cover_roof_thickness": 1.6,
       "left_cover_corner_radius": 1,
@@ -351,7 +351,7 @@
       "left_cover_slot_pitch": 7,
       "left_cover_slot_y": 0,
       "left_cover_inner_length": 83,
-      "left_cover_transition_span": 16,
+      "left_cover_transition_span": 20,
       "left_cover_seam_inset": 0.2,
       "left_cover_peg_width": 4,
       "left_cover_peg_length": 8,
@@ -366,7 +366,7 @@
     },
     "right_cover": {
       "right_cover_width": 22.2,
-      "right_cover_length": 96,
+      "right_cover_length": 100.8,
       "right_cover_height": 10.2,
       "right_cover_roof_thickness": 1.6,
       "right_cover_corner_radius": 1,
@@ -377,7 +377,7 @@
       "right_cover_key_y": 3.45,
       "right_cover_key_pitch": 24,
       "right_cover_inner_length": 83,
-      "right_cover_transition_span": 16,
+      "right_cover_transition_span": 20,
       "right_cover_seam_inset": 0.2,
       "right_cover_peg_width": 4,
       "right_cover_peg_length": 8,

@@ -104,6 +104,12 @@
       "source": "user_requested",
       "description": "仅参考两侧Joy-Con滑轨截面、入口、止挡与唇边缺口；不采用原手机框及轨道间距",
       "path": "product/references/uploads/20260929T041741902Z-1-joycon-phone-grip.stl"
+    },
+    {
+      "id": "four_corner_transitions",
+      "source": "user_requested",
+      "description": "滑轨与两侧盖板/下壳相邻的四处端部外轮廓圆滑过渡红线参考",
+      "path": "product/references/uploads/20260929T050042339Z-1-mark.png"
     }
   ],
   "assembly_story": {
@@ -148,7 +154,8 @@
           "closed_lower_housing_top_lids",
           "integrated_rails_lower_shell",
           "filled_ends_square_posts_chamfers",
-          "joycon_rail_stl"
+          "joycon_rail_stl",
+          "four_corner_transitions"
         ]
       }
     ]
