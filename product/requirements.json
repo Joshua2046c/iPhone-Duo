@@ -184,22 +184,29 @@
       "value": "两侧盖板与手柄侧部平齐",
       "source": "user"
     },
-    "round_volume_buttons": {
-      "value": "右侧加减音量按键改为圆形",
-      "source": "user"
-    },
     "flush_cover_implementation": {
       "value": {
         "cover_top_z_mm": 11.6,
         "cover_roof_thickness_mm": 3,
-        "button_diameter_mm": 8,
         "button_thickness_mm": 4.4,
-        "button_hole_diameter_mm": 8.8,
         "cap_edge_chamfer_mm": 0.3,
         "speaker_slot_pitch_y_mm": 24,
-        "interpretation": "盖板顶面与现有滑轨顶部齐平；方桩、下壳和盖板落座面不动，键帽仍高出盖面1.2 mm。"
+        "interpretation": "盖板顶面与现有滑轨顶部齐平；方桩、下壳和盖板落座面不动，键帽仍高出盖面1.2 mm。",
+        "button_outline_length_width_mm": [
+          14,
+          2.8
+        ],
+        "button_hole_length_width_mm": [
+          14.8,
+          3.6
+        ],
+        "button_markings": "none"
       },
       "source": "default"
+    },
+    "volume_button_shape": {
+      "value": "右侧两个音量按键与左侧开孔形状一致，为竖向圆头短线形，去掉加减符号。",
+      "source": "user"
     }
   },
   "open_questions": []

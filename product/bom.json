@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "draft",
   "bom_ready": false,
-  "requirements_digest": "77230d2bc0fb5fa323cfd392ff33a76920a4cf2fecbcd0363ecccead0230f90b",
+  "requirements_digest": "acd0c3025f6b074e83ab664d6b98e7aaa18daed67f4a66e7f1bdb66b863266b0",
   "items": [
     {
       "id": "phone",
@@ -27,7 +27,7 @@
     },
     {
       "id": "rear_shell",
-      "name": "PETG 双轨一体下壳原型，STL参考滑轨、四角20 mm对称过渡、方桩插孔及外壳倒角，含圆形键帽的柔性音量双键",
+      "name": "PETG 双轨一体下壳原型，STL参考滑轨、四角20 mm对称过渡、方桩插孔及外壳倒角，含无符号竖向圆头长条键帽的柔性音量双键",
       "quantity": 1,
       "source": "default"
     },
@@ -45,7 +45,7 @@
     },
     {
       "id": "right_cover",
-      "name": "PETG 右侧随形上盖，21.8×100.4×3 mm顶板、两根一体方形卡桩、圆形音量双键孔",
+      "name": "PETG 右侧随形上盖，21.8×100.4×3 mm顶板、两根一体方形卡桩、竖向圆头长条音量双键孔",
       "quantity": 1,
       "source": "default"
     }

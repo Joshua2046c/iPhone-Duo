@@ -116,6 +116,12 @@
       "source": "user_requested",
       "description": "盖板与侧部平齐、左侧出声孔竖向排列、右侧音量键改圆形",
       "path": "product/references/uploads/20260929T053641002Z-1-mark.png"
+    },
+    {
+      "id": "unmarked_capsule_volume_keys",
+      "source": "user_requested",
+      "description": "右侧音量键形状与左侧竖向圆头出声孔一致，取消加减符号",
+      "path": "product/references/uploads/20260929T055537108Z-1-mark.png"
     }
   ],
   "assembly_story": {
@@ -162,7 +168,8 @@
           "filled_ends_square_posts_chamfers",
           "joycon_rail_stl",
           "four_corner_transitions",
-          "flush_covers_stacked_slots_round_keys"
+          "flush_covers_stacked_slots_round_keys",
+          "unmarked_capsule_volume_keys"
         ]
       }
     ]

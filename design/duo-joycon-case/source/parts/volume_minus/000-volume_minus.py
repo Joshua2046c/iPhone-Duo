@@ -1,4 +1,5 @@
 # cell: volume_minus
+# cell: volume_minus
 
 foot_w=param("volume_minus_anchor_width",4.0)
 foot_span=param("volume_minus_anchor_span",14.0)
@@ -14,8 +15,9 @@ nose_x=param("volume_minus_contact_x",-4.0)
 nose_z=param("volume_minus_contact_height",3.1)
 nose_w=param("volume_minus_contact_width",3.0)
 nose_t=param("volume_minus_contact_thickness",1.6)
-# Existing cap_width now controls the circular cap diameter.
-cap_w=param("volume_minus_cap_width",8.0)
+# Vertical capsule matches the 14 x 2.8 mm left acoustic slots.
+cap_w=param("volume_minus_cap_width",2.8)
+cap_l=param("volume_minus_cap_length",14.0)
 cap_t=param("volume_minus_cap_thickness",2.0)
 embed=param("volume_minus_anchor_embed",0.2)
 # Anchor integrates with shell; flexible leaves and nose remain free of the shell.
@@ -31,13 +33,11 @@ k=k+Pos(beam_l,0,nose_z+leg_h/2)*Box(arm_t,nose_w,leg_h)
 k=k+Pos((nose_x+beam_l)/2,0,nose_z)*Box(beam_l-nose_x,nose_w,nose_t)
 cap_x=beam_l+arm_l/2
 cap_bottom=beam_z+arm_t
-cap=Pos(cap_x,0,cap_bottom)*extrude(Circle(cap_w/2),amount=cap_t)
+cap=Pos(cap_x,0,cap_bottom)*extrude(SlotOverall(cap_l,cap_w,rotation=90),amount=cap_t)
 edge=param("volume_minus_cap_edge_chamfer",0.3)
 cap=chamfer(cap.faces().sort_by(Axis.Z)[-1].edges(),length=edge)
 k=k+cap
-# Raised tactile mark derived from cap size.
-k=k+Pos(cap_x,0,cap_bottom+cap_t+beam_t/4)*Box(cap_w*0.6,beam_t,beam_t/2)
-
+# Unmarked cap: no raised plus/minus geometry.
 k.color=Color(0.12,0.63,0.72)
 publish("volume_minus",k,"音量减柔性转向键",material="petg")
 fit("volume_minus","rear_shell",kind="fused",reason="The fixed foot joins both the base (0.2 mm) and the tray sidewall (0.8 mm); only this anchor is fused, leaving both flexure leaves and the output arm free.")

@@ -1,6 +1,7 @@
 # cell: right_cover
 # cell: right_cover
 # cell: right_cover
+# cell: right_cover
 
 w=param("right_cover_width",22.2)
 length=param("right_cover_length",96.0)
@@ -37,13 +38,14 @@ outline=wing_profile(w-2*seam,length-2*seam,inner_length-2*seam,transition,max(r
 lid=Pos(0,0,height-roof)*extrude(outline,amount=roof)
 
 
-# Existing hole width controls the circular opening diameter.
-hole_w=param("right_cover_key_hole_width",8.8)
+# Capsule through-openings retain 0.4 mm normal clearance to the caps.
+hole_w=param("right_cover_key_hole_width",3.6)
+hole_l=param("right_cover_key_hole_length",14.8)
 key_x=param("right_cover_key_x",4.5)
 key_y=param("right_cover_key_y",3.45)
 key_pitch=param("right_cover_key_pitch",24.0)
 for sign in [-1,1]:
-    lid-=Pos(key_x,key_y+sign*key_pitch/2,height-roof)*extrude(Circle(hole_w/2),amount=roof+1)
+    lid-=Pos(key_x,key_y+sign*key_pitch/2,height-roof)*extrude(SlotOverall(hole_l,hole_w,rotation=90),amount=roof+1)
 
 peg_w=param("right_cover_peg_width",4.0)
 peg_l=param("right_cover_peg_length",8.0)
