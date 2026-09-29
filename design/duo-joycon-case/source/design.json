@@ -26,7 +26,7 @@
           "target": "volume_plus",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/volume_plus/000-volume_plus.py",
-          "sha256": "21043c6de6fe4226005a41824f2b7cdb1db6d65117a426799a5c33bbfd922c66"
+          "sha256": "b538bc9bd7599440d0a8346fa9e30978cf7bb462dbd68d29aabd9339c5225524"
         }
       ],
       "dependencies": []
@@ -40,7 +40,7 @@
           "target": "volume_minus",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/volume_minus/000-volume_minus.py",
-          "sha256": "39cc0b11aaaad53b9377f23750d06a657a371d7687b623db928c8b3453b6d10c"
+          "sha256": "6e35ec4c064a1409da2a68e295aa34d6a7caec52a4c61fb9cf87bc412fdb65be"
         }
       ],
       "dependencies": []
@@ -54,7 +54,7 @@
           "target": "left_cover",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/left_cover/000-left_cover.py",
-          "sha256": "11baca8931abd1b112017fe9b763f4370e4614d00cbca1ce9aac3594b2a6e9d6"
+          "sha256": "1dbb0ab5eeb025f5140e66cded3d2e4d989f2189a3e466c7fdcbfb36f86df155"
         }
       ],
       "dependencies": []
@@ -68,7 +68,7 @@
           "target": "right_cover",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/right_cover/000-right_cover.py",
-          "sha256": "d5e5dee734c8bb398cc814ad0b82804ab9e8d0b4ab29a05d4f4f79907dacd064"
+          "sha256": "9229038615b783885dc22a308e02b6048113f0588c171a158f28ef3c528a9f17"
         }
       ],
       "dependencies": []
@@ -108,7 +108,7 @@
       "label": "音量加柔性转向键",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "b3227d2c8c9af5ef91e75324b10fdbbb2f5e8bef8ad8a4384a7dde3370fefe13",
+      "shapeHash": "36d739907d1f1f6cd3e416e9af8171be30b0cbaf11349bcb169a015e35ec1145",
       "transform": {
         "positionMm": [
           63,
@@ -135,7 +135,7 @@
       "label": "音量减柔性转向键",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "f2b3115c87dfc578f42b6d852a83345f04a2a1c8056e3791512ff7b934b8f44f",
+      "shapeHash": "290fccb839448a46ec5d22ef8e06d3c97085588c594cc5cb66274a616ee71c8a",
       "transform": {
         "positionMm": [
           63,
@@ -162,7 +162,7 @@
       "label": "左侧曲线出声上盖",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "afe0780cc0d721dbe374f1a8804b805cf1cdcbc2823f1b1b0896a02ec30a64bd",
+      "shapeHash": "64fdd1e9d72561541e2b186624433fb3abbfc1b2a339f9b6f3dee9ac518460f6",
       "transform": {
         "positionMm": [
           -70.5,
@@ -189,7 +189,7 @@
       "label": "右侧曲线音量上盖",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "944014780eaeaf105f404e802c5e3f5047bcab87dee2bd66a1bc43010851f1ad",
+      "shapeHash": "680822e5653dd033981acf81c9e060f42ede157cda3ea91c4ebe7cbddc4cb2db",
       "transform": {
         "positionMm": [
           70.5,
@@ -226,7 +226,7 @@
       "b": "rear_shell"
     }
   ],
-  "updatedAt": "2026-09-29T05:05:13.388Z",
+  "updatedAt": "2026-09-29T05:40:30.224Z",
   "parameters": {
     "rear_shell": {
       "rear_shell_side_clearance": 0.5,
@@ -316,9 +316,9 @@
       "volume_plus_contact_width": 3,
       "volume_plus_contact_thickness": 1.6,
       "volume_plus_cap_width": 8,
-      "volume_plus_cap_length": 10,
-      "volume_plus_cap_thickness": 3,
-      "volume_plus_anchor_embed": 0.2
+      "volume_plus_cap_thickness": 4.4,
+      "volume_plus_anchor_embed": 0.2,
+      "volume_plus_cap_edge_chamfer": 0.3
     },
     "volume_minus": {
       "volume_minus_anchor_width": 4,
@@ -336,19 +336,19 @@
       "volume_minus_contact_width": 3,
       "volume_minus_contact_thickness": 1.6,
       "volume_minus_cap_width": 8,
-      "volume_minus_cap_length": 10,
-      "volume_minus_cap_thickness": 3,
-      "volume_minus_anchor_embed": 0.2
+      "volume_minus_cap_thickness": 4.4,
+      "volume_minus_anchor_embed": 0.2,
+      "volume_minus_cap_edge_chamfer": 0.3
     },
     "left_cover": {
       "left_cover_width": 22.2,
       "left_cover_length": 100.8,
-      "left_cover_height": 10.2,
-      "left_cover_roof_thickness": 1.6,
+      "left_cover_height": 11.6,
+      "left_cover_roof_thickness": 3,
       "left_cover_corner_radius": 1,
       "left_cover_slot_length": 14,
       "left_cover_slot_width": 2.8,
-      "left_cover_slot_pitch": 7,
+      "left_cover_slot_pitch": 24,
       "left_cover_slot_y": 0,
       "left_cover_inner_length": 83,
       "left_cover_transition_span": 20,
@@ -367,12 +367,10 @@
     "right_cover": {
       "right_cover_width": 22.2,
       "right_cover_length": 100.8,
-      "right_cover_height": 10.2,
-      "right_cover_roof_thickness": 1.6,
+      "right_cover_height": 11.6,
+      "right_cover_roof_thickness": 3,
       "right_cover_corner_radius": 1,
       "right_cover_key_hole_width": 8.8,
-      "right_cover_key_hole_length": 10.8,
-      "right_cover_key_hole_radius": 2.4,
       "right_cover_key_x": 4.5,
       "right_cover_key_y": 3.45,
       "right_cover_key_pitch": 24,

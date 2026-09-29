@@ -110,6 +110,12 @@
       "source": "user_requested",
       "description": "滑轨与两侧盖板/下壳相邻的四处端部外轮廓圆滑过渡红线参考",
       "path": "product/references/uploads/20260929T050042339Z-1-mark.png"
+    },
+    {
+      "id": "flush_covers_stacked_slots_round_keys",
+      "source": "user_requested",
+      "description": "盖板与侧部平齐、左侧出声孔竖向排列、右侧音量键改圆形",
+      "path": "product/references/uploads/20260929T053641002Z-1-mark.png"
     }
   ],
   "assembly_story": {
@@ -155,7 +161,8 @@
           "integrated_rails_lower_shell",
           "filled_ends_square_posts_chamfers",
           "joycon_rail_stl",
-          "four_corner_transitions"
+          "four_corner_transitions",
+          "flush_covers_stacked_slots_round_keys"
         ]
       }
     ]

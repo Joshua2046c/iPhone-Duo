@@ -1,5 +1,6 @@
 # cell: left_cover
 # cell: left_cover
+# cell: left_cover
 
 w=param("left_cover_width",22.2)
 length=param("left_cover_length",96.0)
@@ -38,10 +39,11 @@ lid=Pos(0,0,height-roof)*extrude(outline,amount=roof)
 
 slot_l=param("left_cover_slot_length",14.0)
 slot_w=param("left_cover_slot_width",2.8)
-slot_pitch=param("left_cover_slot_pitch",7.0)
+# Two slots are stacked on the same vertical centreline (Y direction).
+slot_pitch=param("left_cover_slot_pitch",24.0)
 slot_y=param("left_cover_slot_y",0.0)
 for sign in [-1,1]:
-    lid-=Pos(sign*slot_pitch/2,slot_y,height-roof-1)*extrude(SlotOverall(slot_l,slot_w,rotation=90),amount=roof+2)
+    lid-=Pos(0,slot_y+sign*slot_pitch/2,height-roof-1)*extrude(SlotOverall(slot_l,slot_w,rotation=90),amount=roof+2)
 
 peg_w=param("left_cover_peg_width",4.0)
 peg_l=param("left_cover_peg_length",8.0)
