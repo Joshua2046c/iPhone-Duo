@@ -29,12 +29,12 @@
     "right_control_width": 20,
     "hinge_setback": 4,
     "camera_opening": [
-      22,
-      56
+      24,
+      58
     ],
     "camera_center": [
-      41.5,
-      -8.5
+      44,
+      -9.5
     ],
     "button_center_y": [
       12,
@@ -121,15 +121,15 @@
     "cover_peg_retention": 0.4,
     "cover_peg_retention_height": 1.2,
     "cover_peg_release_height": 0.4,
-    "cover_socket_width": 4.4,
+    "cover_socket_width": 4.6,
     "cover_socket_depth": 8.4,
     "cover_socket_lower_relief": [
-      5.2,
-      4.4,
+      5.4,
+      4.6,
       2.3
     ],
     "cover_peg_bottom_clearance": 0.4,
-    "cover_peg_side_clearance": 0.2,
+    "cover_peg_side_clearance": 0.3,
     "back_chamfer": 0.6,
     "outer_shoulder_chamfer": 0.3,
     "front_outer_chamfer": 0.4,
@@ -161,7 +161,21 @@
       3.6
     ],
     "key_cap_hole_normal_clearance": 0.4,
-    "key_cap_marking": "none"
+    "key_cap_marking": "none",
+    "phone_cavity_front_corner_radius": 12.5,
+    "phone_cavity_hinge_corner_radius": 0,
+    "shell_front_corner_radius": 14.9,
+    "volume_contact_y": [
+      -2,
+      -15.5
+    ],
+    "volume_output_tunnel_center_y": [
+      -2,
+      -15.5
+    ],
+    "cover_peg_insertion_deflection_per_arm": 0.1,
+    "socket_to_chamber_ligament": 1.9,
+    "inter_linkage_static_clearance": 1.5
   },
   "verification": {
     "phone_fit": false,
@@ -171,7 +185,7 @@
     "cover_retention": false,
     "acoustic_performance": false
   },
-  "note": "连续底板、双轨及双翼侧壁为单实体。标注端部空洞、旧胶槽及前缘外侧缺口已补齐；每盖两根开槽方桩与下壳方孔卡接，带可退出斜面。背面外轮廓与外露边缘局部倒角，排除轨道和手机内侧。盖板落座Z=8.6，桩底Z=0.6；盖板无需胶带，手机固定胶垫保留。真实手机/手柄接口、完整开合、声学性能和方桩插拔保持力均未实配。相机尺寸与位置仍为照片对应的可调初值。 双轨采用用户STL提取数据，居中后纵向范围[-53.85,46.95]、槽腔Z[-0.4,9.6]、喉口Z[0.8,8.4]；闭端止挡Y=-43.75，唇边缺口Y[32.65,37.65]。轨道本体不加外壳倒角，入口及端部曲面为参考造型的重建。四角过渡跨度20 mm，翼壳长度100.8 mm、上盖长度100.4 mm，与长轨端部接顺；方桩及插孔中心、主功能腔、手机托壳与按键中心保持；盖板顶面加厚至Z=11.6与轨顶齐平，底面仍在Z=8.6，左侧双槽改为竖向上下排列，双音量键帽改为与左侧声孔相同的14×2.8 mm竖向圆头长条，无加减标记，盖板匹配孔14.8×3.6 mm。",
+  "note": "连续底板、双轨及双翼侧壁为单实体。标注端部空洞、旧胶槽及前缘外侧缺口已补齐；每盖两根开槽方桩与下壳方孔卡接，带可退出斜面。背面外轮廓与外露边缘局部倒角，排除轨道和手机内侧。盖板落座Z=8.6，桩底Z=0.6；盖板无需胶带，手机固定胶垫保留。真实手机/手柄接口、完整开合、声学性能和方桩插拔保持力均未实配。相机24×58 mm、中心(44,-9.5)，托壳仅外侧两角圆弧、铰链侧方角。音量触点(59,-2,3.1)/(59,-15.5,3.1)与对应传动口按新图比例修正，前面键帽仍在Y=±12；低位折线臂连接。方孔由4.4增至4.6 mm，桩身单侧间隙0.3、压入每臂偏转0.1 mm。全部新增机械尺寸为照片比例的可调默认值。 双轨采用用户STL提取数据，居中后纵向范围[-53.85,46.95]、槽腔Z[-0.4,9.6]、喉口Z[0.8,8.4]；闭端止挡Y=-43.75，唇边缺口Y[32.65,37.65]。轨道本体不加外壳倒角，入口及端部曲面为参考造型的重建。四角过渡跨度20 mm，翼壳长度100.8 mm、上盖长度100.4 mm，与长轨端部接顺；方桩及插孔中心、主功能腔及正面键帽中心保持，手机托壳与内部触点按新图比例修正；盖板顶面加厚至Z=11.6与轨顶齐平，底面仍在Z=8.6，左侧双槽改为竖向上下排列，双音量键帽改为与左侧声孔相同的14×2.8 mm竖向圆头长条，无加减标记，盖板匹配孔14.8×3.6 mm。",
   "construction": {
     "rail_lower_shell_single_solid": true,
     "source": "user",
@@ -196,5 +210,55 @@
     "notch_depth_radial": 0.7,
     "entry_profile": "24 points sampled from mesh; interpolated spline, combined with 4 mm longitudinal end rounding",
     "notch_function_verified": false
+  },
+  "rear_photo_reference": {
+    "source_path": "product/references/uploads/20260929T115547271Z-1-ishot-2026-09-29-7-55-00.png",
+    "sha256": "587760093a4ff2aa397f7266f2cba1df8afa791c59bd05bf6ef456c8dcb86bf6",
+    "method": "Visual proportion estimate only; ANT labels and dBm values are radio data, not mechanical dimensions. No calibrated drawing or rear-half STEP supplied.",
+    "image_body_bounds_px_approx": [
+      188,
+      247,
+      351,
+      476
+    ],
+    "portrait_envelope_proxy_mm": [
+      84.1,
+      117.8
+    ],
+    "mapping": "Existing case frame: portrait top maps to +X, portrait hinge/right maps to +Y. Front corner rounding applies at -Y only.",
+    "visible_features": "Rounded left two body corners, nearly square hinge-side right corners; horizontal pill camera island close to portrait top-left; two short features on the top edge interpreted as the two volume buttons.",
+    "defaults_mm": {
+      "phone_outer_corner_radius": 12,
+      "phone_cavity_corner_radius": 12.5,
+      "shell_outer_corner_radius": 14.9,
+      "camera_cutout_width_length": [
+        24,
+        58
+      ],
+      "camera_cutout_center": [
+        44,
+        -9.5
+      ],
+      "volume_tip_centers": [
+        [
+          59,
+          -2,
+          3.1
+        ],
+        [
+          59,
+          -15.5,
+          3.1
+        ]
+      ],
+      "volume_front_caps_y": [
+        12,
+        -12
+      ],
+      "cover_socket_width": 4.6,
+      "peg_width": 4,
+      "peg_max_shoulder_width": 4.8
+    },
+    "uncertainty": "Photo-derived features are approximate (roughly 1–2 mm positional uncertainty, not a metrology tolerance); rear half width still uses folded total width proxy. Button +/- ordering, button height and travel, camera projection and hinge sweep cannot be established from this image."
   }
 }

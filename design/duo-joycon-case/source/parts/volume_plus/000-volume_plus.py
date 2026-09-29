@@ -1,5 +1,6 @@
 # cell: volume_plus
 # cell: volume_plus
+# cell: volume_plus
 
 foot_w=param("volume_plus_anchor_width",4.0)
 foot_span=param("volume_plus_anchor_span",14.0)
@@ -15,6 +16,8 @@ nose_x=param("volume_plus_contact_x",-4.0)
 nose_z=param("volume_plus_contact_height",3.1)
 nose_w=param("volume_plus_contact_width",3.0)
 nose_t=param("volume_plus_contact_thickness",1.6)
+nose_y=param("volume_plus_contact_y",-14)
+turn_x=param("volume_plus_contact_elbow_x",3.0)
 # Vertical capsule matches the 14 x 2.8 mm left acoustic slots.
 cap_w=param("volume_plus_cap_width",2.8)
 cap_l=param("volume_plus_cap_length",14.0)
@@ -30,7 +33,15 @@ k=k+Pos(beam_l+arm_l/2,0,beam_z+arm_t/2)*Box(arm_l,2*nose_w,arm_t)
 # Downward leg below flexure converts front downstroke to inward nose travel.
 leg_h=beam_z+arm_t-nose_z
 k=k+Pos(beam_l,0,nose_z+leg_h/2)*Box(arm_t,nose_w,leg_h)
-k=k+Pos((nose_x+beam_l)/2,0,nose_z)*Box(beam_l-nose_x,nose_w,nose_t)
+# Offset the phone-facing tip while preserving the front cap and flexure position.
+# Straight tip crosses the shell wall before the angled low-level link begins.
+from math import atan2, degrees, hypot
+link_l=hypot(beam_l-turn_x,nose_y)
+link_a=degrees(atan2(-nose_y,beam_l-turn_x))
+k=k+Pos((turn_x+beam_l)/2,nose_y/2,nose_z)*Rot(0,0,link_a)*Box(link_l,nose_w,nose_t)
+k=k+Pos(turn_x,nose_y,nose_z)*Cylinder(nose_w/2,nose_t)
+k=k+Pos((nose_x+turn_x)/2,nose_y,nose_z)*Box(turn_x-nose_x,nose_w,nose_t)
+k=k+Pos(beam_l,0,nose_z)*Cylinder(nose_w/2,nose_t)
 cap_x=beam_l+arm_l/2
 cap_bottom=beam_z+arm_t
 cap=Pos(cap_x,0,cap_bottom)*extrude(SlotOverall(cap_l,cap_w,rotation=90),amount=cap_t)

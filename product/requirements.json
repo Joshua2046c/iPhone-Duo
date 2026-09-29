@@ -59,7 +59,7 @@
       "source": "default"
     },
     "mechanism_concept": {
-      "value": "两路独立音量键，每路以两条并联柔性梁回位、L 形臂转向并向内接触手机音量键；固定脚与壳一体融合，壳体设置下压限位。横向姿态右边缘的原音量键坐标待核实。",
+      "value": "两路柔性梁回位、L形转向臂与低位折线输出臂；正面长条键帽位置保持，内部触点按背面图移至Y=-2/-15.5 mm，顶部可见凸起暂解释为音量键，正负对应及实际行程仍需校准。",
       "source": "default"
     },
     "manufacturing_method": {
@@ -79,7 +79,7 @@
       "source": "user"
     },
     "rail_structure": {
-      "value": "两侧Joy-Con滑轨按用户上传20260929T041741902Z-1-joycon-phone-grip.stl提取的造型与数据重建，仅采用滑轨部分；保留现有手机托壳、盖板、方桩、音量机构和布局",
+      "value": "两侧Joy-Con滑轨按用户上传20260929T041741902Z-1-joycon-phone-grip.stl提取的造型与数据重建，仅采用滑轨部分；手机托壳、相机及音量触点依据最新背面图比例调整，保持外侧手柄布局。",
       "source": "user"
     },
     "layout_frame": {
@@ -96,7 +96,7 @@
       "source": "user"
     },
     "rear_camera_reference": {
-      "value": "手机后盖摄像头布局参考 20260928 图 2；在既定横向装机姿态下对应外侧角部",
+      "value": "后盖轮廓、摄像头与顶部原机音量键布局按用户20260929T115547271Z背面图调整。",
       "source": "user"
     },
     "rail_centering": {
@@ -118,7 +118,7 @@
       "source": "user"
     },
     "cover_construction": {
-      "value": "两侧翼部一体封闭下壳，壁高8.6 mm、侧壁标称2.4 mm；端部填实，保留内部功能腔。独立上盖板厚3 mm、顶面与滑轨Z=11.6 mm齐平、外轮廓21.8×100.4 mm，四处曲线跟随底板，周缘内收0.2 mm。每盖两根4 mm方形开槽弹性桩，长8 mm、中心距72 mm，插入4.4 mm方孔，止退肩与孔底扩腔卡接；取消盖板胶槽。背面外轮廓倒角0.6 mm，翼部外露端肩0.3 mm、前缘0.4 mm。左盖双槽14×2.8 mm、同一竖线沿Y上下排列、中心距24 mm；声音低位通道及右侧必要传动口保留。",
+      "value": "两侧翼部一体封闭下壳，壁高8.6 mm、侧壁标称2.4 mm；端部填实，保留内部功能腔。独立上盖板厚3 mm、顶面与滑轨Z=11.6 mm齐平、外轮廓21.8×100.4 mm，四处曲线跟随底板，周缘内收0.2 mm。每盖两根4 mm方形开槽弹性桩，长8 mm、中心距72 mm，插入4.6 mm方孔，止退肩与孔底扩腔卡接；取消盖板胶槽。背面外轮廓倒角0.6 mm，翼部外露端肩0.3 mm、前缘0.4 mm。左盖双槽14×2.8 mm、同一竖线沿Y上下排列、中心距24 mm；声音低位通道及右侧必要传动口保留。",
       "source": "default"
     },
     "lower_wing_enclosure": {
@@ -162,7 +162,7 @@
       "source": "default"
     },
     "four_corner_transitions": {
-      "value": "按20260929最新红线，将两侧盖板及一体下壳与滑轨相邻的四处端部外轮廓接顺，四角对称圆滑过渡；滑轨功能截面、手机托壳、方桩孔位与按钮布局保持。",
+      "value": "按红线将两侧盖板及一体下壳与滑轨相邻的四处端部外轮廓接顺，四角对称圆滑过渡；滑轨功能截面、方桩中心与正面按钮布局保持。",
       "source": "user"
     },
     "wing_transition_default": {
@@ -207,6 +207,45 @@
     "volume_button_shape": {
       "value": "右侧两个音量按键与左侧开孔形状一致，为竖向圆头短线形，去掉加减符号。",
       "source": "user"
+    },
+    "rear_photo_fit": {
+      "value": "依据最新背面图修正手机托壳轮廓、摄像头开口和音量传导位置；卡扣可略松。",
+      "source": "user"
+    },
+    "rear_photo_fit_defaults": {
+      "value": {
+        "phone_outer_corner_radius": 12,
+        "phone_cavity_corner_radius": 12.5,
+        "shell_outer_corner_radius": 14.9,
+        "camera_cutout_width_length": [
+          24,
+          58
+        ],
+        "camera_cutout_center": [
+          44,
+          -9.5
+        ],
+        "volume_tip_centers": [
+          [
+            59,
+            -2,
+            3.1
+          ],
+          [
+            59,
+            -15.5,
+            3.1
+          ]
+        ],
+        "volume_front_caps_y": [
+          12,
+          -12
+        ],
+        "cover_socket_width": 4.6,
+        "peg_width": 4,
+        "peg_max_shoulder_width": 4.8
+      },
+      "source": "default"
     }
   },
   "open_questions": []

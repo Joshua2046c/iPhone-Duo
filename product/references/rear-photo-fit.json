@@ -1,0 +1,50 @@
+{
+  "source_path": "product/references/uploads/20260929T115547271Z-1-ishot-2026-09-29-7-55-00.png",
+  "sha256": "587760093a4ff2aa397f7266f2cba1df8afa791c59bd05bf6ef456c8dcb86bf6",
+  "method": "Visual proportion estimate only; ANT labels and dBm values are radio data, not mechanical dimensions. No calibrated drawing or rear-half STEP supplied.",
+  "image_body_bounds_px_approx": [
+    188,
+    247,
+    351,
+    476
+  ],
+  "portrait_envelope_proxy_mm": [
+    84.1,
+    117.8
+  ],
+  "mapping": "Existing case frame: portrait top maps to +X, portrait hinge/right maps to +Y. Front corner rounding applies at -Y only.",
+  "visible_features": "Rounded left two body corners, nearly square hinge-side right corners; horizontal pill camera island close to portrait top-left; two short features on the top edge interpreted as the two volume buttons.",
+  "defaults_mm": {
+    "phone_outer_corner_radius": 12,
+    "phone_cavity_corner_radius": 12.5,
+    "shell_outer_corner_radius": 14.9,
+    "camera_cutout_width_length": [
+      24,
+      58
+    ],
+    "camera_cutout_center": [
+      44,
+      -9.5
+    ],
+    "volume_tip_centers": [
+      [
+        59,
+        -2,
+        3.1
+      ],
+      [
+        59,
+        -15.5,
+        3.1
+      ]
+    ],
+    "volume_front_caps_y": [
+      12,
+      -12
+    ],
+    "cover_socket_width": 4.6,
+    "peg_width": 4,
+    "peg_max_shoulder_width": 4.8
+  },
+  "uncertainty": "Photo-derived features are approximate (roughly 1–2 mm positional uncertainty, not a metrology tolerance); rear half width still uses folded total width proxy. Button +/- ordering, button height and travel, camera projection and hinge sweep cannot be established from this image."
+}

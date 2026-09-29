@@ -1,6 +1,7 @@
 # cell: rear_shell
 # cell: rear_shell
 # cell: rear_shell
+# cell: rear_shell
 
 # Phone envelope from the user's size sheet, rotated into the reference pose.
 PHONE_X = 117.8
@@ -73,9 +74,25 @@ front_bevel=param("rear_shell_front_chamfer",0.4)
 s = Pos(0,0,-base)*extrude(floor_profile.sketch,amount=base)
 # Only the outside wire of the rear face is beveled, before any interior or rail exists.
 s=chamfer(s.faces().sort_by(Axis.Z)[0].outer_wire().edges(),length=back_bevel)
+# Rear-photo outline: the two outer corners are round; hinge-side corners stay square.
+# Source: user image 20260929T115547271Z-1; radii remain photo-based defaults.
+def phone_outline(width,depth,r):
+    a=-width/2
+    b=width/2
+    f=-depth/2
+    h=depth/2
+    with BuildSketch() as profile:
+        with BuildLine():
+            Polyline((a,h),(b,h),(b,f+r))
+            CenterArc((b-r,f+r),r,0,-90)
+            Line((b-r,f),(a+r,f))
+            CenterArc((a+r,f+r),r,-90,-90)
+            Line((a,f+r),(a,h))
+        make_face()
+    return profile.sketch
 # Three-sided low phone wall rises from the common floor; no wall spans the hinge.
-rim=extrude(RectangleRounded(ox,oy,corner),amount=rise)
-rim=rim-extrude(RectangleRounded(ix,iy,max(corner-wall,0.5)),amount=rise+1)
+rim=extrude(phone_outline(ox,oy,corner),amount=rise)
+rim=rim-extrude(phone_outline(ix,iy,max(corner-wall,0.5)),amount=rise+1)
 rim=rim-Pos(0,hinge_y+oy/2,rise/2)*Box(ox+2,oy,rise+2)
 s=s+rim
 
@@ -135,18 +152,22 @@ for sign, extension in [(-1,left),(1,right)]:
     s+=chamber
 
 # Fill the exterior triangular junctions without entering the phone keep-out.
-phone_keepout=extrude(RectangleRounded(ix,iy,max(corner-wall,0.5)),amount=rise+1)
+phone_keepout=extrude(phone_outline(ix,iy,max(corner-wall,0.5)),amount=rise+1)
 for sign in [-1,1]:
     corner_zone=Pos(sign*(ox/2-corner/2),front_y+corner/2,rise/2)*Box(corner,corner,rise)
     bridge=(extrude(floor_profile.sketch,amount=rise) & corner_zone)-phone_keepout
     s+=bridge
 
-# Photo 2 supplies corner location/orientation only; cutout dimensions are tunable defaults.
-camera = Pos(camx,camy,-base-1)*extrude(RectangleRounded(camw,camh,camw/2-0.1),amount=base+rise+2)
+# Camera module position scaled from rear photo; 0.5-1 mm nominal clearance is provisional.
+camera = Pos(camx,camy,-base-1)*extrude(SlotOverall(camh,camw,rotation=90),amount=base+rise+2)
 s=s-camera
 s=s-Pos(-join,porty,port_z)*Box(wall*3,portw,port_h)
-for yy in [-key_pitch/2,key_pitch/2]:
+# Photo-visible top buttons; independent of the user's front-cap pitch.
+output_plus_y=param("rear_shell_output_plus_y",-2.0)
+output_minus_y=param("rear_shell_output_minus_y",-15.5)
+for yy in [output_plus_y,output_minus_y]:
     s=s-Pos(join+wall/2,yy,key_z)*Box(wall*3,keyslot,key_h)
+for yy in [-key_pitch/2,key_pitch/2]:
     for sign in [-1,1]:
         s=s+Pos(key_x,yy+sign*stop_span/2,stop_z/2)*Box(stop_w,stop_depth,stop_z)
 

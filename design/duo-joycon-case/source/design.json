@@ -12,7 +12,7 @@
           "target": "rear_shell",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/rear_shell/000-rear_shell.py",
-          "sha256": "0724efbbfad03bd5e3feba79598c45c530ab2135d1529448ad0b01345f207048"
+          "sha256": "7a51a3e9f7c798666be58933367cf856f78b6cc3eb7b16942c10a631d3fe37a7"
         }
       ],
       "dependencies": []
@@ -26,7 +26,7 @@
           "target": "volume_plus",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/volume_plus/000-volume_plus.py",
-          "sha256": "35f1d0b968786de9733bca026fdc1f48440ef090bdd8a9aa282bde09bac151b8"
+          "sha256": "5a53452d6efacd5064c153f58877685cc8861578ebdb6530b348574b86f887da"
         }
       ],
       "dependencies": []
@@ -40,7 +40,7 @@
           "target": "volume_minus",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/volume_minus/000-volume_minus.py",
-          "sha256": "3c5eed113992449629b4297e9b54a72ae465d399ee68db60abffc67edb468f4b"
+          "sha256": "199520b1b63005087495cdd53e6dd40e969cf41b1b6e9e18ce1ce6f9b2455449"
         }
       ],
       "dependencies": []
@@ -81,7 +81,7 @@
       "label": "滑轨一体下壳",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "c4066874c788e8935869b92502ce0a7a7620654e4bf9325428b641f7851515b6",
+      "shapeHash": "e80b23182ef64666f6c63b673bbe993083a0ed271f0376689d2bd70928261a4f",
       "transform": {
         "positionMm": [
           0,
@@ -108,7 +108,7 @@
       "label": "音量加柔性转向键",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "8dc7c2381cb0f33cc58ef91c51753695223c2eeeb48e183b8a7501d76431d893",
+      "shapeHash": "6ed6c2da9156dc531acdc9aee00710f3ca2443dc8174d69616d4a076250a3db8",
       "transform": {
         "positionMm": [
           63,
@@ -135,7 +135,7 @@
       "label": "音量减柔性转向键",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "dfae13d7a8744b22f931a4bdecb8e46ae6e8a12190973bfa1936b0ba70c56fe8",
+      "shapeHash": "2666da0130b35e086c5728eba410f35756e3aed25987015d3f83d76e1f7b34ed",
       "transform": {
         "positionMm": [
           63,
@@ -226,7 +226,7 @@
       "b": "rear_shell"
     }
   ],
-  "updatedAt": "2026-09-29T05:57:20.079Z",
+  "updatedAt": "2026-09-29T12:02:11.952Z",
   "parameters": {
     "rear_shell": {
       "rear_shell_side_clearance": 0.5,
@@ -236,11 +236,11 @@
       "rear_shell_left_blank": 20,
       "rear_shell_right_control": 20,
       "rear_shell_hinge_setback": 4,
-      "rear_shell_corner_radius": 6,
-      "rear_shell_camera_width": 22,
-      "rear_shell_camera_length": 56,
-      "rear_shell_camera_x": 41.5,
-      "rear_shell_camera_y": -8.5,
+      "rear_shell_corner_radius": 14.9,
+      "rear_shell_camera_width": 24,
+      "rear_shell_camera_length": 58,
+      "rear_shell_camera_x": 44,
+      "rear_shell_camera_y": -9.5,
       "rear_shell_port_relief_length": 24,
       "rear_shell_port_relief_y": 0,
       "rear_shell_button_pitch": 24,
@@ -295,10 +295,12 @@
       "rear_shell_back_chamfer": 0.6,
       "rear_shell_outer_chamfer": 0.3,
       "rear_shell_front_chamfer": 0.4,
-      "rear_shell_cover_socket_width": 4.4,
+      "rear_shell_cover_socket_width": 4.6,
       "rear_shell_cover_socket_depth": 8.4,
       "rear_shell_socket_retention_relief": 0.4,
-      "rear_shell_socket_capture_height": 2.3
+      "rear_shell_socket_capture_height": 2.3,
+      "rear_shell_output_plus_y": -2,
+      "rear_shell_output_minus_y": -15.5
     },
     "volume_plus": {
       "volume_plus_anchor_width": 4,
@@ -319,7 +321,9 @@
       "volume_plus_cap_thickness": 4.4,
       "volume_plus_anchor_embed": 0.2,
       "volume_plus_cap_edge_chamfer": 0.3,
-      "volume_plus_cap_length": 14
+      "volume_plus_cap_length": 14,
+      "volume_plus_contact_y": -14,
+      "volume_plus_contact_elbow_x": 3
     },
     "volume_minus": {
       "volume_minus_anchor_width": 4,
@@ -340,7 +344,9 @@
       "volume_minus_cap_thickness": 4.4,
       "volume_minus_anchor_embed": 0.2,
       "volume_minus_cap_edge_chamfer": 0.3,
-      "volume_minus_cap_length": 14
+      "volume_minus_cap_length": 14,
+      "volume_minus_contact_y": -3.5,
+      "volume_minus_contact_elbow_x": 3
     },
     "left_cover": {
       "left_cover_width": 22.2,

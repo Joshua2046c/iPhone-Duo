@@ -122,6 +122,12 @@
       "source": "user_requested",
       "description": "右侧音量键形状与左侧竖向圆头出声孔一致，取消加减符号",
       "path": "product/references/uploads/20260929T055537108Z-1-mark.png"
+    },
+    {
+      "id": "rear_photo_outline_camera_buttons",
+      "source": "user_requested",
+      "description": "用户提供的新背面图，修正机身轮廓/摄像头/原机顶部音量键的比例位置；图中文字为射频数据，不是机械尺寸",
+      "path": "product/references/uploads/20260929T115547271Z-1-ishot-2026-09-29-7-55-00.png"
     }
   ],
   "assembly_story": {
@@ -169,7 +175,8 @@
           "joycon_rail_stl",
           "four_corner_transitions",
           "flush_covers_stacked_slots_round_keys",
-          "unmarked_capsule_volume_keys"
+          "unmarked_capsule_volume_keys",
+          "rear_photo_outline_camera_buttons"
         ]
       }
     ]
