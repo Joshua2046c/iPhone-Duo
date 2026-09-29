@@ -98,6 +98,12 @@
       "source": "user_requested",
       "description": "补齐红框缺口与端部空洞，上盖方桩连接，底壳背面及外缘倒角但排除轨道和手机内侧",
       "path": "product/references/uploads/20260928T142555511Z-1-mark.png"
+    },
+    {
+      "id": "joycon_rail_stl",
+      "source": "user_requested",
+      "description": "仅参考两侧Joy-Con滑轨截面、入口、止挡与唇边缺口；不采用原手机框及轨道间距",
+      "path": "product/references/uploads/20260929T041741902Z-1-joycon-phone-grip.stl"
     }
   ],
   "assembly_story": {
@@ -141,7 +147,8 @@
           "centered_rails_and_covers",
           "closed_lower_housing_top_lids",
           "integrated_rails_lower_shell",
-          "filled_ends_square_posts_chamfers"
+          "filled_ends_square_posts_chamfers",
+          "joycon_rail_stl"
         ]
       }
     ]

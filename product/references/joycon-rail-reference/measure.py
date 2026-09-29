@@ -64,8 +64,7 @@ result = {
     'regular_channel_void_cross_section_u_z': [[0,3.2],[.7,3.2],[.7,2],[2.9,2],[2.9,12],[.7,12],[.7,10.8],[0,10.8]],
     'accuracy_note': 'Planar dimensions rounded to 0.1 mm from STL planes; curved endpoint rounded to 0.0001 coordinate unit, which is mesh precision, not fit accuracy. Underlying analytic fillet radii and manufacturing tolerances are unavailable.',
     'notch_function': 'Likely a latch/relief feature from geometry; not proven by supplied mesh.',
-    'fit_verified': False,
-    'applied_to_current_cad': False
+    'fit_verified': False
 }
 OUT.mkdir(parents=True, exist_ok=True)
 (OUT/'measurements.json').write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')

@@ -2,7 +2,7 @@ id,name,quantity,source
 phone,Apple iPhone Duo,1,user
 joycon_l,Nintendo Switch Joy-Con (L)，初代,1,user
 joycon_r,Nintendo Switch Joy-Con (R)，初代,1,user
-rear_shell,PETG 双轨一体下壳原型，端部填实、四个方桩插孔、外侧倒角，含柔性音量双键,1,default
+rear_shell,PETG 双轨一体下壳原型，滑轨按用户STL重建，端部填实、方桩插孔、外壳倒角，含柔性音量双键,1,default
 adhesive,可移除双面胶垫，厚 0.3 mm，10 × 30 mm，原型固定用,2,default
 left_cover,PETG 左侧随形上盖，1.6 mm顶板、两根一体方形卡桩、双竖向出声槽,1,default
 right_cover,PETG 右侧随形上盖，1.6 mm顶板、两根一体方形卡桩、音量双键孔,1,default

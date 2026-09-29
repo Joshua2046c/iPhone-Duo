@@ -1,4 +1,6 @@
 # cell: rear_shell
+# cell: rear_shell
+# cell: rear_shell
 
 # Phone envelope from the user's size sheet, rotated into the reference pose.
 PHONE_X = 117.8
@@ -148,77 +150,97 @@ for yy in [-key_pitch/2,key_pitch/2]:
     for sign in [-1,1]:
         s=s+Pos(key_x,yy+sign*stop_span/2,stop_z/2)*Box(stop_w,stop_depth,stop_z)
 
-# Integrated left_rail: original channel, entry and latch relief dimensions are preserved.
-def make_left_rail():
-    w=param("left_rail_width",5.0)
-    length=param("left_rail_length",96.0)
-    height=param("left_rail_height",10.0)
-    rounding=param("left_rail_corner_radius",1.0)
-    channel_d=param("left_rail_channel_depth",2.8)
-    channel_h=param("left_rail_channel_height",4.6)
-    mouth_h=param("left_rail_mouth_height",2.4)
-    lip=param("left_rail_lip_thickness",0.7)
-    channel_z=param("left_rail_channel_center_z",6.0)
-    stop=param("left_rail_bottom_stop",3.0)
-    latch_y=param("left_rail_latch_y",-39.0)
-    latch_len=param("left_rail_latch_length",3.0)
-    latch_depth=param("left_rail_latch_depth",0.6)
-    entry=param("left_rail_entry_length",5.0)
-    # Custom groove inspired by user's red-box views. These are NOT Nintendo-certified dimensions.
-    foundation=param("left_rail_foundation_height",2.4)
-    # Rail dimensions retain their original parameter names as features of the unified shell.
-    rail=Pos(0,0,foundation)*extrude(RectangleRounded(w,length,rounding),amount=height-foundation)
-    side=-1
-    # Solid web joins the inner rail corners to the wing wall before cutting the track.
-    rail=rail+Pos(-side*w/2,0,(foundation+height)/2)*Box(2*rounding,length,height-foundation)
-    run=length-stop+1
-    cy=stop/2+0.5
-    cx=side*(w/2-lip-channel_d/2)
-    rail=rail-Pos(cx,cy,channel_z)*Box(channel_d,run,channel_h)
-    rail=rail-Pos(side*(w/2-lip/2+0.1),cy,channel_z)*Box(lip+0.3,run,mouth_h)
-    rail=rail-Pos(side*(w/2-channel_d/2),length/2-entry/2+0.1,channel_z)*Box(channel_d+0.2,entry+0.2,channel_h)
-    rail=rail-Pos(side*(w/2-lip-channel_d-latch_depth/2+0.1),latch_y,channel_z)*Box(latch_depth+0.2,latch_len,channel_h/2)
-    return Pos(xl+w/2,center_y,-foundation)*rail
-s=s+make_left_rail()
 
-# Integrated right_rail: original channel, entry and latch relief dimensions are preserved.
+# STL reference 1c8aebf06ef5afe978ff12c1fb71b8741c7f7302be65ff041370069c9f929254.
+# Local u points inward, v follows sliding direction, z starts on rail bottom.
+# Entry boundary sampled from the uploaded mesh, millimetres assumed. Not a standard.
+RAIL_ENTRY_SAMPLES = [[0,45.8174],[0.005,45.950453],[0.02,46.098106],[0.05,46.259242],[0.1,46.440397],[0.2,46.688844],[0.35,46.947008],[0.5,47.140131],[0.7,47.336907],[1,47.548992],[1.25,47.673701],[1.5,47.80278],[1.75,47.964278],[2,48.165033],[2.25,48.415849],[2.5,48.742328],[2.7,49.094049],[2.8,49.325257],[2.85,49.465936],[2.9,49.634881],[2.95,49.856649],[2.98,50.0585],[2.995,50.228623],[3,50.4]]
+RAIL_ENTRY_RADIAL_SPAN = 3.0
+RAIL_ENTRY_Y_START = 45.8174
+RAIL_ENTRY_Y_END = 50.4
+
+def reference_rail(w,length,height,rounding,channel_d,channel_h,mouth_h,lip,channel_z,stop,latch_y,latch_len,latch_depth,entry,foundation):
+    # Only the mounting web is adapted to the existing wing. The functional void stays 1:1.
+    assert w>lip+channel_d and height>channel_h and length>stop
+    entry_points=[(u, length/2-entry+(v-RAIL_ENTRY_Y_START)*entry/(RAIL_ENTRY_Y_END-RAIL_ENTRY_Y_START)) for u,v in RAIL_ENTRY_SAMPLES]
+    with BuildSketch() as entry_plan:
+        with BuildLine():
+            Polyline((0,-length/2),entry_points[0])
+            Spline(*entry_points)
+            Polyline(entry_points[-1],(w,length/2),(w,-length/2),(0,-length/2))
+        make_face()
+    rail=extrude(entry_plan.sketch,amount=height)
+    # Source longitudinal end surfaces: 4 mm round-nosed envelope in YZ.
+    envelope=extrude(Plane.YZ*Pos(0,height/2)*RectangleRounded(length,height,rounding),amount=w)
+    rail=rail & envelope
+    # Join to the original wing only below its lid seat, keeping a 0.2 mm lid side gap.
+    web=Pos(w+wall/4-rail_allowance,0,foundation+housing_h/2)*Box(wall/2,wing_depth-2*outer_r,housing_h)
+    rail+=web
+    v0=-length/2+stop
+    run=length-stop+2
+    cy=v0+run/2
+    void=Pos(lip+channel_d/2,cy,channel_z)*Box(channel_d,run,channel_h)
+    void+=Pos((lip-1)/2,cy,channel_z)*Box(lip+1,run,mouth_h)
+    # Source has paired lip notches near the entrance, not a blind groove-back pocket.
+    void+=Pos((latch_depth-1)/2,latch_y,channel_z)*Box(latch_depth+1,latch_len,channel_h)
+    return rail-void,void
+
+def make_left_rail():
+    w=param("left_rail_width",5)
+    length=param("left_rail_length",100.8)
+    height=param("left_rail_height",14)
+    rounding=param("left_rail_corner_radius",4)
+    channel_d=param("left_rail_channel_depth",2.2)
+    channel_h=param("left_rail_channel_height",10)
+    mouth_h=param("left_rail_mouth_height",7.6)
+    lip=param("left_rail_lip_thickness",0.7)
+    channel_z=param("left_rail_channel_center_z",7)
+    stop=param("left_rail_bottom_stop",10.1)
+    latch_y=param("left_rail_latch_y",38.6)
+    latch_len=param("left_rail_latch_length",5)
+    latch_depth=param("left_rail_latch_depth",0.7)
+    entry=param("left_rail_entry_length",4.5826)
+    foundation=param("left_rail_foundation_height",2.4)
+    rail,void=reference_rail(w,length,height,rounding,channel_d,channel_h,mouth_h,lip,channel_z,stop,latch_y,latch_len,latch_depth,entry,foundation)
+    band=Pos(w/2,0,height/2)*Box(w,2*max(length,wing_depth),height+2*base)
+    return Pos(xl,center_y,-foundation)*rail,Pos(xl,center_y,-foundation)*void,Pos(xl,center_y,-foundation)*band
+left_rail_body,left_rail_void,left_rail_band=make_left_rail()
+# Cut the functional channel through the existing foundation as well.
+s=(s-left_rail_band+left_rail_body)-left_rail_void
+
 def make_right_rail():
-    w=param("right_rail_width",5.0)
-    length=param("right_rail_length",96.0)
-    height=param("right_rail_height",10.0)
-    rounding=param("right_rail_corner_radius",1.0)
-    channel_d=param("right_rail_channel_depth",2.8)
-    channel_h=param("right_rail_channel_height",4.6)
-    mouth_h=param("right_rail_mouth_height",2.4)
+    w=param("right_rail_width",5)
+    length=param("right_rail_length",100.8)
+    height=param("right_rail_height",14)
+    rounding=param("right_rail_corner_radius",4)
+    channel_d=param("right_rail_channel_depth",2.2)
+    channel_h=param("right_rail_channel_height",10)
+    mouth_h=param("right_rail_mouth_height",7.6)
     lip=param("right_rail_lip_thickness",0.7)
-    channel_z=param("right_rail_channel_center_z",6.0)
-    stop=param("right_rail_bottom_stop",3.0)
-    latch_y=param("right_rail_latch_y",-39.0)
-    latch_len=param("right_rail_latch_length",3.0)
-    latch_depth=param("right_rail_latch_depth",0.6)
-    entry=param("right_rail_entry_length",5.0)
-    # Custom groove inspired by user's red-box views. These are NOT Nintendo-certified dimensions.
+    channel_z=param("right_rail_channel_center_z",7)
+    stop=param("right_rail_bottom_stop",10.1)
+    latch_y=param("right_rail_latch_y",38.6)
+    latch_len=param("right_rail_latch_length",5)
+    latch_depth=param("right_rail_latch_depth",0.7)
+    entry=param("right_rail_entry_length",4.5826)
     foundation=param("right_rail_foundation_height",2.4)
-    # Rail dimensions retain their original parameter names as features of the unified shell.
-    rail=Pos(0,0,foundation)*extrude(RectangleRounded(w,length,rounding),amount=height-foundation)
-    side=1
-    # Solid web joins the inner rail corners to the wing wall before cutting the track.
-    rail=rail+Pos(-side*w/2,0,(foundation+height)/2)*Box(2*rounding,length,height-foundation)
-    run=length-stop+1
-    cy=stop/2+0.5
-    cx=side*(w/2-lip-channel_d/2)
-    rail=rail-Pos(cx,cy,channel_z)*Box(channel_d,run,channel_h)
-    rail=rail-Pos(side*(w/2-lip/2+0.1),cy,channel_z)*Box(lip+0.3,run,mouth_h)
-    rail=rail-Pos(side*(w/2-channel_d/2),length/2-entry/2+0.1,channel_z)*Box(channel_d+0.2,entry+0.2,channel_h)
-    rail=rail-Pos(side*(w/2-lip-channel_d-latch_depth/2+0.1),latch_y,channel_z)*Box(latch_depth+0.2,latch_len,channel_h/2)
-    return Pos(xr-w/2,center_y,-foundation)*rail
-s=s+make_right_rail()
+    rail,void=reference_rail(w,length,height,rounding,channel_d,channel_h,mouth_h,lip,channel_z,stop,latch_y,latch_len,latch_depth,entry,foundation)
+    band=Pos(w/2,0,height/2)*Box(w,2*max(length,wing_depth),height+2*base)
+    rail=mirror(rail,about=Plane.YZ)
+    void=mirror(void,about=Plane.YZ)
+    band=mirror(band,about=Plane.YZ)
+    return Pos(xr,center_y,-foundation)*rail,Pos(xr,center_y,-foundation)*void,Pos(xr,center_y,-foundation)*band
+right_rail_body,right_rail_void,right_rail_band=make_right_rail()
+# Cut the functional channel through the existing foundation as well.
+s=(s-right_rail_band+right_rail_body)-right_rail_void
 
 s=s.clean()
 # The front exterior rim edge is outside the phone contact faces; rails are excluded by Z/Y.
 front_edges=[e for e in s.edges() if all(abs(v.Z-rise)<1e-5 and abs(v.Y-front_y)<1e-5 for v in e.vertices()) and e.length>wall]
 assert len(front_edges)>0
 s=chamfer(front_edges,length=front_bevel)
+assert (s & left_rail_void).volume < 1e-6, "Left channel blocked by lower shell"
+assert (s & right_rail_void).volume < 1e-6, "Right channel blocked by lower shell"
 assert len(s.solids()) == 1, "Rails and lower housing must be one connected solid"
 s.color=Color(0.16,0.19,0.23)
 publish("rear_shell",s,"滑轨一体下壳",material="petg")

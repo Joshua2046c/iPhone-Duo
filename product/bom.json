@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "draft",
   "bom_ready": false,
-  "requirements_digest": "d858095f71efea93be6fac71e89878b24e9365f6ebd3d40939c89a4d08a75474",
+  "requirements_digest": "38b72a2e009ddeab54776525a595fdd3067a3059288803549119dd403be1d932",
   "items": [
     {
       "id": "phone",
@@ -27,7 +27,7 @@
     },
     {
       "id": "rear_shell",
-      "name": "PETG 双轨一体下壳原型，端部填实、四个方桩插孔、外侧倒角，含柔性音量双键",
+      "name": "PETG 双轨一体下壳原型，滑轨按用户STL重建，端部填实、方桩插孔、外壳倒角，含柔性音量双键",
       "quantity": 1,
       "source": "default"
     },
@@ -51,7 +51,7 @@
     }
   ],
   "unresolved_items": [
-    "初代滑轨截面、锁扣尺寸需实配",
+    "滑轨截面与缺口已有用户STL依据，真实初代Joy-Con滑入、锁止、释放及打印公差仍需实配",
     "手机音量键坐标、行程、相机与铰链尺寸待核实；现有模型采用明确标注的默认空间参数"
   ]
 }

@@ -63,7 +63,7 @@
       "source": "default"
     },
     "manufacturing_method": {
-      "value": "PETG FDM 主壳和自定义槽形滑轨原型；滑轨截面尺寸待实配",
+      "value": "PETG FDM主壳；滑轨功能截面及止挡/唇边缺口依据用户STL，接口与打印公差仍待实配",
       "source": "default"
     },
     "deliverable": {
@@ -79,7 +79,7 @@
       "source": "user"
     },
     "rail_structure": {
-      "value": "参照后三张红框的长直导向槽与端部结构设计左右滑轨",
+      "value": "两侧Joy-Con滑轨按用户上传20260929T041741902Z-1-joycon-phone-grip.stl提取的造型与数据重建，仅采用滑轨部分；保留现有手机托壳、盖板、方桩、音量机构和布局",
       "source": "user"
     },
     "layout_frame": {
@@ -139,6 +139,26 @@
     "exterior_chamfers": {
       "value": "底壳背板外轮廓和外露边缘做倒角，轨道和手机壳内侧不做倒角",
       "source": "user"
+    },
+    "rail_reference_dimensions": {
+      "value": {
+        "rail_length": 100.8,
+        "rail_height": 14,
+        "channel_height": 10,
+        "mouth_height": 7.6,
+        "total_groove_depth": 2.9,
+        "lip_thickness": 0.7,
+        "undercut_depth": 2.2,
+        "stop_from_end": 10.1,
+        "lip_notch_length": 5,
+        "lip_notch_center_from_stop": 78.9,
+        "units": "按mm解释，无缩放；STL自身无单位"
+      },
+      "source": "research"
+    },
+    "rail_mounting_default": {
+      "value": "保持外侧面X=±86.6、纵向中心Y=-3.45；轨道底面Z=-2.4与背板齐平，顶面Z=11.6；功能尺寸不缩放；仅在两侧5 mm轨道条带内重建基础及连接腹板，不移动盖板及按钮",
+      "source": "default"
     }
   },
   "open_questions": []

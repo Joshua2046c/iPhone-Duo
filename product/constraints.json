@@ -28,9 +28,6 @@
     "left_blank_width": 20,
     "right_control_width": 20,
     "hinge_setback": 4,
-    "rail_length": 96,
-    "rail_channel_height": 4.6,
-    "rail_channel_depth": 2.8,
     "camera_opening": [
       22,
       56
@@ -46,7 +43,7 @@
     "volume_contact_x": 59.0,
     "overall_case_bbox": [
       173.2,
-      96,
+      100.8,
       14.2
     ],
     "nominal_key_downstroke": 0.8,
@@ -58,7 +55,6 @@
     "base_transition_span": 16,
     "rail_foundation_width": 4.8,
     "rail_center_y": -3.45,
-    "rail_fore_aft_projection": 6.5,
     "cover_size": [
       21.8,
       95.6,
@@ -106,8 +102,8 @@
     "volume_output_tunnel_z": 3.1,
     "lower_shell_bbox": [
       173.2,
-      96,
-      11
+      100.8,
+      14
     ],
     "cover_plate_size": [
       21.8,
@@ -140,7 +136,16 @@
     "cover_peg_side_clearance": 0.2,
     "back_chamfer": 0.6,
     "outer_shoulder_chamfer": 0.3,
-    "front_outer_chamfer": 0.4
+    "front_outer_chamfer": 0.4,
+    "rail_z_range": [
+      -2.4,
+      11.6
+    ],
+    "rail_outer_face_x": [
+      -86.6,
+      86.6
+    ],
+    "rail_mounting_width": 5
   },
   "verification": {
     "phone_fit": false,
@@ -150,10 +155,30 @@
     "cover_retention": false,
     "acoustic_performance": false
   },
-  "note": "连续底板、双轨及双翼侧壁为单实体。标注端部空洞、旧胶槽及前缘外侧缺口已补齐；每盖两根开槽方桩与下壳方孔卡接，带可退出斜面。背面外轮廓与外露边缘局部倒角，排除轨道和手机内侧。盖板落座Z=8.6，桩底Z=0.6；盖板无需胶带，手机固定胶垫保留。真实手机/手柄接口、完整开合、声学性能和方桩插拔保持力均未实配。相机尺寸与位置仍为照片对应的可调初值。",
+  "note": "连续底板、双轨及双翼侧壁为单实体。标注端部空洞、旧胶槽及前缘外侧缺口已补齐；每盖两根开槽方桩与下壳方孔卡接，带可退出斜面。背面外轮廓与外露边缘局部倒角，排除轨道和手机内侧。盖板落座Z=8.6，桩底Z=0.6；盖板无需胶带，手机固定胶垫保留。真实手机/手柄接口、完整开合、声学性能和方桩插拔保持力均未实配。相机尺寸与位置仍为照片对应的可调初值。 双轨采用用户STL提取数据，居中后纵向范围[-53.85,46.95]、槽腔Z[-0.4,9.6]、喉口Z[0.8,8.4]；闭端止挡Y=-43.75，唇边缺口Y[32.65,37.65]。轨道本体不加外壳倒角，入口及端部曲面为参考造型的重建。其他零件位置及形状保持。",
   "construction": {
     "rail_lower_shell_single_solid": true,
     "source": "user",
-    "implementation": "双轨和封闭翼部直接并入rear_shell；轨道内侧端部用实心连接区衔接侧壁，再切原导槽、入口和锁止凹位；不再导出独立轨道零件。"
+    "implementation": "两轨仍与rear_shell为一个实体。只重建外侧5 mm安装条带，去掉旧底板在新圆头/入口外的残留，再切完整槽腔；安装腹板止于盖板落座面，不侵入上盖。"
+  },
+  "rail_reference": {
+    "source": "research",
+    "source_path": "product/references/uploads/20260929T041741902Z-1-joycon-phone-grip.stl",
+    "sha256": "1c8aebf06ef5afe978ff12c1fb71b8741c7f7302be65ff041370069c9f929254",
+    "units_assumption": "mm, no scaling",
+    "length": 100.8,
+    "height": 14,
+    "channel_height": 10,
+    "mouth_height": 7.6,
+    "groove_total_depth": 2.9,
+    "channel_depth_behind_lip": 2.2,
+    "lip_thickness": 0.7,
+    "lip_projection": 1.2,
+    "bottom_stop": 10.1,
+    "notch_length": 5,
+    "notch_center_y_local": 38.6,
+    "notch_depth_radial": 0.7,
+    "entry_profile": "24 points sampled from mesh; interpolated spline, combined with 4 mm longitudinal end rounding",
+    "notch_function_verified": false
   }
 }
