@@ -2,6 +2,7 @@
 # cell: right_cover
 # cell: right_cover
 # cell: right_cover
+# cell: right_cover
 
 w=param("right_cover_width",22.2)
 length=param("right_cover_length",96.0)
@@ -32,10 +33,17 @@ def wing_profile(w, length, inner_length, transition, r):
         make_face()
     return sketch.sketch
 
-outline=wing_profile(w-2*seam,length-2*seam,inner_length-2*seam,transition,max(radius-seam,seam))
+outline=Pos(radius,0)*wing_profile(w+2*radius,length,inner_length,transition,radius)
+# End curves follow the lower shell exactly; clearance is kept on the two long sides.
+outline=outline & Rectangle(w-2*seam,length)
 
 # Only the top plate is detachable. All lower sidewalls now belong to rear_shell.
 lid=Pos(0,0,height-roof)*extrude(outline,amount=roof)
+# Fixed envelope data from the supplied STL rail: 14 mm high, R4 longitudinal ends.
+RAIL_PROFILE_HEIGHT=14.0
+RAIL_END_RADIUS=4.0
+end_envelope=extrude(Plane.YZ*Pos(0,height-RAIL_PROFILE_HEIGHT/2)*RectangleRounded(length,RAIL_PROFILE_HEIGHT,RAIL_END_RADIUS),amount=w,both=True)
+lid=lid & end_envelope
 
 
 # Capsule through-openings retain 0.4 mm normal clearance to the caps.

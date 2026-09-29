@@ -128,6 +128,12 @@
       "source": "user_requested",
       "description": "用户提供的新背面图，修正机身轮廓/摄像头/原机顶部音量键的比例位置；图中文字为射频数据，不是机械尺寸",
       "path": "product/references/uploads/20260929T115547271Z-1-ishot-2026-09-29-7-55-00.png"
+    },
+    {
+      "id": "rail_matched_outer_surface",
+      "source": "user_requested",
+      "description": "整壳端部跟随滑轨曲率，消除红框上下外缘台阶与不连续位置",
+      "path": "product/references/uploads/20260929T123232327Z-1-mark.png"
     }
   ],
   "assembly_story": {
@@ -176,7 +182,8 @@
           "four_corner_transitions",
           "flush_covers_stacked_slots_round_keys",
           "unmarked_capsule_volume_keys",
-          "rear_photo_outline_camera_buttons"
+          "rear_photo_outline_camera_buttons",
+          "rail_matched_outer_surface"
         ]
       }
     ]

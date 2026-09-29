@@ -1,31 +1,31 @@
 {
   "designId": "duo-joycon-case",
-  "revision": "af9bdddfc4bf9dcdc91230194145ef7121d5a25840a61d0e55c49a9a93ae91f9",
+  "revision": "3e70cb0326da55769f217f3474f890ba85d425cf5bf3d3419ac3005faa242a47",
   "schemaVersion": 2,
-  "exportId": "export-10fe85829e40361505211f08f00f4ef3",
-  "generatedAt": "2026-09-29T12:02:11.952Z",
-  "designSha256": "829f69225a18c277d60939143392bb3ab6879fe5931ae89877d027835f01bc1c",
+  "exportId": "export-2a2881fa38aba8fe4ceac70ce6f83000",
+  "generatedAt": "2026-09-29T12:36:33.377Z",
+  "designSha256": "d665aa44b28fa14cb45975bdc44f75cff85581ec8d9a368d2e506298ad698419",
   "role": "enclosure",
-  "stateHash": "b11dad17c47d01a9840141379d4130cc6a8657995ff14892be136e4db97d40e6",
+  "stateHash": "38e895fa66389eb3c7db093f859463624bc575ff36a9f9255674f73d07edfab7",
   "stateManifest": {
     "schemaVersion": 3,
     "designId": "duo-joycon-case",
     "role": "enclosure",
     "design": {
-      "revision": "af9bdddfc4bf9dcdc91230194145ef7121d5a25840a61d0e55c49a9a93ae91f9",
-      "designSha256": "389915ebe1dc2c8dbde510460f4d9db3dea74de3af52b3d5b6f0aafa35e9fdb5",
-      "manifestSha256": "6d8247753d67a035a808f978c3013d89d8b325eb68df25ce2a6dba26760afa48",
-      "stepSha256": "7879943b98f0f0ecb306925532597b0e20acc6613d0c2a5ca5beda29b6a7274f",
+      "revision": "3e70cb0326da55769f217f3474f890ba85d425cf5bf3d3419ac3005faa242a47",
+      "designSha256": "aa08e9a39f3e76a6f1338fc2bc0db71eec93312ffe864283703164f6e8927427",
+      "manifestSha256": "ea855dd1c089aa9d891b8412cc65d77d2eb4e45364534128d7835fe96cbafb62",
+      "stepSha256": "862a5d44afc2e3b50d646b379bf2f4a3c406008a64fbcc8020640480ad147953",
       "pcbReleases": []
     },
     "brief": {
       "path": "design/duo-joycon-case/README.md",
-      "sha256": "f91959cc3767ddf451e6b161ebdb0e327526ebcc9f407e47e988060842c93b2a"
+      "sha256": "dc64d65d9248d963cd6ae3a090731a645fc9be48ef8a3425f852d9df71869834"
     },
     "requirement": {
       "artifactContractPath": "product/contract.json",
-      "artifactContractSha256": "6ce73169a61861bc3943e359933f74e16e4d26ebd844a83b4ac279b747997649",
-      "designRequirementSha256": "9b634f0a2768db690bec8f757b069e7cb3c402af634a37bd64621499bee60499",
+      "artifactContractSha256": "d31166273e77135ec549af659a4365d9b83e16cddc901688a8f9d84e20724d8c",
+      "designRequirementSha256": "55fde75830970778f1a20730dd260d242ed9d9d993146a356e19224c5132c15a",
       "inputs": [
         {
           "role": "external-reference",
@@ -106,6 +106,13 @@
         },
         {
           "role": "external-reference",
+          "id": "rail_matched_outer_surface",
+          "path": "product/references/uploads/20260929T123232327Z-1-mark.png",
+          "sha256": "0d48e2bdc4a09d94dc7ecc29c2aa68aae164cce35c86fb6d5942c99469eb81cd",
+          "sizeBytes": 343005
+        },
+        {
+          "role": "external-reference",
           "id": "rail_reference_2",
           "path": "product/references/uploads/20260927T004006717Z-2-ishot-2026-09-27-8-36-31.png",
           "sha256": "79b974f22c817d0f5878f4d51b1b67aef557180ccb8825a505c2088df6052859",
@@ -154,28 +161,28 @@
         "step"
       ]
     },
-    "stateHash": "b11dad17c47d01a9840141379d4130cc6a8657995ff14892be136e4db97d40e6"
+    "stateHash": "38e895fa66389eb3c7db093f859463624bc575ff36a9f9255674f73d07edfab7"
   },
   "buildArtifacts": {
-    "manifestSha256": "6d8247753d67a035a808f978c3013d89d8b325eb68df25ce2a6dba26760afa48",
-    "stepSha256": "7879943b98f0f0ecb306925532597b0e20acc6613d0c2a5ca5beda29b6a7274f"
+    "manifestSha256": "ea855dd1c089aa9d891b8412cc65d77d2eb4e45364534128d7835fe96cbafb62",
+    "stepSha256": "862a5d44afc2e3b50d646b379bf2f4a3c406008a64fbcc8020640480ad147953"
   },
   "exportAlgorithm": {
     "version": 1,
     "bootstrapSha256": "f4939328ef685300fcdaa250c860428f6b9e009d10931b20d36728e55e0029e4"
   },
   "sourceHashes": {
-    "left_cover/left_cover": "1dbb0ab5eeb025f5140e66cded3d2e4d989f2189a3e466c7fdcbfb36f86df155",
-    "rear_shell/rear_shell": "7a51a3e9f7c798666be58933367cf856f78b6cc3eb7b16942c10a631d3fe37a7",
-    "right_cover/right_cover": "cc7a50d3ef94982090381e8583b818334b5eff8d84951ec3f3a349be26f9fcc5",
+    "left_cover/left_cover": "cbe02b4905020a9e68af8a68e9b6fd415448a16ca168c708f6f83a54fa41d499",
+    "rear_shell/rear_shell": "e62967c450edc1f5adee6d308e5bd8962d566df2c1321d9932f4e82807a16484",
+    "right_cover/right_cover": "17370af3bca1b121e327da24cfcac68bb578b0eef560a9b778ef74273b009a87",
     "volume_minus/volume_minus": "199520b1b63005087495cdd53e6dd40e969cf41b1b6e9e18ce1ce6f9b2455449",
     "volume_plus/volume_plus": "5a53452d6efacd5064c153f58877685cc8861578ebdb6530b348574b86f887da"
   },
   "assetHashes": {},
   "shapeHashes": {
-    "left_cover": "64fdd1e9d72561541e2b186624433fb3abbfc1b2a339f9b6f3dee9ac518460f6",
-    "rear_shell": "e80b23182ef64666f6c63b673bbe993083a0ed271f0376689d2bd70928261a4f",
-    "right_cover": "7144fd6f9e2ada8e672009920a2ce34a29965c294231a061f4289e0586b4dc68",
+    "left_cover": "ce0c202bc7c79e24105325c07ea0bf237aa53f35a45125572a5007fa34282e8c",
+    "rear_shell": "41a451d671e6f179782fb02121b010ab9e126334bab1eb421a14f56131c0ed29",
+    "right_cover": "3a79c53e1d8b74aa6ae7e19e2af3f462fb62562aafcc3d0938909c45331a3b88",
     "volume_minus": "2666da0130b35e086c5728eba410f35756e3aed25987015d3f83d76e1f7b34ed",
     "volume_plus": "6ed6c2da9156dc531acdc9aee00710f3ca2443dc8174d69616d4a076250a3db8"
   },
@@ -188,10 +195,10 @@
   },
   "artifacts": [
     {
-      "path": "manufacturing/duo-joycon-case/releases/export-10fe85829e40361505211f08f00f4ef3/model.step",
+      "path": "manufacturing/duo-joycon-case/releases/export-2a2881fa38aba8fe4ceac70ce6f83000/model.step",
       "role": "model/step",
-      "sha256": "7879943b98f0f0ecb306925532597b0e20acc6613d0c2a5ca5beda29b6a7274f",
-      "sizeBytes": 1957825
+      "sha256": "862a5d44afc2e3b50d646b379bf2f4a3c406008a64fbcc8020640480ad147953",
+      "sizeBytes": 1858847
     }
   ],
   "interference": {
@@ -232,9 +239,9 @@
     "algorithm": "hmac-sha256",
     "keyId": "761657b6d664e71812fd01e01c1125b1",
     "projectId": "3d45b24e-981b-4bd8-9704-a2998fdf1cb7",
-    "receiptPath": "manufacturing/duo-joycon-case/releases/export-10fe85829e40361505211f08f00f4ef3/receipt.json",
-    "payloadSha256": "947c1c2c3402283eb5b6e6d98cbe3c8c3385931453d06125474da8f7b9e7fa17",
-    "mac": "c581cb8e4ca8b9f40b5bcd3c51663081099ecf7f041fabff43834e9a4ac4c126"
+    "receiptPath": "manufacturing/duo-joycon-case/releases/export-2a2881fa38aba8fe4ceac70ce6f83000/receipt.json",
+    "payloadSha256": "3f4e58c56c2c1812b0629fe38249e54151196f2f14054c421835edbef108cae3",
+    "mac": "c0478974de41491a8d6ec4e579ab9b3765ca3ce31a9f11bdb3887769dad087c0"
   },
   "status": "handoff"
 }

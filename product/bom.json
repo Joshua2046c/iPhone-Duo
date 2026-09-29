@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "draft",
   "bom_ready": false,
-  "requirements_digest": "4ed5d56d221a47b2a0c3df3ad3d46839ed10a81bec5b23a58dd268bb358cf443",
+  "requirements_digest": "fff4a1b49957de0c3a879a4d213b4247685e29bc9a414cdd5e9fd826d57d30d4",
   "items": [
     {
       "id": "phone",
@@ -27,7 +27,7 @@
     },
     {
       "id": "rear_shell",
-      "name": "PETG 双轨一体下壳原型，背面图比例修正托壳/相机口/音量触点，4.6 mm稍松方孔，含无符号长条音量双键",
+      "name": "PETG 双轨一体下壳原型，端部随滑轨R4收边，背面图比例修正托壳/相机口/音量触点，4.6 mm稍松方孔，含无符号长条音量双键",
       "quantity": 1,
       "source": "default"
     },
@@ -39,13 +39,13 @@
     },
     {
       "id": "left_cover",
-      "name": "PETG 左侧随形上盖，21.8×100.4×3 mm顶板、两根一体方形卡桩、上下排列双竖向出声槽",
+      "name": "PETG 左侧随形上盖，21.8×100.546 mm随滑轨R4曲面顶板（中部厚3 mm）、两根一体方形卡桩、上下排列双竖向出声槽",
       "quantity": 1,
       "source": "default"
     },
     {
       "id": "right_cover",
-      "name": "PETG 右侧随形上盖，21.8×100.4×3 mm顶板、两根一体方形卡桩、竖向圆头长条音量双键孔",
+      "name": "PETG 右侧随形上盖，21.8×100.546 mm随滑轨R4曲面顶板（中部厚3 mm）、两根一体方形卡桩、竖向圆头长条音量双键孔",
       "quantity": 1,
       "source": "default"
     }

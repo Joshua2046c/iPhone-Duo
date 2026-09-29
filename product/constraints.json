@@ -57,7 +57,7 @@
     "rail_center_y": -3.45,
     "cover_size": [
       21.8,
-      100.4,
+      100.545967,
       11
     ],
     "cover_roof_thickness": 3,
@@ -81,7 +81,7 @@
     "wing_housing_height": 8.6,
     "wing_housing_wall_nominal": 2.4,
     "wing_housing_width": 22.2,
-    "cover_perimeter_inset": 0.2,
+    "cover_perimeter_inset": 0,
     "cover_support_center_y": [
       32.55,
       -39.45
@@ -103,7 +103,7 @@
     ],
     "cover_plate_size": [
       21.8,
-      100.4,
+      100.545967,
       3
     ],
     "cover_plate_z_range": [
@@ -131,7 +131,7 @@
     "cover_peg_bottom_clearance": 0.4,
     "cover_peg_side_clearance": 0.3,
     "back_chamfer": 0.6,
-    "outer_shoulder_chamfer": 0.3,
+    "outer_shoulder_chamfer": 0,
     "front_outer_chamfer": 0.4,
     "rail_z_range": [
       -2.4,
@@ -175,7 +175,8 @@
     ],
     "cover_peg_insertion_deflection_per_arm": 0.1,
     "socket_to_chamber_ligament": 1.9,
-    "inter_linkage_static_clearance": 1.5
+    "inter_linkage_static_clearance": 1.5,
+    "cover_long_side_clearance": 0.2
   },
   "verification": {
     "phone_fit": false,
@@ -185,7 +186,7 @@
     "cover_retention": false,
     "acoustic_performance": false
   },
-  "note": "连续底板、双轨及双翼侧壁为单实体。标注端部空洞、旧胶槽及前缘外侧缺口已补齐；每盖两根开槽方桩与下壳方孔卡接，带可退出斜面。背面外轮廓与外露边缘局部倒角，排除轨道和手机内侧。盖板落座Z=8.6，桩底Z=0.6；盖板无需胶带，手机固定胶垫保留。真实手机/手柄接口、完整开合、声学性能和方桩插拔保持力均未实配。相机24×58 mm、中心(44,-9.5)，托壳仅外侧两角圆弧、铰链侧方角。音量触点(59,-2,3.1)/(59,-15.5,3.1)与对应传动口按新图比例修正，前面键帽仍在Y=±12；低位折线臂连接。方孔由4.4增至4.6 mm，桩身单侧间隙0.3、压入每臂偏转0.1 mm。全部新增机械尺寸为照片比例的可调默认值。 双轨采用用户STL提取数据，居中后纵向范围[-53.85,46.95]、槽腔Z[-0.4,9.6]、喉口Z[0.8,8.4]；闭端止挡Y=-43.75，唇边缺口Y[32.65,37.65]。轨道本体不加外壳倒角，入口及端部曲面为参考造型的重建。四角过渡跨度20 mm，翼壳长度100.8 mm、上盖长度100.4 mm，与长轨端部接顺；方桩及插孔中心、主功能腔及正面键帽中心保持，手机托壳与内部触点按新图比例修正；盖板顶面加厚至Z=11.6与轨顶齐平，底面仍在Z=8.6，左侧双槽改为竖向上下排列，双音量键帽改为与左侧声孔相同的14×2.8 mm竖向圆头长条，无加减标记，盖板匹配孔14.8×3.6 mm。",
+  "note": "连续底板、双轨及双翼侧壁为单实体。标注端部空洞、旧胶槽及前缘外侧缺口已补齐；每盖两根开槽方桩与下壳方孔卡接，带可退出斜面。背面外轮廓与外露边缘局部倒角，排除轨道和手机内侧。盖板落座Z=8.6，桩底Z=0.6；盖板无需胶带，手机固定胶垫保留。真实手机/手柄接口、完整开合、声学性能和方桩插拔保持力均未实配。相机24×58 mm、中心(44,-9.5)，托壳仅外侧两角圆弧、铰链侧方角。音量触点(59,-2,3.1)/(59,-15.5,3.1)与对应传动口按新图比例修正，前面键帽仍在Y=±12；低位折线臂连接。方孔由4.4增至4.6 mm，桩身单侧间隙0.3、压入每臂偏转0.1 mm。全部新增机械尺寸为照片比例的可调默认值。 双轨采用用户STL提取数据，居中后纵向范围[-53.85,46.95]、槽腔Z[-0.4,9.6]、喉口Z[0.8,8.4]；闭端止挡Y=-43.75，唇边缺口Y[32.65,37.65]。轨道本体不加外壳倒角，入口及端部曲面为参考造型的重建。四角过渡跨度20 mm，翼壳长度100.8 mm、上盖外包络长度约100.546 mm，与长轨端部接顺；方桩及插孔中心、主功能腔及正面键帽中心保持，手机托壳与内部触点按新图比例修正；盖板顶面加厚至Z=11.6与轨顶齐平，底面仍在Z=8.6，左侧双槽改为竖向上下排列，双音量键帽改为与左侧声孔相同的14×2.8 mm竖向圆头长条，无加减标记，盖板匹配孔14.8×3.6 mm。 端部上下外皮与滑轨共用R4圆头截面，已去掉端肩0.3 mm小倒角及曲线端部0.2 mm缩边；侧向拆装间隙保留。",
   "construction": {
     "rail_lower_shell_single_solid": true,
     "source": "user",
@@ -260,5 +261,26 @@
       "peg_max_shoulder_width": 4.8
     },
     "uncertainty": "Photo-derived features are approximate (roughly 1–2 mm positional uncertainty, not a metrology tolerance); rear half width still uses folded total width proxy. Button +/- ordering, button height and travel, camera projection and hinge sweep cannot be established from this image."
+  },
+  "outer_surface": {
+    "source": "default",
+    "reference": "User STL rail longitudinal envelope: length 100.8, height 14, radius 4 mm",
+    "end_radius_mm": 4,
+    "center_y_mm": -3.45,
+    "z_range_mm": [
+      -2.4,
+      11.6
+    ],
+    "method": "Lower shell and lids intersect the same YZ end envelope. Wing blanks extend into the replaced rail band; lids use matching curved plan edges and retain 0.2 mm clearance only on long sides.",
+    "cover_seat_end_y_mm": [
+      -53.722983,
+      46.822983
+    ],
+    "top_flat_end_y_mm": [
+      -49.85,
+      42.95
+    ],
+    "cover_seat_z_mm": 8.6,
+    "seam_type": "Coplanar curved end surfaces; detachable horizontal parting seam remains."
   }
 }

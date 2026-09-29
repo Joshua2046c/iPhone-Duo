@@ -12,7 +12,7 @@
           "target": "rear_shell",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/rear_shell/000-rear_shell.py",
-          "sha256": "7a51a3e9f7c798666be58933367cf856f78b6cc3eb7b16942c10a631d3fe37a7"
+          "sha256": "e62967c450edc1f5adee6d308e5bd8962d566df2c1321d9932f4e82807a16484"
         }
       ],
       "dependencies": []
@@ -54,7 +54,7 @@
           "target": "left_cover",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/left_cover/000-left_cover.py",
-          "sha256": "1dbb0ab5eeb025f5140e66cded3d2e4d989f2189a3e466c7fdcbfb36f86df155"
+          "sha256": "cbe02b4905020a9e68af8a68e9b6fd415448a16ca168c708f6f83a54fa41d499"
         }
       ],
       "dependencies": []
@@ -68,7 +68,7 @@
           "target": "right_cover",
           "order": 0,
           "path": "design/duo-joycon-case/source/parts/right_cover/000-right_cover.py",
-          "sha256": "cc7a50d3ef94982090381e8583b818334b5eff8d84951ec3f3a349be26f9fcc5"
+          "sha256": "17370af3bca1b121e327da24cfcac68bb578b0eef560a9b778ef74273b009a87"
         }
       ],
       "dependencies": []
@@ -81,7 +81,7 @@
       "label": "滑轨一体下壳",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "e80b23182ef64666f6c63b673bbe993083a0ed271f0376689d2bd70928261a4f",
+      "shapeHash": "41a451d671e6f179782fb02121b010ab9e126334bab1eb421a14f56131c0ed29",
       "transform": {
         "positionMm": [
           0,
@@ -162,7 +162,7 @@
       "label": "左侧曲线出声上盖",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "64fdd1e9d72561541e2b186624433fb3abbfc1b2a339f9b6f3dee9ac518460f6",
+      "shapeHash": "ce0c202bc7c79e24105325c07ea0bf237aa53f35a45125572a5007fa34282e8c",
       "transform": {
         "positionMm": [
           -70.5,
@@ -189,7 +189,7 @@
       "label": "右侧曲线音量上盖",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "7144fd6f9e2ada8e672009920a2ce34a29965c294231a061f4289e0586b4dc68",
+      "shapeHash": "3a79c53e1d8b74aa6ae7e19e2af3f462fb62562aafcc3d0938909c45331a3b88",
       "transform": {
         "positionMm": [
           70.5,
@@ -226,7 +226,7 @@
       "b": "rear_shell"
     }
   ],
-  "updatedAt": "2026-09-29T12:02:11.952Z",
+  "updatedAt": "2026-09-29T12:36:33.377Z",
   "parameters": {
     "rear_shell": {
       "rear_shell_side_clearance": 0.5,
@@ -293,7 +293,7 @@
       "right_rail_entry_length": 4.5826,
       "right_rail_foundation_height": 2.4,
       "rear_shell_back_chamfer": 0.6,
-      "rear_shell_outer_chamfer": 0.3,
+      "rear_shell_outer_chamfer": 0,
       "rear_shell_front_chamfer": 0.4,
       "rear_shell_cover_socket_width": 4.6,
       "rear_shell_cover_socket_depth": 8.4,

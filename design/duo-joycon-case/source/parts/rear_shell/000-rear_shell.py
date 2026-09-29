@@ -2,6 +2,7 @@
 # cell: rear_shell
 # cell: rear_shell
 # cell: rear_shell
+# cell: rear_shell
 
 # Phone envelope from the user's size sheet, rotated into the reference pose.
 PHONE_X = 117.8
@@ -133,14 +134,16 @@ def wing_profile(w, length, inner_length, transition, r):
 for sign, extension in [(-1,left),(1,right)]:
     wing_w=extension+wall-rail_allowance
     wc=sign*(join+wing_w/2)
-    outline=wing_profile(wing_w,wing_depth,hinge_y-front_y,transition,outer_r)
+    outline=Pos(outer_r,0)*wing_profile(wing_w+2*outer_r,wing_depth,hinge_y-front_y,transition,outer_r)
+    # The blank extends into the rail replacement band so the end has no plan-view notch.
     if sign<0:
         outline=Rot(0,0,180)*outline
     outer=Pos(wc,center_y,0)*extrude(outline,amount=housing_h)
     # Chamfer the outside end shoulders only, never the phone-facing or rail-side long edge.
     shoulders=[e for e in outer.edges() if all(abs(v.Z-housing_h)<1e-5 for v in e.vertices()) and abs(e.center().Y-center_y)>(hinge_y-front_y)/2-1e-5]
     assert len(shoulders)>0
-    outer=chamfer(shoulders,length=edge_bevel)
+    if edge_bevel>0:
+        outer=chamfer(shoulders,length=edge_bevel)
     # End voids and tape recesses are replaced by solid square-socket lands.
     pocket_l=wing_depth-2*support_inset-support_depth
     inner=RectangleRounded(wing_w-2*wall,pocket_l,outer_r)
@@ -224,8 +227,9 @@ def make_left_rail():
     foundation=param("left_rail_foundation_height",2.4)
     rail,void=reference_rail(w,length,height,rounding,channel_d,channel_h,mouth_h,lip,channel_z,stop,latch_y,latch_len,latch_depth,entry,foundation)
     band=Pos(w/2,0,height/2)*Box(w,2*max(length,wing_depth),height+2*base)
-    return Pos(xl,center_y,-foundation)*rail,Pos(xl,center_y,-foundation)*void,Pos(xl,center_y,-foundation)*band
-left_rail_body,left_rail_void,left_rail_band=make_left_rail()
+    silhouette=extrude(Plane.YZ*Pos(0,height/2)*RectangleRounded(length,height,rounding),amount=(xr-xl)/2)
+    return Pos(xl,center_y,-foundation)*rail,Pos(xl,center_y,-foundation)*void,Pos(xl,center_y,-foundation)*band,Pos(xl,center_y,-foundation)*silhouette
+left_rail_body,left_rail_void,left_rail_band,left_silhouette=make_left_rail()
 # Cut the functional channel through the existing foundation as well.
 s=(s-left_rail_band+left_rail_body)-left_rail_void
 
@@ -250,11 +254,15 @@ def make_right_rail():
     rail=mirror(rail,about=Plane.YZ)
     void=mirror(void,about=Plane.YZ)
     band=mirror(band,about=Plane.YZ)
-    return Pos(xr,center_y,-foundation)*rail,Pos(xr,center_y,-foundation)*void,Pos(xr,center_y,-foundation)*band
-right_rail_body,right_rail_void,right_rail_band=make_right_rail()
+    silhouette=extrude(Plane.YZ*Pos(0,height/2)*RectangleRounded(length,height,rounding),amount=(xr-xl)/2)
+    silhouette=mirror(silhouette,about=Plane.YZ)
+    return Pos(xr,center_y,-foundation)*rail,Pos(xr,center_y,-foundation)*void,Pos(xr,center_y,-foundation)*band,Pos(xr,center_y,-foundation)*silhouette
+right_rail_body,right_rail_void,right_rail_band,right_silhouette=make_right_rail()
 # Cut the functional channel through the existing foundation as well.
 s=(s-right_rail_band+right_rail_body)-right_rail_void
 
+# One shared rail-derived end envelope removes projecting floor and wing corners.
+s=s & left_silhouette.fuse(right_silhouette)
 s=s.clean()
 # The front exterior rim edge is outside the phone contact faces; rails are excluded by Z/Y.
 front_edges=[e for e in s.edges() if all(abs(v.Z-rise)<1e-5 and abs(v.Y-front_y)<1e-5 for v in e.vertices()) and e.length>wall]
