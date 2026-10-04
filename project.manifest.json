@@ -1,0 +1,8 @@
+{
+  "formatVersion": 4,
+  "name": "iPhone Duo 游戏手柄",
+  "title": "iPhone Duo Joy-Con 半包后壳原型",
+  "summary": "一款用于 iPhone Duo 展开横屏游戏的半包后壳原型，设有双侧 Joy-Con 滑轨和机械音量按键，手柄兼容性与手机开合空间仍待实配验证。",
+  "license": "MIT",
+  "artifacts": "rebuild"
+}

@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "file": "interface-research.md",
+      "sha256": "2eac985a5d7db36de2942cd3af3ebd49450495ed686d0ea32b95ed000f8c5685",
+      "bytes": 2835,
+      "addedAt": "2026-09-27T00:37:50.873Z",
+      "share": false
+    },
+    {
+      "file": "joycon-rail-reference/README.md",
+      "sha256": "99be6842c771e3f2ac17d1c7e2b212de7e1988e87aa5fe675a5b96f5069451d5",
+      "bytes": 5386,
+      "addedAt": "2026-09-29T04:24:10.829Z",
+      "share": false
+    },
+    {
+      "file": "joycon-rail-reference/measure.py",
+      "sha256": "5fa08733cd7b0651e8012a58d257611c17459c5341836da4d84c9bcb4afcd6ed",
+      "bytes": 5051,
+      "addedAt": "2026-09-29T04:24:10.830Z",
+      "share": false
+    },
+    {
+      "file": "joycon-rail-reference/measurements.json",
+      "sha256": "7f8057462859d55b01141a33f100643a4dbc1a26c9dc2fde03c2f158ab8285f3",
+      "bytes": 10539,
+      "addedAt": "2026-09-29T04:24:10.830Z",
+      "share": false
+    },
+    {
+      "file": "joycon-rail-reference/rail-sections.png",
+      "sha256": "805faddc403f6ee30425f3052050706653c6723bc8381c1824bdf4642cc527f0",
+      "bytes": 84417,
+      "addedAt": "2026-09-29T04:24:10.830Z",
+      "share": false
+    },
+    {
+      "file": "rear-photo-fit.json",
+      "sha256": "eb6cecd3e6654bf530c8ba9a5c3e44a4b254e16b0298da8ad928498b8ee3c85f",
+      "bytes": 1693,
+      "addedAt": "2026-09-29T12:00:53.786Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260927T003420271Z-1-ishot-2026-09-24-11-17-13.png",
+      "sha256": "8f23ca89ae44d83f6e5fe8191739144497e094a7f307ebd7a659af18441456e7",
+      "bytes": 77162,
+      "addedAt": "2026-09-27T00:34:20.475Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260927T003420271Z-2-ishot-2026-09-24-11-17-19.png",
+      "sha256": "3cd0c76b2f4e4e25ca73901e9e3ca58b776705c801057a30c9e69e620c1150f6",
+      "bytes": 94709,
+      "addedAt": "2026-09-27T00:34:20.476Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260927T004006717Z-1-ishot-2026-09-27-12-07-53.png",
+      "sha256": "f02f110425f2169d889c4f4e948864b4d4cbdd939e1046efcc94cc933dc064d0",
+      "bytes": 137274,
+      "addedAt": "2026-09-27T00:40:12.073Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260927T004006717Z-2-ishot-2026-09-27-8-36-31.png",
+      "sha256": "79b974f22c817d0f5878f4d51b1b67aef557180ccb8825a505c2088df6052859",
+      "bytes": 275962,
+      "addedAt": "2026-09-27T00:40:12.073Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260927T004006717Z-3-2026-09-27-8-36-50.png",
+      "sha256": "3a32b52c26b7b4ddedf75df076a90f31738d83e2f557d3c902314a0d7826bc7e",
+      "bytes": 70323,
+      "addedAt": "2026-09-27T00:40:12.073Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260927T004006717Z-4-2026-09-27-8-37-00.png",
+      "sha256": "bc6070c33cd613a659e01cb440f238edc150db7b448a9e483e3df74fb9b7a8e9",
+      "bytes": 155302,
+      "addedAt": "2026-09-27T00:40:12.074Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260928T034345208Z-1-mark.png",
+      "sha256": "85fafd9cd169749af231cbbc18e8316a9b6ace692dbbe0f51ed2a29abc6e0911",
+      "bytes": 1037461,
+      "addedAt": "2026-09-28T03:43:58.730Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260928T034345208Z-2-image.png",
+      "sha256": "85fcac2cf565964fed3f113ae81833f0899fbcb98642c6317040e269d764f0ed",
+      "bytes": 37079,
+      "addedAt": "2026-09-28T03:43:58.731Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260928T035108743Z-1-mark.png",
+      "sha256": "3b53a1f1fb816f3ecc6e6899d7216f7ced9c244ca9f8da33575d020b9423e36a",
+      "bytes": 484358,
+      "addedAt": "2026-09-28T03:51:13.980Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260928T124340899Z-1-mark.png",
+      "sha256": "82deacca589873927ca40840da1dec713ee7b03ef4298976b233eebff55804c9",
+      "bytes": 575174,
+      "addedAt": "2026-09-28T12:44:00.424Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260928T141931364Z-1-mark.png",
+      "sha256": "6d57293a965a6a24d483cf0d5accf298aec27f815c71306f2d81958c799ca7bf",
+      "bytes": 554664,
+      "addedAt": "2026-09-28T14:19:53.432Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260928T142555511Z-1-mark.png",
+      "sha256": "696ca80a48bdc8ff0b33928e9898d1df1900b6282518729fcdf63af8756cf90e",
+      "bytes": 429987,
+      "addedAt": "2026-09-28T14:25:59.342Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260929T041741902Z-1-joycon-phone-grip.stl",
+      "sha256": "1c8aebf06ef5afe978ff12c1fb71b8741c7f7302be65ff041370069c9f929254",
+      "bytes": 2412784,
+      "addedAt": "2026-09-29T04:17:51.266Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260929T050042339Z-1-mark.png",
+      "sha256": "1fa094cd186d85d530396dd8b38839071539bed2ba1136f32b790c7cf874a3d3",
+      "bytes": 172472,
+      "addedAt": "2026-09-29T05:00:45.276Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260929T053641002Z-1-mark.png",
+      "sha256": "ab16371beaaf78650ea70a64f424dc98e95fe0ec58a3a811f67125748c0d334a",
+      "bytes": 502754,
+      "addedAt": "2026-09-29T05:36:51.362Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260929T055537108Z-1-mark.png",
+      "sha256": "5e9b87947e8786fbe002fa6e19c06f8cba83483c21ee76727c724e496d746701",
+      "bytes": 546712,
+      "addedAt": "2026-09-29T05:55:46.424Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260929T115547271Z-1-ishot-2026-09-29-7-55-00.png",
+      "sha256": "587760093a4ff2aa397f7266f2cba1df8afa791c59bd05bf6ef456c8dcb86bf6",
+      "bytes": 200716,
+      "addedAt": "2026-09-29T11:56:00.265Z",
+      "share": false
+    },
+    {
+      "file": "uploads/20260929T123232327Z-1-mark.png",
+      "sha256": "0d48e2bdc4a09d94dc7ecc29c2aa68aae164cce35c86fb6d5942c99469eb81cd",
+      "bytes": 343005,
+      "addedAt": "2026-09-29T12:32:39.502Z",
+      "share": false
+    }
+  ]
+}
